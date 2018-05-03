@@ -139,9 +139,17 @@ erlang (1:21.0-1) unstable; urgency=medium
 erlang (1:21.0~rc1+dfsg-1) experimental; urgency=medium
 
   * New upstream release candidate (upload to experimental).
+  * Update debian/copyright.
   * Refresh patches, remove a SPARC related one.
+  * Remove the erlang-corba, erlang-ic and erlang-ic-java packages since
+    they are no longer distributed upstream.
+  * Add the erlang-ftp and erlang-tftp packages since they are sptit out
+    from the inets upstream package and a treated as separate applications
+    from now on.
+  * Fix the binary packages interdependencies which have to be changes
+    because of adding and removing packages.
 
- -- Sergei Golovan <sgolovan@debian.org>  Thu, 03 May 2018 12:05:42 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 03 May 2018 14:20:11 +0300
 
 erlang (1:20.3.8+dfsg-1) unstable; urgency=medium
 
