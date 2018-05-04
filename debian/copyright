@@ -1,6 +1,7 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Files-Excluded: lib/diameter/doc/standard
  lib/megaco/doc/standard
+ lib/ftp/doc/archive
  lib/inets/doc/archive
  lib/common_test/priv/jquery-latest.js
  lib/common_test/priv/jquery.tablesorter.min.js
