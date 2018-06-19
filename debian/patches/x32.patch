@@ -1,0 +1,26 @@
+Author: Sergei Golovan
+Description: This patch fixes FTBFS for x86_x32 architecture (x86_64
+ with 32-bit integers, longs and pointers). HiPE still doesn't work
+ and probably never will.
+Last-Modified: Sun, 27 Dec 2015 12:39:07 +0300
+
+--- a/erts/lib_src/pthread/ethread.c
++++ b/erts/lib_src/pthread/ethread.c
+@@ -192,7 +192,7 @@
+ void
+ ethr_x86_cpuid__(int *eax, int *ebx, int *ecx, int *edx)
+ {
+-#if ETHR_SIZEOF_PTR == 4
++#if ETHR_SIZEOF_PTR == 4 && (!defined(__x86_64__) || !(__x86_64__ && __ILP32__))
+     int have_cpuid;
+     /*
+      * If it is possible to toggle eflags bit 21,
+@@ -219,7 +219,7 @@
+ 	return;
+     }
+ #endif
+-#if ETHR_SIZEOF_PTR == 4 && defined(__PIC__) && __PIC__
++#if ETHR_SIZEOF_PTR == 4 && (!defined(__x86_64__) || !(__x86_64__ && __ILP32__)) && defined(__PIC__) && __PIC__
+     /*
+      * When position independet code is used in 32-bit mode, the B register
+      * is used for storage of global offset table address, and we may not

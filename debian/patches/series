@@ -1,0 +1,14 @@
+clean.patch
+gnu.patch
+sparc.patch
+man.patch
+emacs.patch
+docs.patch
+java.patch
+hppa.patch
+javascript.patch
+wx3.0-constants.patch
+beamload.patch
+x32.patch
+xemacs.patch
+atomsfontlock.patch

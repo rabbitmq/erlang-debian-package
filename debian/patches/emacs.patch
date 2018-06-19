@@ -1,0 +1,63 @@
+Patch by Balint Reczey <balint@balintreczey.hu> fixes backquote
+syntax (see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=494823).
+Also, it fixes manpage name regexp matching only 3erl manpages in
+section 3.
+
+--- a/lib/tools/emacs/erlang.el
++++ b/lib/tools/emacs/erlang.el
+@@ -507,8 +507,8 @@
+ (defvar erlang-man-dirs
+   '(("Man - Commands" "/man/man1" t)
+     ("Man - Modules" "/man/man3" t)
+-    ("Man - Files" "/man/man4" t)
+-    ("Man - Applications" "/man/man6" t))
++    ("Man - Files" "/man/man5" t)
++    ("Man - Applications" "/man/man7" t))
+   "The man directories displayed in the Erlang menu.
+ 
+ Each item in the list should be a list with three elements, the first
+@@ -1955,7 +1955,7 @@
+ 
+ (defun erlang-man-make-menu-item (file)
+   "Create a menu item containing the name of the man page."
+-  (and (string-match ".+/\\([^/]+\\)\\.\\([124-9]\\|3\\(erl\\)?\\)\\(\\.gz\\)?$" file)
++  (and (string-match ".+/\\([^/]+\\)\\.\\([124-9]\\|3\\(erl\\)\\)\\(\\.gz\\)?$" file)
+        (let ((page (substring file (match-beginning 1) (match-end 1))))
+          (list (capitalize page)
+                (list 'lambda '()
+@@ -1966,7 +1966,7 @@
+ 
+ (defun erlang-man-get-files (dir)
+   "Return files in directory DIR."
+-  (directory-files dir t ".+\\.\\([124-9]\\|3\\(erl\\)?\\)\\(\\.gz\\)?\\'"))
++  (directory-files dir t ".+\\.\\([124-9]\\|3\\(erl\\)\\)\\(\\.gz\\)?\\'"))
+ 
+ 
+ (defun erlang-man-module (&optional module)
+@@ -1988,7 +1988,7 @@
+     (error "No Erlang module name given"))
+   (let ((dir-list erlang-man-dirs)
+         (pat (concat "/" (regexp-quote module)
+-                     "\\.\\([124-9]\\|3\\(erl\\)?\\)\\(\\.gz\\)?$"))
++                     "\\.\\(3\\(erl\\)\\)\\(\\.gz\\)?$"))
+         (file nil)
+         file-list)
+     (while (and dir-list (null file))
+@@ -2115,7 +2115,7 @@
+                 (message "Could not find function `%s'" func)))))))
+ 
+ (defvar erlang-man-file-regexp
+-  "\\(.*\\)/man[^/]*/\\([^.]+\\)\\.\\([124-9]\\|3\\(erl\\)?\\)\\(\\.gz\\)?$")
++  "\\(.*\\)/man[^/]*/\\([^.]+\\)\\.\\([124-9]\\|3\\(erl\\)\\)\\(\\.gz\\)?$")
+ 
+ (defun erlang-man-display (file)
+   "Display FILE as a `man' file.
+@@ -2127,7 +2127,7 @@
+       (let ((process-environment (copy-sequence process-environment)))
+         (if (string-match erlang-man-file-regexp file)
+             (let ((dir (substring file (match-beginning 1) (match-end 1)))
+-                  (page (substring file (match-beginning 2) (match-end 2))))
++                  (page (concat (substring file (match-beginning 2) (match-end 2)) "(" (substring file (match-beginning 3) (match-end 3)) ")")))
+               (setenv "MANPATH" dir)
+               (manual-entry page))
+           (error "Can't find man page for %s\n" file)))))

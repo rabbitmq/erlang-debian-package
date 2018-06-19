@@ -1,0 +1,9 @@
+# Watch control file for uscan
+
+version=4
+
+opts="dversionmangle=s/\+dfsg\d*$//;s/~/-/, \
+  oversionmangle=s/-/~/;s/$/+dfsg/, \
+  repack, compression=xz" \
+  https://github.com/erlang/otp/releases \
+  /erlang/otp/archive/OTP-(.+).tar.gz

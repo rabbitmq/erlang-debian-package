@@ -1,0 +1,3 @@
+usr/lib/erlang/bin/ct_run	usr/bin/ct_run
+usr/share/javascript/jquery/jquery.min.js   usr/lib/erlang/lib/common_test-@COMMON_TEST_VSN@/priv/jquery-latest.js
+usr/share/javascript/jquery-tablesorter/jquery.tablesorter.min.js   usr/lib/erlang/lib/common_test-@COMMON_TEST_VSN@/priv/jquery.tablesorter.min.js

@@ -1,0 +1,20 @@
+Author: Sergei Golovan <sgolovan@debian.org>
+Description: GCJ 4.4 passes the test for JDK 1.5 but doesn't implement
+ String#String(int[], int, int) constructor, which breaks jinterface
+ build. This patch adds a check for the definition of this constructor.
+ It helps to build Erlang on architectures without openjdk-6 available.
+Forwarded: yes
+Last-updated: Sat, 13 Feb 2010 10:08:42 +0300
+
+--- a/erts/configure.in
++++ b/erts/configure.in
+@@ -4857,7 +4857,8 @@
+   dnl Make sure it's at least JDK 1.6
+   AC_CACHE_CHECK(for JDK version 1.6, 
+      ac_cv_prog_javac_ver_1_6,
+-     [ERL_TRY_LINK_JAVA([], [for (String i : args);],
++     [ERL_TRY_LINK_JAVA([], [for (String i : args);
++        int[] values = {}; String s = new String(values, 0, values.length);],
+         ac_cv_prog_javac_ver_1_6=yes, ac_cv_prog_javac_ver_1_6=no)])
+   if test $ac_cv_prog_javac_ver_1_6 = no; then
+     unset -v JAVAC

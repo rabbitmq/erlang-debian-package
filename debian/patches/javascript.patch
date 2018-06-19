@@ -1,0 +1,11 @@
+--- a/lib/common_test/priv/Makefile.in
++++ b/lib/common_test/priv/Makefile.in
+@@ -61,7 +61,7 @@
+ SCRIPTS = 
+ IMAGES = tile1.jpg
+ CSS = ct_default.css
+-JS = jquery-latest.js jquery.tablesorter.min.js 
++JS =
+ 
+ #
+ # Rules
