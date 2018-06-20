@@ -1,6 +1,5 @@
 clean.patch
 gnu.patch
-sparc.patch
 man.patch
 emacs.patch
 docs.patch

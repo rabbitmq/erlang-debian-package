@@ -13,24 +13,60 @@ Author: Pino Toscano <pino@debian.org>
 
 --- a/erts/configure.in
 +++ b/erts/configure.in
-@@ -435,7 +435,7 @@
+@@ -401,7 +401,7 @@ dnl ---------------------------------------------------------------------
  
  dnl NOTE: CPPFLAGS will be included in CFLAGS at the end
  case $host_os in
 -    linux*) CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE";; 
-+    linux*|*gnu*) CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE";; 
++    linux*|*gnu*) CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE";;
      win32)
  	# The ethread library requires _WIN32_WINNT of at least 0x0403.
  	# -D_WIN32_WINNT=* from CPPFLAGS is saved in ETHR_DEFS.
-@@ -1371,7 +1371,7 @@
- 	fi
+@@ -1147,7 +1147,7 @@ if test "x$enable_lock_count" != "xno"; then
+ fi
  
+ case $host_os in
+-    linux*)
++    linux*|*gnu*)
+ 	AC_MSG_CHECKING([whether dlopen() needs to be called before first call to dlerror()])
+ 	if test "x$ETHR_THR_LIB_BASE_TYPE" != "xposix_nptl"; then
+ 	    AC_DEFINE(ERTS_NEED_DLOPEN_BEFORE_DLERROR,[1],
+@@ -1818,7 +1818,7 @@ AC_SEARCH_LIBS(fdatasync, [rt])
+ 
+ dnl sendfile syscall
+ case $host_os in
+-    linux*|freebsd*|dragonfly*|darwin*)
++    linux*|*gnu*|freebsd*|dragonfly*|darwin*)
+ 		AC_CHECK_FUNCS([sendfile])
+ 		;;
+     solaris*)
+@@ -3057,7 +3057,7 @@ case $host_os in
+ 		DED_LD="$CC"
+ 		DED_LD_FLAG_RUNTIME_LIBRARY_PATH="$CFLAG_RUNTIME_LIBRARY_PATH"
+ 	;;
+-	linux*)
++	linux*|*gnu*)
+ 		DED_LD="$CC"
+ 		DED_LD_FLAG_RUNTIME_LIBRARY_PATH="$CFLAG_RUNTIME_LIBRARY_PATH"
+ 		DED_LDFLAGS="-shared -Wl,-Bsymbolic"
+@@ -3671,7 +3671,7 @@ dnl		One could argue that this is wrong, but
+ dnl		so it is - be adoptable
+     if test "$ssl_found" = "yes" && test "$ssl_linkable" = "yes" && test "$SSL_DYNAMIC_ONLY" != "yes"; then
  	case $host_os in
--	    linux*)
-+	    linux*|*gnu*)
- 		AC_MSG_CHECKING([whether dlopen() needs to be called before first call to dlerror()])
- 		if test "x$ETHR_THR_LIB_BASE_TYPE" != "xposix_nptl"; then
- 		    AC_DEFINE(ERTS_NEED_DLOPEN_BEFORE_DLERROR,[1],
+-		linux*)
++		linux*|*gnu*)
+ 			saveCFLAGS="$CFLAGS"
+  			saveLDFLAGS="$LDFLAGS"
+ 			saveLIBS="$LIBS"
+@@ -4032,7 +4032,7 @@ case $host_os in
+ 		use_cpu_sup=yes ;;
+ 	openbsd*)
+ 		use_cpu_sup=yes ;;
+-	linux*)
++	linux*|*gnu*)
+ 		use_cpu_sup=yes ;;
+ 	freebsd*)
+ 		use_cpu_sup=yes ;;
 --- a/lib/os_mon/c_src/memsup.c
 +++ b/lib/os_mon/c_src/memsup.c
 @@ -99,6 +99,11 @@
