@@ -83,37 +83,6 @@ Description: Erlang/OTP application for automated testing
  coverage analysis of Erlang/OTP programs.
 
 
-Package: erlang-corba
-Architecture: any
-Depends: ${erlang-base}, erlang-inets (= ${binary:Version}), erlang-mnesia (= ${binary:Version}), erlang-ssl (= ${binary:Version}), ${misc:Depends}
-Suggests: erlang, erlang-manpages, erlang-doc
-Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe (<< ${binary:Version}), erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
-Description: Erlang/OTP applications for CORBA support
- The Orber application is an Erlang implementation of a CORBA
- Object Request Broker.
- .
- The cosEvent application is an Erlang implementation of a CORBA
- Service CosEvent.
- .
- The cosEventDomain application is an Erlang implementation of a
- CORBA Service CosEventDomainAdmin.
- .
- The cosFileTransfer Application is an Erlang implementation of
- the OMG CORBA File Transfer Service.
- .
- The cosNotification application is an Erlang implementation of
- the OMG CORBA Notification Service.
- .
- The cosProperty Application is an Erlang implementation of the
- OMG CORBA Property Service.
- .
- The cosTime application is an Erlang implementation of the OMG
- CORBA Time and TimerEvent Services.
- .
- The cosTransactions application is an Erlang implementation of
- the OMG CORBA Transaction Service.
-
-
 Package: erlang-crypto
 Architecture: any
 Depends: ${erlang-base}, ${shlibs:Depends}, ${misc:Depends}
@@ -220,32 +189,6 @@ Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe (<< ${binary:Version}), erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP module for unit testing
  The EUnit application contains modules with support for unit testing.
-
-
-Package: erlang-ic
-Architecture: any
-Depends: ${erlang-base}, ${misc:Depends}
-Suggests: erlang-ic-java, erlang, erlang-manpages, erlang-doc
-Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe (<< ${binary:Version}), erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
-Description: Erlang/OTP IDL compiler
- The IC application is an Erlang implementation of an IDL (CORBA Interface
- Definition Language) compiler. Depending on the choice of back-end the
- code will map to Erlang, C, or Java. The compiler generates client stubs
- and server skeletons.
-
-
-Package: erlang-ic-java
-Architecture: all
-Depends: erlang-jinterface, erlang-ic (>= ${binary:Version}), erlang-ic (<< ${binary:Version}.0), ${misc:Depends}
-Suggests: erlang, erlang-manpages, erlang-doc
-Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe (<< ${binary:Version}), erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
-Description: Erlang/OTP IDL compiler (Java classes)
- The IC application is an Erlang implementation of an IDL (CORBA Interface
- Definition Language) compiler. Depending on the choice of back-end the
- code will map to Erlang, C, or Java. The compiler generates client stubs
- and server skeletons.
- .
- This package includes classes for Java-Erlang communication.
 
 
 Package: erlang-inets
@@ -518,9 +461,9 @@ Description: Erlang major editing mode for Emacs
 
 Package: erlang-nox
 Architecture: all
-Depends: erlang-base | erlang-base-hipe, erlang-asn1, erlang-corba, erlang-crypto,
+Depends: erlang-base | erlang-base-hipe, erlang-asn1, erlang-crypto,
  erlang-diameter, erlang-edoc, erlang-eldap, erlang-erl-docgen, erlang-eunit,
- erlang-ic, erlang-inets, erlang-mnesia, erlang-odbc, erlang-os-mon,
+ erlang-inets, erlang-mnesia, erlang-odbc, erlang-os-mon,
  erlang-parsetools, erlang-public-key, erlang-runtime-tools,
  erlang-snmp, erlang-ssh, erlang-ssl, erlang-syntax-tools, erlang-tools,
  erlang-xmerl, ${misc:Depends}
@@ -547,15 +490,15 @@ Description: Erlang/OTP applications that require X Window System
 Package: erlang
 Architecture: all
 Depends: erlang-base | erlang-base-hipe, erlang-dev, erlang-asn1,
- erlang-common-test, erlang-corba, erlang-crypto, erlang-debugger,
+ erlang-common-test, erlang-crypto, erlang-debugger,
  erlang-dialyzer, erlang-diameter, erlang-edoc, erlang-eldap,
- erlang-erl-docgen, erlang-et, erlang-eunit, erlang-ic, erlang-inets,
+ erlang-erl-docgen, erlang-et, erlang-eunit, erlang-inets,
  erlang-megaco, erlang-mnesia, erlang-observer, erlang-odbc,
  erlang-os-mon, erlang-parsetools,
  erlang-public-key, erlang-reltool, erlang-runtime-tools, erlang-snmp,
  erlang-ssh, erlang-ssl, erlang-syntax-tools,
  erlang-tools, erlang-wx, erlang-xmerl, ${misc:Depends}
-Recommends: erlang-jinterface, erlang-ic-java, erlang-mode, erlang-src,
+Recommends: erlang-jinterface, erlang-mode, erlang-src,
  erlang-examples
 Suggests: erlang-manpages, erlang-doc
 Description: Concurrent, real-time, distributed functional language
