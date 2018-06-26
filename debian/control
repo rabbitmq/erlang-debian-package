@@ -4,7 +4,7 @@ Uploaders: Sergei Golovan <sgolovan@debian.org>
 Section: interpreters
 Priority: optional
 Standards-Version: 3.9.8
-Build-Depends: debhelper (>= 8.0.0), autoconf (>= 2.50), openssl, libssl1.0-dev, m4,
+Build-Depends: debhelper (>= 8.0.0), autoconf (>= 2.50), openssl, libssl-dev, m4,
  libncurses5-dev, autotools-dev, unixodbc-dev, bison, flex, ed,
  libwxgtk3.0-dev, dctrl-tools, xsltproc,
  libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev,
