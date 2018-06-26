@@ -35,8 +35,6 @@ cd ${ELCDIR}
 ln -sf ${ELDIR}/*.el .
 if [ ${FLAVOR} = emacs21 -o ${FLAVORTEST} = xemacs ]; then
     rm -f erlang-flymake.el
-    rm -f erlang-edoc.el
-    rm -f erldoc.el
 fi
 
 FILES=`echo *.el`

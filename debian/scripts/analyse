@@ -56,10 +56,10 @@ find $DIR -type f | \
     cut -c 20- >> debian/erlang-dev.install
 
 PACKAGES='asn1 common-test corba crypto debugger dialyzer diameter
-	  edoc eldap erl-docgen et eunit ic-java ic inets jinterface megaco mnesia
-	  observer odbc os-mon parsetools public-key reltool
+	  edoc eldap erl-docgen et eunit gs ic-java ic inets jinterface megaco mnesia
+	  observer odbc os-mon parsetools percept public-key reltool
 	  runtime-tools snmp ssh ssl syntax-tools tools
-	  wx xmerl'
+	  typer wx xmerl'
 
 CMD='grep -v -E -e ./usr/lib/erlang/usr/include |
      grep -v -E -f debian/patterns/erlang-base.patterns |

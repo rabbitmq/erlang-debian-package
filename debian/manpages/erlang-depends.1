@@ -125,7 +125,7 @@
 .\" ========================================================================
 .\"
 .IX Title "ERLANG-DEPENDS 1"
-.TH ERLANG-DEPENDS 1 "2017\-07\-02" "1:20.0+dfsg\-1" "Erlang packages for Debian GNU/Linux"
+.TH ERLANG-DEPENDS 1 "2016\-09\-03" "1:19.0.5\-dfsg\-2" "Erlang packages for Debian GNU/Linux"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -163,6 +163,7 @@ ${erlang\-edoc:Depends},
 ${erlang\-eldap:Depends},
 ${erlang\-et:Depends},
 ${erlang\-eunit:Depends},
+${erlang\-gs:Depends},
 ${erlang\-ic:Depends},
 ${erlang\-inets:Depends},
 ${erlang\-megaco:Depends},
@@ -171,6 +172,7 @@ ${erlang\-observer:Depends},
 ${erlang\-odbc:Depends},
 ${erlang\-os-mon:Depends},
 ${erlang\-parsetools:Depends},
+${erlang\-percept:Depends},
 ${erlang\-public-key:Depends},
 ${erlang\-reltool:Depends},
 ${erlang\-runtime-tools:Depends},
@@ -179,6 +181,7 @@ ${erlang\-ssh:Depends},
 ${erlang\-ssl:Depends},
 ${erlang\-syntax-tools:Depends},
 ${erlang\-tools:Depends},
+${erlang\-typer:Depends},
 ${erlang\-wx:Depends},
 ${erlang\-xmerl:Depends}.
 .PP
@@ -213,10 +216,6 @@ Erlang distribution.
 Variable ${erlang\-test\-server:Depends} was dropped in version 1:19.0.5+dfsg\-2
 of erlang\-dev package because the test_server application was removed from the
 Erlang distribution.
-.PP
-Variables ${erlang\-gs:Depends}, ${erlang\-percept:Depends}, ${erlang\-typer:Depends}
-were dropped in version 1:20.0\-dfsg\-1 of erlang\-dev package because the
-gs, percept and type applications were removed from the Erlang distribution.
 .PP
 For compatibility with older versions the variables
 ${erlang\-nox:Depends} and ${erlang\-x11:Depends} also work (even since the

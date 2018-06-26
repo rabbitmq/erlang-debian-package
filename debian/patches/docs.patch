@@ -25,7 +25,7 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
  
 --- a/lib/megaco/doc/src/Makefile
 +++ b/lib/megaco/doc/src/Makefile
-@@ -158,8 +158,6 @@
+@@ -170,8 +170,6 @@
  	$(INSTALL_DATA) $(INFO_FILE) "$(RELSYSDIR)"
  	$(INSTALL_DIR) "$(RELEASE_PATH)/man/man3"
  	$(INSTALL_DATA) $(MAN3DIR)/* "$(RELEASE_PATH)/man/man3"
@@ -36,7 +36,7 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
  
 --- a/lib/stdlib/doc/src/re.xml
 +++ b/lib/stdlib/doc/src/re.xml
-@@ -594,7 +594,7 @@
+@@ -573,7 +573,7 @@
                to match before it. Setting this without <c>multiline</c> (at
                compile time) causes circumflex never to match. This option only
                affects the behavior of the circumflex metacharacter. It does not
@@ -45,7 +45,7 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
            </item>
            <tag><c>noteol</c></tag>
            <item>
-@@ -603,7 +603,7 @@
+@@ -582,7 +582,7 @@
                in multiline mode) a newline immediately before it. Setting this
                without <c>multiline</c> (at compile time) causes dollar never to
                match. This option affects only the behavior of the dollar

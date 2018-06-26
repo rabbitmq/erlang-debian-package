@@ -1,9 +1,9 @@
 #!/usr/bin/make -f
 
 #export DH_VERBOSE=1
-DEB_HOST_ARCH ?= $(shell dpkg-architecture -qDEB_HOST_ARCH)
-DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
-DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
+DEB_HOST_ARCH := $(shell dpkg-architecture -qDEB_HOST_ARCH)
+DEB_HOST_GNU_TYPE := $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
+DEB_BUILD_GNU_TYPE := $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
 ROOT_DIR=$(shell pwd)
 MAN_DIR = $(ROOT_DIR)/debian/erlang-docs/usr/lib/erlang/man
@@ -76,7 +76,7 @@ GEN_OPT_FLGS=-O2 -fno-strict-aliasing
 TYPE=
 endif
 
-JAVA_OPTIONS=-Xlint -source 1.8 -target 1.8
+JAVA_OPTIONS=-Xlint -source 1.7 -target 1.7
 
 JOBS=4
 
@@ -138,7 +138,7 @@ automake-stamp:
 	fi ; \
 	if [ $$err = 1 ] ; then \
 	    echo ; \
-	    echo Use uscan --download to get the upstream tarball. ; \
+	    echo Use get-orig-source target to get upstream tarball. ; \
 	    echo ; \
 	    false ; \
 	fi
@@ -454,7 +454,7 @@ binary-erlang-base: build-stamp
 	dh_link -a -Nerlang-base-hipe
 	dh_systemd_enable -a -Nerlang-base-hipe --no-enable
 	dh_systemd_start -a -Nerlang-base-hipe --no-start
-	dh_strip -a -Nerlang-base-hipe
+	dh_strip -a -Nerlang-base-hipe --dbg-package=erlang-dbg
 	dh_compress -a -Nerlang-base-hipe
 	dh_fixperms -a -Nerlang-base-hipe
 	dh_makeshlibs -a -Nerlang-base-hipe
@@ -501,8 +501,27 @@ binary-erlang-base-hipe: build-stamp
 
 binary: binary-indep binary-arch
 
+REL=19.2.1
+DEB_REL=$(REL)+dfsg
+
+get-orig-source:
+	CURDIR=`pwd` && TMPDIR=`mktemp -d /tmp/erlang.XXXXXX` && \
+	cd $$TMPDIR && \
+	wget -O - https://github.com/erlang/otp/archive/OTP-$(REL).tar.gz | tar -zx && \
+	(cd otp-OTP-$(REL) && \
+	 if ./otp_build save_bootstrap ; then \
+	    for f in `cat prebuilt.files` ; do rm -f $$f ; done \
+	 fi) && \
+	(cd otp-OTP-$(REL)/erts && autoheader) && \
+	(cd otp-OTP-$(REL)/lib/erl_interface && autoheader) && \
+	rm -rvf otp-OTP-$(REL)/lib/*/doc/standard/ && \
+	rm -rvf otp-OTP-$(REL)/lib/*/doc/archive/ && \
+	rm -rvf otp-OTP-$(REL)/lib/common_test/priv/*.js && \
+	tar -Jcf $$CURDIR/erlang_$(DEB_REL).orig.tar.xz otp-OTP-$(REL) && \
+	rm -rf $$TMPDIR
+
 .PHONY: clean automake install build build-arch build-indep
-.PHONY: binary binary-arch binary-indep
+.PHONY: binary binary-arch binary-indep get-orig-source
 .PHONY: configure-stnd build-stnd install-stnd docs manpages
 .PHONY: configure-hipe build-hipe install-hipe
 .PHONY: binary-erlang-base binary-erlang-base-hipe

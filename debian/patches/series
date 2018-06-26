@@ -10,5 +10,5 @@ javascript.patch
 wx3.0-constants.patch
 beamload.patch
 x32.patch
-xemacs.patch
-atomsfontlock.patch
+cve-2016-10253.patch
+cve-2017-1000385.patch

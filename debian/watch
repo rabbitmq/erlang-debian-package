@@ -1,9 +1,7 @@
 # Watch control file for uscan
 
-version=4
+# Compulsory line, this is a version 3 file
+version=3
 
-opts="dversionmangle=s/\+dfsg\d*$//;s/~/-/, \
-  oversionmangle=s/-/~/;s/$/+dfsg/, \
-  repack, compression=xz" \
-  https://github.com/erlang/otp/releases \
-  /erlang/otp/archive/OTP-(.+).tar.gz
+opts=dversionmangle=s/-dfsg\d*$// \
+  http://www.erlang.org/download/otp_src_([.\d]+).tar.gz

@@ -1,13 +1,13 @@
 sparc.patch by Jurij Smakov <jurij@wooyd.org>
 
 (1) Defines ARCH=ultrasparc for any sparc* architecture. This allows
-    one to build HiPE enabled package for sparc in Debian.
+    to build HiPE enabled package for sparc in Debian.
 
 (2) Fixes FTBFS(see http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=328031).
 
 --- a/erts/configure.in
 +++ b/erts/configure.in
-@@ -615,7 +615,7 @@
+@@ -608,7 +608,7 @@
  fi
  
  case $chk_arch_ in
@@ -18,7 +18,7 @@ sparc.patch by Jurij Smakov <jurij@wooyd.org>
      i86pc)	ARCH=x86;;
 --- a/erts/emulator/beam/beam_emu.c
 +++ b/erts/emulator/beam/beam_emu.c
-@@ -1105,19 +1105,11 @@
+@@ -1086,19 +1086,11 @@
   * in registers.
   */
  
