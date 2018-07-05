@@ -50,10 +50,8 @@ endif
 USE_CLOCK_GETTIME := $(shell echo ${DEB_HOST_ARCH} | egrep -c "bsd|hurd" | sed -es/1/no/ -es/0/yes/)
 ifeq ($(USE_CLOCK_GETTIME), no)
 CLOCK_GETTIME_OPT=
-SYSTEMD_OPT=
 else
 CLOCK_GETTIME_OPT=--enable-clock-gettime
-SYSTEMD_OPT=--enable-systemd
 endif
 
 # Temporary (until #475459 is fixed) disabling threads for sparc architecture
@@ -187,7 +185,6 @@ configure-hipe-stamp: automake-stamp
 		    $(THREAD_OPTS) \
 		    --enable-hipe \
 		    $(KERNEL_POLL_OPT) \
-		    $(SYSTEMD_OPT) \
 		    --enable-sctp \
 		    $(CLOCK_GETTIME_OPT) \
 		    --enable-dynamic-ssl-lib \
@@ -219,7 +216,6 @@ configure-stnd-stamp: automake-stamp
 		    $(THREAD_OPTS) \
 		    --disable-hipe \
 		    $(KERNEL_POLL_OPT) \
-		    $(SYSTEMD_OPT) \
 		    --enable-sctp \
 		    $(CLOCK_GETTIME_OPT) \
 		    --enable-dynamic-ssl-lib \
@@ -285,13 +281,6 @@ define do-install
 		    $(INSTALL_DIR)/usr/lib/erlang/lib/hipe-$(HIPE_VSN)/$${subdir} ; \
 	    fi ; \
 	done
-
-	# Install systemd units for epmd
-	if [ "$(USE_CLOCK_GETTIME)" = "yes" ] ; then \
-	    install -m 755 -d $(INSTALL_DIR)/lib/systemd/system ; \
-	    install -m 644 debian/epmd.service $(INSTALL_DIR)/lib/systemd/system ; \
-	    install -m 644 debian/epmd.socket $(INSTALL_DIR)/lib/systemd/system ; \
-	fi
 endef
 
 # manpages builds section 1 manual pages
@@ -452,8 +441,6 @@ binary-erlang-base: build-stamp
 	dh_installman -a -Nerlang-base-hipe
 	dh_installmenu -a -Nerlang-base-hipe
 	dh_link -a -Nerlang-base-hipe
-	dh_systemd_enable -a -Nerlang-base-hipe --no-enable
-	dh_systemd_start -a -Nerlang-base-hipe --no-start
 	dh_strip -a -Nerlang-base-hipe
 	dh_compress -a -Nerlang-base-hipe
 	dh_fixperms -a -Nerlang-base-hipe
@@ -486,8 +473,6 @@ binary-erlang-base-hipe: build-stamp
 	dh_installman -perlang-base-hipe
 	dh_installmenu -perlang-base-hipe
 	dh_link -perlang-base-hipe
-	dh_systemd_enable -perlang-base-hipe --no-enable
-	dh_systemd_start -perlang-base-hipe --no-start
 	dh_strip -perlang-base-hipe
 	dh_compress -perlang-base-hipe
 	dh_fixperms -perlang-base-hipe
