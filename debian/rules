@@ -76,7 +76,7 @@ GEN_OPT_FLGS=-O2 -fno-strict-aliasing
 TYPE=
 endif
 
-JAVA_OPTIONS=-Xlint -source 1.7 -target 1.7
+JAVA_OPTIONS=-Xlint -source 1.8 -target 1.8
 
 JOBS=4
 
