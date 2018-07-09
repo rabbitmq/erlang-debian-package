@@ -1,3 +1,9 @@
+erlang (1:19.3.6.9-2) unstable; urgency=medium
+
+  * Align package revision with Debian Stretch.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Tue, 26 Jun 2018 12:22:02 +0200
+
 erlang (1:19.3.6.9-1) unstable; urgency=medium
 
   * New upstream release.
