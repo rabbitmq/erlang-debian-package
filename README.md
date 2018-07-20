@@ -4,7 +4,7 @@ This repository contains release automation files for Debian and Ubuntu packages
 maintained by the RabbitMQ team.
 
 This work is based on the [official Erlang/OTP package for Debian](https://salsa.debian.org/erlang-team/packages/erlang).
-The RabbitMQ team adapted the upstream package to produce packages for many
+The RabbitMQ team adapted the upstream package to produce packages for more/different
 combinations of Erlang/OTP, Debian and Ubuntu releases.
 
 
@@ -215,7 +215,7 @@ called `esl-erlang`.
 
 This repository doesn't provide such packages.
 
-## How Packages are Produced
+## How the Packages are Produced
 
 Team RabbitMQ maintains a [public Concourse pipeline](https://ci.rabbitmq.com/teams/main/pipelines/erlang-debian-package)
 that automates the build process for all versions of Erlang/OTP and all
