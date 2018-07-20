@@ -13,10 +13,10 @@ combinations of Erlang/OTP, Debian and Ubuntu releases.
 Packages are published to the [RabbitMQ Debian repositories on Bintray](https://bintray.com/rabbitmq/debian). The following
 distributions are currently supported:
 
-*   Ubuntu 18.04 (Bionic)
-*   Ubuntu 16.04 (Xenial)
-*   Debian Stretch
-*   Debian Jessie
+ * Ubuntu 18.04 (Bionic)
+ * Ubuntu 16.04 (Xenial)
+ * Debian Stretch
+ * Debian Jessie
 
 For each distribution, the following release series of Erlang/OTP are packaged:
 
