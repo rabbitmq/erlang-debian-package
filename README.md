@@ -97,6 +97,23 @@ deb http://dl.bintray.com/rabbitmq/debian bionic erlang-20.x
 `erlang-21.x`, `erlang-19.x`, and `erlang-16.x` are the components for Erlang 21.x,
 19.x and R16B03, respectively.
 
+
+### Installing Packages
+
+After updating the list of `apt` sources it is necessary to run `apt-get update`:
+
+```sh
+sudo apt-get update
+```
+
+Then packages can be installed just like with the standard Debian repositories:
+
+```sh
+# or "erlang"
+sudo apt-get install erlang-nox
+```
+
+
 ### Erlang Master Packages
 
 Packages from the `master` branch of the Erland/OTP Git repository are also produced.
