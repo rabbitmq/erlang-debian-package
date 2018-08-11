@@ -1,3 +1,9 @@
+erlang (1:19.3.6.10-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Sat, 11 Aug 2018 13:49:55 +0000
+
 erlang (1:19.3.6.9-2) unstable; urgency=medium
 
   * Remove patch `cve-2017-1000385.patch` which was applied upstream.
