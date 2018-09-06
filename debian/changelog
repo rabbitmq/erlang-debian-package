@@ -88,6 +88,12 @@ erlang (1:21.0.8-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 12:23:31 +0000
 
+erlang (1:21.0.8+dfsg-1~exp1) experimental; urgency=medium
+
+  * New upstream bugfix release (upload to experimental).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 06 Sep 2018 15:34:25 +0300
+
 erlang (1:21.0.7-1) unstable; urgency=medium
 
   * New upstream release.
