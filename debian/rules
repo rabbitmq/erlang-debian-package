@@ -426,7 +426,7 @@ binary-indep: build-stamp docs-stamp
 	dh_shlibdeps -i
 	dh_gencontrol -i
 	dh_md5sums -i
-	dh_builddeb -i -- -Z xz
+	dh_builddeb -i
 
 binary-arch: $(BINARY_TARGETS)
 
@@ -465,7 +465,7 @@ binary-erlang-base: build-stamp
 	dh_gencontrol -a -Nerlang-base -Nerlang-base-hipe -- \
 		-Verlang-base='$(ERLANGBASE)'
 	dh_md5sums -a -Nerlang-base-hipe
-	dh_builddeb -a -Nerlang-base-hipe -- -Z xz
+	dh_builddeb -a -Nerlang-base-hipe
 
 binary-erlang-base-hipe: build-stamp
 	dh_testdir
@@ -497,7 +497,7 @@ binary-erlang-base-hipe: build-stamp
 	dh_gencontrol -perlang-base-hipe -- \
 		-Vlibsctp:Version='$(LIBSCTPDEP)'
 	dh_md5sums -perlang-base-hipe
-	dh_builddeb -perlang-base-hipe -- -Z xz
+	dh_builddeb -perlang-base-hipe
 
 binary: binary-indep binary-arch
 

@@ -79,9 +79,20 @@ erlang (1:21.1-1) unstable; urgency=medium
 erlang (1:21.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
-  * Refresh patches.
+  * Changes from the experimental branch:
+    - Update debian/copyright.
+    - Refresh patches, remove a SPARC related one.
+    - Remove the erlang-corba, erlang-ic and erlang-ic-java packages since
+      they are no longer distributed upstream.
+    - Add the erlang-ftp and erlang-tftp packages since they are sptit out
+      from the inets upstream package and a treated as separate applications
+      from now on.
+    - Fix the binary packages interdependencies which have to be changes
+      because of adding and removing packages.
+  * Remove custom compression settings from the binary package creation
+    commands in debian/rules.
 
- -- Sergei Golovan <sgolovan@debian.org>  Thu, 27 Sep 2018 09:37:04 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 27 Sep 2018 11:52:05 +0300
 
 erlang (1:21.0.9-1) unstable; urgency=medium
 
@@ -95,24 +106,11 @@ erlang (1:21.0.8-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 12:23:31 +0000
 
-erlang (1:21.0.8+dfsg-1~exp1) experimental; urgency=medium
-
-  * New upstream bugfix release (upload to experimental).
-
- -- Sergei Golovan <sgolovan@debian.org>  Thu, 06 Sep 2018 15:34:25 +0300
-
 erlang (1:21.0.7-1) unstable; urgency=medium
 
   * New upstream release.
 
  -- RabbitMQ Team <info@rabbitmq.com>  Thu, 30 Aug 2018 14:09:22 +0000
-
-erlang (1:21.0.7+dfsg-1~exp1) experimental; urgency=medium
-
-  * New upstream bugfix release (upload to experimental).
-  * Bump standards version to 4.2.0.
-
- -- Sergei Golovan <sgolovan@debian.org>  Mon, 13 Aug 2018 18:35:41 +0300
 
 erlang (1:21.0.6-1) unstable; urgency=medium
 
@@ -132,26 +130,11 @@ erlang (1:21.0.4-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Thu, 26 Jul 2018 10:14:56 +0000
 
-erlang (1:21.0.4+dfsg-1~exp1) experimental; urgency=medium
-
-  * New upstream bugfix release (upload to experimental).
-  * Remove broken symlinks which were caused by incomplete removal of the
-    erlang-ic package (closes: #905045).
-
- -- Sergei Golovan <sgolovan@debian.org>  Wed, 01 Aug 2018 14:45:50 +0300
-
 erlang (1:21.0.3-1) unstable; urgency=medium
 
   * New upstream release.
 
  -- RabbitMQ Team <info@rabbitmq.com>  Fri, 13 Jul 2018 11:33:01 +0000
-
-erlang (1:21.0.3+dfsg-1~exp1) experimental; urgency=medium
-
-  * New upstream bugfix release (upload to experimental).
-  * Refresh patches.
-
- -- Sergei Golovan <sgolovan@debian.org>  Fri, 20 Jul 2018 11:58:23 +0300
 
 erlang (1:21.0.2-1) unstable; urgency=medium
 
@@ -159,23 +142,11 @@ erlang (1:21.0.2-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Wed, 04 Jul 2018 07:49:16 +0000
 
-erlang (1:21.0.2+dfsg-1~exp1) experimental; urgency=medium
-
-  * New upstream bugfix release (upload to experimental).
-
- -- Sergei Golovan <sgolovan@debian.org>  Wed, 04 Jul 2018 11:23:05 +0300
-
 erlang (1:21.0.1-1) unstable; urgency=medium
 
   * New upstream release.
 
  -- RabbitMQ Team <info@rabbitmq.com>  Tue, 26 Jun 2018 05:16:41 +0000
-
-erlang (1:21.0.1+dfsg-1~exp1) experimental; urgency=medium
-
-  * New upstream bugfix release (upload to experimental).
-
- -- Sergei Golovan <sgolovan@debian.org>  Tue, 26 Jun 2018 10:37:45 +0300
 
 erlang (1:21.0-1) unstable; urgency=medium
 
@@ -183,34 +154,36 @@ erlang (1:21.0-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Jun 2018 16:40:01 +0000
 
-erlang (1:21.0+dfsg-1~exp1) experimental; urgency=medium
+erlang (1:20.3.8.8+dfsg-1) unstable; urgency=medium
 
-  * New upstream major release (upload to experimental).
-  * Refresh patches.
+  * New upstream bugfix release.
 
- -- Sergei Golovan <sgolovan@debian.org>  Sat, 23 Jun 2018 14:24:23 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 04 Sep 2018 14:08:49 +0300
 
-erlang (1:21.0~rc2+dfsg-1) experimental; urgency=medium
+erlang (1:20.3.8.5+dfsg-1) unstable; urgency=medium
 
-  * New upstream release candidate (upload to experimental).
-  * Refresh patches.
+  * New upstream bugfix release.
+  * Bump standards version to 4.2.0.
 
- -- Sergei Golovan <sgolovan@debian.org>  Fri, 01 Jun 2018 09:57:25 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 13 Aug 2018 17:56:38 +0300
 
-erlang (1:21.0~rc1+dfsg-1) experimental; urgency=medium
+erlang (1:20.3.8.4+dfsg-1) unstable; urgency=medium
 
-  * New upstream release candidate (upload to experimental).
-  * Update debian/copyright.
-  * Refresh patches, remove a SPARC related one.
-  * Remove the erlang-corba, erlang-ic and erlang-ic-java packages since
-    they are no longer distributed upstream.
-  * Add the erlang-ftp and erlang-tftp packages since they are sptit out
-    from the inets upstream package and a treated as separate applications
-    from now on.
-  * Fix the binary packages interdependencies which have to be changes
-    because of adding and removing packages.
+  * New upstream bugfix release.
 
- -- Sergei Golovan <sgolovan@debian.org>  Thu, 03 May 2018 14:20:11 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 06 Aug 2018 12:31:42 +0300
+
+erlang (1:20.3.8.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 24 Jul 2018 11:10:48 +0300
+
+erlang (1:20.3.8.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 25 Jun 2018 16:41:56 +0300
 
 erlang (1:20.3.8+dfsg-1) unstable; urgency=medium
 
