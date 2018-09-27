@@ -25,7 +25,7 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
  
 --- a/lib/megaco/doc/src/Makefile
 +++ b/lib/megaco/doc/src/Makefile
-@@ -158,8 +158,6 @@
+@@ -159,8 +159,6 @@
  	$(INSTALL_DATA) $(INFO_FILE) "$(RELSYSDIR)"
  	$(INSTALL_DIR) "$(RELEASE_PATH)/man/man3"
  	$(INSTALL_DATA) $(MAN3DIR)/* "$(RELEASE_PATH)/man/man3"

@@ -8,7 +8,7 @@ Last-updated: Mon, 22 Feb 2010 10:34:34 +0300
 
 --- a/erts/configure.in
 +++ b/erts/configure.in
-@@ -2013,6 +2013,14 @@
+@@ -2014,6 +2014,14 @@
  AC_CHECK_DECLS([posix2time, time2posix],,,[#include <time.h>])
  
  disable_vfork=false
