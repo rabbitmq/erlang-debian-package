@@ -76,6 +76,14 @@ erlang (1:21.1-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Tue, 25 Sep 2018 06:49:47 +0000
 
+erlang (1:21.1+dfsg-2) unstable; urgency=medium
+
+  * Add 'Breaks: rabbitmq-server (<< 3.7.7)' to the debian/control file
+    because rabbitmq-server older than version 3.7.7 doesn't support
+    Erlang/OTP 21 (closes: #909941).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 08 Oct 2018 08:04:00 +0300
+
 erlang (1:21.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
