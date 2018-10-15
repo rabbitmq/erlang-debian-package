@@ -70,6 +70,14 @@ erlang (1:21.1.1-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Fri, 12 Oct 2018 16:01:17 +0000
 
+erlang (1:21.1.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+  * Add aupport for stopping/starting native systemd services in erlang-base
+    and erlang-base-hipe prerm and postinst maintainer scripts.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 16 Oct 2018 09:22:26 +0300
+
 erlang (1:21.1-1) unstable; urgency=medium
 
   * New upstream release.
