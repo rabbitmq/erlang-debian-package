@@ -17,8 +17,8 @@ install erlang-manpages (for manual pages) and/or erlang-doc
 
 Starting from version 1:21.1.1+dfsg-2 the erlang-base and erlang-base-hipe
 packages provide systemd socket and unit files for the epmd daemon, which
-are enabled by default. This make epmd to be executed owned by a separate user
-which is more secure in multi-user environment. (By default, the first
+are enabled by default. This causes the executed epmd to be owned by a separate
+user which is more secure in multi-user environment. (By default, the first
 distributed Erlang application starts the epmd daemon, and then it can kill
 it disrupting the other epmd clients.)
 

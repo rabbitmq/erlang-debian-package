@@ -74,9 +74,9 @@ erlang (1:21.1.1+dfsg-2) unstable; urgency=medium
 
   * Enable the epmd.socket and epmd.service units by default. Make the socket
     listen on the loopback interface only. Expand the section on how to
-    configure the socket options in README.Debian.
+    configure the socket options in README.Debian (closes: #709754).
 
- -- Sergei Golovan <sgolovan@debian.org>  Wed, 17 Oct 2018 10:23:43 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 19 Oct 2018 15:08:13 +0300
 
 erlang (1:21.1.1+dfsg-1) unstable; urgency=medium
 
