@@ -10,7 +10,7 @@ combinations of Erlang/OTP, Debian and Ubuntu releases.
 
 ## Supported Erlang/OTP and Debian/Ubuntu Combinations
 
-Packages are published to the [RabbitMQ Debian repositories on Bintray](https://bintray.com/rabbitmq/debian). The following
+Packages are published to a [Debian repository on Bintray](https://bintray.com/rabbitmq-erlang/debian). The following
 distributions are currently supported:
 
 *   Ubuntu 18.04 (Bionic)
@@ -49,7 +49,7 @@ pattern:
 
 ```
 # See below for supported distribution and component values
-deb https://dl.bintray.com/rabbitmq/debian $distribution $component
+deb https://dl.bintray.com/rabbitmq-erlang/debian $distribution $component
 ```
 
 The next couple of sections discusses what distribution and component values
@@ -75,7 +75,7 @@ determines what Debian repository `component` will be configured.
 Consider the following repository file at `/etc/apt/sources.list.d/bintray.rabbitmq.list`:
 
 ```
-deb http://dl.bintray.com/rabbitmq/debian bionic erlang
+deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang
 ```
 
 It configures apt to install the most recent Erlang/OTP version available in the
@@ -84,14 +84,14 @@ repository and use packages for Ubuntu 18.04 (Bionic).
 For Debian Stretch the file would look like this:
 
 ```
-deb http://dl.bintray.com/rabbitmq/debian stretch erlang
+deb http://dl.bintray.com/rabbitmq-erlang/debian stretch erlang
 ```
 
 To use the most recent `20.x` patch release available, switch the component
 to `erlang-20.x`:
 
 ```
-deb http://dl.bintray.com/rabbitmq/debian bionic erlang-20.x
+deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-20.x
 ```
 
 `erlang-21.x`, `erlang-19.x`, and `erlang-16.x` are the components for Erlang 21.x,
@@ -120,7 +120,7 @@ Packages from the `master` branch of the Erland/OTP Git repository are also prod
 To get them, specify `erlang-22.x` for source component:
 
 ```
-deb http://dl.bintray.com/rabbitmq/debian bionic erlang-22.x
+deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-22.x
 ```
 
 Only a few most recent commits are kept in the repository, so older versions usually
