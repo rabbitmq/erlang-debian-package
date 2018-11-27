@@ -1,3 +1,10 @@
+erlang (1:19.3.6.12-3) unstable; urgency=medium
+
+  * The goal is to retrigger the package build so that Bintray signs the
+    repository. There is no other changes compared to 1:19.3.6.12-1.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Tue, 27 Nov 2018 16:56:27 +0100
+
 erlang (1:19.3.6.12-2) unstable; urgency=medium
 
   * The goal is to retrigger the package build so a package is published to
