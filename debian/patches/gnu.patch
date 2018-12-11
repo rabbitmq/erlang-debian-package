@@ -22,7 +22,7 @@ Author: Pino Toscano <pino@debian.org>
      win32)
  	# The ethread library requires _WIN32_WINNT of at least 0x0403.
  	# -D_WIN32_WINNT=* from CPPFLAGS is saved in ETHR_DEFS.
-@@ -1198,7 +1198,7 @@
+@@ -1209,7 +1209,7 @@
  fi
  
  case $host_os in
@@ -83,7 +83,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -4805,6 +4805,11 @@
+@@ -4821,6 +4821,11 @@
      *x = addr;
      return 0;
  }

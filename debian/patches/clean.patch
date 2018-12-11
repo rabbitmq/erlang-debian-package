@@ -5,7 +5,7 @@ a hack to remove them.
 
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -1109,6 +1109,7 @@
+@@ -1115,6 +1115,7 @@
  	rm -f *~ *.bak config.log config.status prebuilt.files ibin/*
  	cd erts && ERL_TOP=$(ERL_TOP) $(MAKE) clean
  	cd lib  && ERL_TOP=$(ERL_TOP) $(MAKE) clean BUILD_ALL=true
@@ -13,7 +13,7 @@ a hack to remove them.
  
  distclean: clean
  	find . -type f -name SKIP              -print | xargs $(RM)
-@@ -1150,3 +1151,205 @@
+@@ -1156,3 +1157,205 @@
  		|| $(MAKE) BOOTSTRAP_ROOT=$(BOOTSTRAP_ROOT) bootstrap_root_clean
  
  # ----------------------------------------------------------------------
