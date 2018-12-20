@@ -46,6 +46,13 @@ erlang (1:21.2-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Tue, 11 Dec 2018 11:13:06 +0000
 
+erlang (1:21.2+dfsg-2) unstable; urgency=medium
+
+  * Do not install Erlang mode for XEmacs since it isn't supposed to work
+    with it (closes: #909387).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 20 Dec 2018 11:01:02 +0300
+
 erlang (1:21.2+dfsg-1) unstable; urgency=medium
 
   * New upstream bugfix release.
