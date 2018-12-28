@@ -3,7 +3,6 @@ Description=Erlang Port Mapper Daemon Activation Socket
 
 [Socket]
 ListenStream=4369
-BindToDevice=lo
 BindIPv6Only=both
 Accept=false
 

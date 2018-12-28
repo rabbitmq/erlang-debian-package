@@ -15,7 +15,7 @@ install erlang-manpages (for manual pages) and/or erlang-doc
 
 ----------------
 
-Starting from version 1:21.1.1+dfsg-2 the erlang-base and erlang-base-hipe
+Starting from version 1:21.2.2+dfsg-1 the erlang-base and erlang-base-hipe
 packages provide systemd socket and unit files for the epmd daemon, which
 are enabled by default. This causes the executed epmd to be owned by a separate
 user which is more secure in multi-user environment. (By default, the first
@@ -27,8 +27,8 @@ To start/stop epmd execute
 systemctl start epmd.socket
 systemctl stop epmd.socket
 
-respectively. Notice, that they bind to the loopback network interface only,
-so if you want to use Erlang distributed across different computers, you'd have
+respectively. Notice, that they bind to all the network interfaces,
+so if you want to restrict the Erlang distribution for localhost only, you'd have
 to edit the socket unit file. Execute
 
 systemctl edit epmd.socket
@@ -36,13 +36,15 @@ systemctl edit epmd.socket
 and then put the following lines into the opened editor:
 
 [Socket]
-BindToDevice=
+BindToDevice=lo
 
 Then reload the systemd daemon:
 
 systemctl daemon-reload
 
-and start epmd.socket. After that epmd will listen on all network interfaces.
+and start epmd.socket. After that epmd will listen on loopback only.
+
+Alternatively, you could use a firewall to block unwanted connections to epmd.
 
 If you never plan to use distributed Erlang, you can disable or even mask the
 epmd units, e.g.
@@ -56,4 +58,4 @@ systemctl mask epmd.socket
 In the former case another service like ejabberd might enable the socket by
 dependency.
 
- -- Sergei Golovan <sgolovan@debian.org>  Wed, 17 Oct 2018 10:05:59 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 28 Dec 2018 15:46:09 +0300
