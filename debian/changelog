@@ -39,10 +39,12 @@ erlang (1:21.2.2+dfsg-1) unstable; urgency=medium
   * New upstream bugfix release.
   * Reconfigure the epmd.socket unit to listen on all network interfaces.
     Listening on loopback only breaks RabbitMQ and other applications
-    which depend on Erlang clustering abilities (closes: 911927).
-  * Fix crashes of erlang-depends on empty substvar files (closes: 911789).
+    which depend on Erlang clustering abilities (closes: #911927).
+  * Fix crashes of erlang-depends on empty substvar files (closes: #911789).
+  * Add erlang-base:native to the build dependencies for cross-building
+    (closes: #898744).
 
- -- Sergei Golovan <sgolovan@debian.org>  Fri, 28 Dec 2018 12:53:34 +0300
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 29 Dec 2018 00:41:13 +0300
 
 erlang (1:21.2.1-1) unstable; urgency=medium
 
