@@ -1,3 +1,9 @@
+erlang (1:19.3.6.13-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 11 Jan 2019 08:44:46 +0000
+
 erlang (1:19.3.6.12-3) unstable; urgency=medium
 
   * The goal is to retrigger the package build so that Bintray signs the
