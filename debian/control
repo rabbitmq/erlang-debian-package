@@ -3,7 +3,7 @@ Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
 Uploaders: Sergei Golovan <sgolovan@debian.org>
 Section: interpreters
 Priority: optional
-Standards-Version: 4.2.0
+Standards-Version: 4.3.0
 Build-Depends: debhelper (>= 10.0.0), autoconf (>= 2.50), openssl, libssl-dev, m4,
  libncurses5-dev, unixodbc-dev, bison, flex, ed,
  libwxgtk3.0-dev, dctrl-tools, xsltproc,
