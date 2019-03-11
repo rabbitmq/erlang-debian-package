@@ -1,4 +1,5 @@
 clean.patch
+clean-erl_docgen-priv.patch
 clean-xmerl-src.patch
 gnu.patch
 man.patch
