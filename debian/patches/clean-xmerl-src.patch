@@ -1,0 +1,14 @@
+Make sure `rm -f` is used to remove files, because they might not exist
+if they were not created yet or were already cleaned.
+
+--- a/lib/xmerl/src/Makefile
++++ b/lib/xmerl/src/Makefile
+@@ -27,6 +27,8 @@ include $(ERL_TOP)/make/$(TARGET)/otp.mk
+ include ../vsn.mk
+ VSN=$(XMERL_VSN)
+ 
++RM = rm -f
++
+ # ----------------------------------------------------
+ # Release directory specification
+ # ----------------------------------------------------
