@@ -426,7 +426,7 @@ binary-indep: build-stamp docs-stamp
 	dh_shlibdeps -i
 	dh_gencontrol -i
 	dh_md5sums -i
-	dh_builddeb -i -- -Z xz --no-uniform-compression
+	dh_builddeb -i
 
 binary-arch: $(BINARY_TARGETS)
 
@@ -452,8 +452,8 @@ binary-erlang-base: build-stamp
 	dh_installman -a -Nerlang-base-hipe
 	dh_installmenu -a -Nerlang-base-hipe
 	dh_link -a -Nerlang-base-hipe
-	dh_systemd_enable -a -Nerlang-base-hipe --no-enable
-	dh_systemd_start -a -Nerlang-base-hipe --no-start
+	dh_systemd_enable -a -Nerlang-base-hipe
+	dh_systemd_start -a -Nerlang-base-hipe
 	dh_strip -a -Nerlang-base-hipe
 	dh_compress -a -Nerlang-base-hipe
 	dh_fixperms -a -Nerlang-base-hipe
@@ -465,7 +465,7 @@ binary-erlang-base: build-stamp
 	dh_gencontrol -a -Nerlang-base -Nerlang-base-hipe -- \
 		-Verlang-base='$(ERLANGBASE)'
 	dh_md5sums -a -Nerlang-base-hipe
-	dh_builddeb -a -Nerlang-base-hipe -- -Z xz --no-uniform-compression
+	dh_builddeb -a -Nerlang-base-hipe
 
 binary-erlang-base-hipe: build-stamp
 	dh_testdir
@@ -486,8 +486,8 @@ binary-erlang-base-hipe: build-stamp
 	dh_installman -perlang-base-hipe
 	dh_installmenu -perlang-base-hipe
 	dh_link -perlang-base-hipe
-	dh_systemd_enable -perlang-base-hipe --no-enable
-	dh_systemd_start -perlang-base-hipe --no-start
+	dh_systemd_enable -perlang-base-hipe
+	dh_systemd_start -perlang-base-hipe
 	dh_strip -perlang-base-hipe
 	dh_compress -perlang-base-hipe
 	dh_fixperms -perlang-base-hipe
@@ -497,7 +497,7 @@ binary-erlang-base-hipe: build-stamp
 	dh_gencontrol -perlang-base-hipe -- \
 		-Vlibsctp:Version='$(LIBSCTPDEP)'
 	dh_md5sums -perlang-base-hipe
-	dh_builddeb -perlang-base-hipe -- -Z xz --no-uniform-compression
+	dh_builddeb -perlang-base-hipe
 
 binary: binary-indep binary-arch
 

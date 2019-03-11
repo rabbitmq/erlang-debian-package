@@ -4,19 +4,21 @@ This repository contains release automation files for Debian and Ubuntu packages
 maintained by the RabbitMQ team.
 
 This work is based on the [official Erlang/OTP package for Debian](https://salsa.debian.org/erlang-team/packages/erlang).
-The RabbitMQ team adapted the upstream package to produce packages for many
+The RabbitMQ team adapted the upstream package to produce packages for more/different
 combinations of Erlang/OTP, Debian and Ubuntu releases.
 
+Unlike Team RabbitMQ's [zero dependency Erlang/OTP RPM](https://github.com/rabbitmq/erlang-rpm), these packages
+are not monolithic and use the same dependency tree as the official Debian packages of Erlang.
 
 ## Supported Erlang/OTP and Debian/Ubuntu Combinations
 
 Packages are published to a [Debian repository on Bintray](https://bintray.com/rabbitmq-erlang/debian). The following
 distributions are currently supported:
 
-*   Ubuntu 18.04 (Bionic)
-*   Ubuntu 16.04 (Xenial)
-*   Debian Stretch
-*   Debian Jessie
+ * Ubuntu 18.04 (Bionic)
+ * Ubuntu 16.04 (Xenial)
+ * Debian Stretch
+ * Debian Jessie
 
 For each distribution, the following release series of Erlang/OTP are packaged:
 
@@ -215,7 +217,7 @@ called `esl-erlang`.
 
 This repository doesn't provide such packages.
 
-## How Packages are Produced
+## How the Packages are Produced
 
 Team RabbitMQ maintains a [public Concourse pipeline](https://ci.rabbitmq.com/teams/main/pipelines/erlang-debian-package)
 that automates the build process for all versions of Erlang/OTP and all

@@ -8,7 +8,7 @@ Last-updated: Sat, 13 Feb 2010 10:08:42 +0300
 
 --- a/erts/configure.in
 +++ b/erts/configure.in
-@@ -4857,7 +4857,8 @@
+@@ -4141,7 +4141,8 @@
    dnl Make sure it's at least JDK 1.6
    AC_CACHE_CHECK(for JDK version 1.6, 
       ac_cv_prog_javac_ver_1_6,

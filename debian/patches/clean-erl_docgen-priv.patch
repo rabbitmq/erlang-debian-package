@@ -1,0 +1,86 @@
+There is no file to clean in `priv`: `$(TARGET_FILES)` is undefined.
+
+Thus, do not try to cann rm(1) with an empty list of files. It worked
+before because `$(RM)` was set to `rm -f` and apparently, it accepts an
+empty arguments list.
+
+--- a/lib/erl_docgen/priv/bin/Makefile
++++ b/lib/erl_docgen/priv/bin/Makefile
+@@ -55,7 +55,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------
+--- a/lib/erl_docgen/priv/css/Makefile
++++ b/lib/erl_docgen/priv/css/Makefile
+@@ -56,7 +56,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------
+--- a/lib/erl_docgen/priv/dtd/Makefile
++++ b/lib/erl_docgen/priv/dtd/Makefile
+@@ -80,7 +80,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------
+--- a/lib/erl_docgen/priv/dtd_html_entities/Makefile
++++ b/lib/erl_docgen/priv/dtd_html_entities/Makefile
+@@ -54,7 +54,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------
+--- a/lib/erl_docgen/priv/dtd_man_entities/Makefile
++++ b/lib/erl_docgen/priv/dtd_man_entities/Makefile
+@@ -54,7 +54,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------
+--- a/lib/erl_docgen/priv/images/Makefile
++++ b/lib/erl_docgen/priv/images/Makefile
+@@ -57,7 +57,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------
+--- a/lib/erl_docgen/priv/js/flipmenu/Makefile
++++ b/lib/erl_docgen/priv/js/flipmenu/Makefile
+@@ -59,7 +59,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------
+--- a/lib/erl_docgen/priv/xsl/Makefile
++++ b/lib/erl_docgen/priv/xsl/Makefile
+@@ -61,7 +61,6 @@ debug opt:
+ docs:
+ 
+ clean:
+-	$(RM) $(TARGET_FILES)
+ 
+ 
+ # ----------------------------------------------------

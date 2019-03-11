@@ -342,7 +342,7 @@ delsubstvar(Verbosity, Package, Substvar) ->
 
 	    Len = string:len(StrData),
 	    StrData2 = case Len - string:rstr(StrData, "\n") of
-			    0 ->
+			    0 when Len > 0 ->
 				string:left(StrData, Len - 1);
 			    _ ->
 				StrData
@@ -406,7 +406,7 @@ addsubstvar(Verbosity, Package, Substvar, Dependency) ->
 
 	    Len = string:len(StrData),
 	    StrData2 = case Len - string:rstr(StrData, "\n") of
-			    0 ->
+			    0 when Len > 0 ->
 				string:left(StrData, Len - 1);
 			    _ ->
 				StrData

@@ -1,4 +1,6 @@
 clean.patch
+clean-erl_docgen-priv.patch
+clean-xmerl-src.patch
 gnu.patch
 man.patch
 emacs.patch
@@ -9,5 +11,4 @@ javascript.patch
 wx3.0-constants.patch
 beamload.patch
 x32.patch
-xemacs.patch
 atomsfontlock.patch
