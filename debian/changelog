@@ -1,3 +1,9 @@
+erlang (1:22.0~rc1.390-g10d1e62616-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 10:13:49 +0000
+
 erlang (1:22.0~rc1.388-g2a8b9385db-1) unstable; urgency=medium
 
   * New upstream release.
