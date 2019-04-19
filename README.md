@@ -17,8 +17,8 @@ distributions are currently supported:
 
  * Ubuntu 18.04 (Bionic)
  * Ubuntu 16.04 (Xenial)
+ * Debian Buster
  * Debian Stretch
- * Debian Jessie
 
 For each distribution, the following release series of Erlang/OTP are packaged:
 
@@ -65,8 +65,8 @@ from the Debian or Ubuntu release used:
 
  * `bionic` for Ubuntu 18.04
  * `xenial` for Ubuntu 16.04
+ * `buster` for Debian Buster
  * `stretch` for Debian Stretch
- * `jessie` for Debian Jessie
 
 ### Erlang/OTP Version
 
