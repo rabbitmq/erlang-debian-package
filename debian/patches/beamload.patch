@@ -5,7 +5,7 @@ Bugs-Debian: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=747593
 
 --- a/erts/emulator/Makefile.in
 +++ b/erts/emulator/Makefile.in
-@@ -681,6 +681,7 @@
+@@ -697,6 +697,7 @@
  COMMON_INCLUDES += -Ipcre -Ihipe
  COMMON_INCLUDES += -I../include -I../include/$(TARGET)
  COMMON_INCLUDES += -I../include/internal -I../include/internal/$(TARGET)

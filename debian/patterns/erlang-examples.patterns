@@ -2,10 +2,14 @@
 ./usr/lib/erlang/lib/diameter-.*/examples/
 ./usr/lib/erlang/lib/et-.*/examples/
 ./usr/lib/erlang/lib/eunit-.*/examples/
+./usr/lib/erlang/lib/gs-.*/examples/
+./usr/lib/erlang/lib/ic-.*/examples/
 ./usr/lib/erlang/lib/inets-.*/examples/
 ./usr/lib/erlang/lib/kernel-.*/examples/
 ./usr/lib/erlang/lib/megaco-.*/examples/
+./usr/lib/erlang/lib/mnemosyne-.*/examples/
 ./usr/lib/erlang/lib/mnesia-.*/examples/
+./usr/lib/erlang/lib/orber-.*/examples/
 ./usr/lib/erlang/lib/reltool-.*/examples/
 ./usr/lib/erlang/lib/snmp-.*/examples/
 ./usr/lib/erlang/lib/ssl-.*/examples/
