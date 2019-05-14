@@ -10,12 +10,9 @@ usr/lib/erlang/usr/include/erl_interface.h		usr/include/erl_interface.h
 usr/lib/erlang/usr/include/erl_memory_trace_parser.h	usr/include/erl_memory_trace_parser.h
 usr/lib/erlang/usr/include/erl_nif.h			usr/include/erl_nif.h
 usr/lib/erlang/usr/include/erl_nif_api_funcs.h		usr/include/erl_nif_api_funcs.h
-usr/lib/erlang/usr/include/erlang.idl			usr/include/erlang.idl
-usr/lib/erlang/usr/include/ic.h				usr/include/ic.h
 usr/lib/erlang/usr/lib/libei.a				usr/lib/libei.a
 usr/lib/erlang/usr/lib/libei_st.a			usr/lib/libei_st.a
 usr/lib/erlang/usr/lib/liberl_interface.a		usr/lib/liberl_interface.a
 usr/lib/erlang/usr/lib/liberl_interface_st.a		usr/lib/liberl_interface_st.a
 usr/lib/erlang/usr/lib/liberts.a			usr/lib/liberts.a
 usr/lib/erlang/usr/lib/liberts_r.a			usr/lib/liberts_r.a
-usr/lib/erlang/usr/lib/libic.a				usr/lib/libic.a

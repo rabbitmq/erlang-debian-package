@@ -3844,6 +3844,238 @@ erlang (1:22.0~121.g8de2daee2d-1) unstable; urgency=medium
 
  -- RabbitMQ Team <info@rabbitmq.com>  Thu, 05 Jul 2018 16:24:10 +0000
 
+erlang (1:21.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Tue, 12 Mar 2019 13:28:09 +0000
+
+erlang (1:21.2.7-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 16:06:04 +0000
+
+erlang (1:21.2.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 12:37:22 +0000
+
+erlang (1:21.2.6+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 18 Feb 2019 16:09:27 +0300
+
+erlang (1:21.2.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 14:07:40 +0000
+
+erlang (1:21.2.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 04 Feb 2019 17:43:49 +0300
+
+erlang (1:21.2.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 12:28:33 +0000
+
+erlang (1:21.2.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 25 Jan 2019 16:24:41 +0300
+
+erlang (1:21.2.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 10:53:10 +0000
+
+erlang (1:21.2.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+  * Bump standards version to 4.3.0.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 16 Jan 2019 14:07:16 +0300
+
+erlang (1:21.2.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 28 Dec 2018 09:28:25 +0000
+
+erlang (1:21.2.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+  * Reconfigure the epmd.socket unit to listen on all network interfaces.
+    Listening on loopback only breaks RabbitMQ and other applications
+    which depend on Erlang clustering abilities (closes: #911927).
+  * Fix crashes of erlang-depends on empty substvar files (closes: #911789).
+  * Add erlang-base:native to the build dependencies for cross-building
+    (closes: #898744).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 29 Dec 2018 00:41:13 +0300
+
+erlang (1:21.2.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 21 Dec 2018 14:35:50 +0000
+
+erlang (1:21.2.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 25 Dec 2018 10:58:50 +0300
+
+erlang (1:21.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Tue, 11 Dec 2018 11:13:06 +0000
+
+erlang (1:21.2+dfsg-2) unstable; urgency=medium
+
+  * Do not install Erlang mode for XEmacs since it isn't supposed to work
+    with it (closes: #909387).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 20 Dec 2018 11:01:02 +0300
+
+erlang (1:21.2+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Refresh patches.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 11 Dec 2018 17:45:08 +0300
+
+erlang (1:21.1.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 30 Nov 2018 09:38:43 +0000
+
+erlang (1:21.1.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+  * Refresh patches.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 10 Dec 2018 10:03:50 +0300
+
+erlang (1:21.1.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 23 Nov 2018 09:01:58 +0000
+
+erlang (1:21.1.2-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 16 Nov 2018 09:30:33 +0000
+
+erlang (1:21.1.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 12 Oct 2018 16:01:17 +0000
+
+erlang (1:21.1.1+dfsg-2) unstable; urgency=medium
+
+  * Enable the epmd.socket and epmd.service units by default. Make the socket
+    listen on the loopback interface only. Expand the section on how to
+    configure the socket options in README.Debian (closes: #709754).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 19 Oct 2018 15:08:13 +0300
+
+erlang (1:21.1.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+  * Add aupport for stopping/starting native systemd services in erlang-base
+    and erlang-base-hipe prerm and postinst maintainer scripts.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 16 Oct 2018 09:22:26 +0300
+
+erlang (1:21.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Tue, 25 Sep 2018 06:49:47 +0000
+
+erlang (1:21.1+dfsg-2) unstable; urgency=medium
+
+  * Add 'Breaks: rabbitmq-server (<< 3.7.7)' to the debian/control file
+    because rabbitmq-server older than version 3.7.7 doesn't support
+    Erlang/OTP 21 (closes: #909941).
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 08 Oct 2018 08:04:00 +0300
+
+erlang (1:21.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Changes from the experimental branch:
+    - Update debian/copyright.
+    - Refresh patches, remove a SPARC related one.
+    - Remove the erlang-corba, erlang-ic and erlang-ic-java packages since
+      they are no longer distributed upstream.
+    - Add the erlang-ftp and erlang-tftp packages since they are sptit out
+      from the inets upstream package and a treated as separate applications
+      from now on.
+    - Fix the binary packages interdependencies which have to be changes
+      because of adding and removing packages.
+  * Remove custom compression settings from the binary package creation
+    commands in debian/rules.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 27 Sep 2018 11:52:05 +0300
+
+erlang (1:21.0.9-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Wed, 12 Sep 2018 14:45:17 +0000
+
+erlang (1:21.0.8-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 12:23:31 +0000
+
+erlang (1:21.0.7-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Thu, 30 Aug 2018 14:09:22 +0000
+
+erlang (1:21.0.6-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Tue, 28 Aug 2018 03:25:41 +0000
+
+erlang (1:21.0.5-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Sat, 11 Aug 2018 14:09:25 +0000
+
+erlang (1:21.0.4-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Thu, 26 Jul 2018 10:14:56 +0000
+
+erlang (1:21.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Fri, 13 Jul 2018 11:33:01 +0000
+
 erlang (1:21.0.2-1) unstable; urgency=medium
 
   * New upstream release.
@@ -3861,6 +4093,37 @@ erlang (1:21.0-1) unstable; urgency=medium
   * New upstream release.
 
  -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Jun 2018 16:40:01 +0000
+
+erlang (1:20.3.8.8+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 04 Sep 2018 14:08:49 +0300
+
+erlang (1:20.3.8.5+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+  * Bump standards version to 4.2.0.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 13 Aug 2018 17:56:38 +0300
+
+erlang (1:20.3.8.4+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 06 Aug 2018 12:31:42 +0300
+
+erlang (1:20.3.8.3+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 24 Jul 2018 11:10:48 +0300
+
+erlang (1:20.3.8.1+dfsg-1) unstable; urgency=medium
+
+  * New upstream bugfix release.
+
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 25 Jun 2018 16:41:56 +0300
 
 erlang (1:20.3.8+dfsg-1) unstable; urgency=medium
 

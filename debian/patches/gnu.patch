@@ -13,7 +13,7 @@ Author: Pino Toscano <pino@debian.org>
 
 --- a/erts/configure.in
 +++ b/erts/configure.in
-@@ -401,7 +401,7 @@ dnl ---------------------------------------------------------------------
+@@ -451,7 +451,7 @@
  
  dnl NOTE: CPPFLAGS will be included in CFLAGS at the end
  case $host_os in
@@ -22,7 +22,7 @@ Author: Pino Toscano <pino@debian.org>
      win32)
  	# The ethread library requires _WIN32_WINNT of at least 0x0403.
  	# -D_WIN32_WINNT=* from CPPFLAGS is saved in ETHR_DEFS.
-@@ -1147,7 +1147,7 @@ if test "x$enable_lock_count" != "xno"; then
+@@ -1209,7 +1209,7 @@
  fi
  
  case $host_os in
@@ -65,7 +65,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -4605,6 +4605,11 @@
+@@ -4821,6 +4821,11 @@
      *x = addr;
      return 0;
  }
@@ -79,7 +79,7 @@ Author: Pino Toscano <pino@debian.org>
  
 --- a/erts/etc/common/erlexec.c
 +++ b/erts/etc/common/erlexec.c
-@@ -1584,7 +1584,7 @@
+@@ -1604,7 +1604,7 @@
      if (!bindir) {
  	/* Determine bindir from absolute path to executable */
  	char *p;
@@ -88,7 +88,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, argv[0], sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1598,7 +1598,7 @@
+@@ -1618,7 +1618,7 @@
      if (!rootdir) {
  	/* Determine rootdir from absolute path to bindir */
  	char *p;
@@ -99,7 +99,7 @@ Author: Pino Toscano <pino@debian.org>
  	
 --- a/erts/etc/common/escript.c
 +++ b/erts/etc/common/escript.c
-@@ -55,7 +55,7 @@
+@@ -47,7 +47,7 @@
  #  define IS_DIRSEP(c) ((c) == '/')
  #  define DIRSEPSTR "/"
  #  define PATHSEPSTR ":"
@@ -110,7 +110,7 @@ Author: Pino Toscano <pino@debian.org>
  
 --- a/erts/etc/unix/dyn_erl.c
 +++ b/erts/etc/unix/dyn_erl.c
-@@ -150,8 +150,8 @@
+@@ -144,8 +144,8 @@
  static char *
  find_prog(char *origpath)
  {
@@ -121,7 +121,7 @@ Author: Pino Toscano <pino@debian.org>
  
      strcpy(relpath, origpath);
  
-@@ -162,7 +162,7 @@
+@@ -156,7 +156,7 @@
          envpath = get_env("PATH");
          if (envpath) {
              /* Try to find the executable in the path */
@@ -130,7 +130,7 @@ Author: Pino Toscano <pino@debian.org>
              char *beg = envpath;
              char *end;
              int sz;
-@@ -276,7 +276,7 @@
+@@ -270,7 +270,7 @@
      /* List install dir and look for latest erts-vsn */
      DIR *dp;                    /* Pointer to directory structure. */
      struct dirent* dirp;        /* Pointer to directory entry.     */
@@ -139,7 +139,7 @@ Author: Pino Toscano <pino@debian.org>
  
      dp = opendir(erl_top);
      if (dp == NULL) {
-@@ -316,7 +316,7 @@
+@@ -310,7 +310,7 @@
  
      char *p;
      char *p2;
@@ -148,7 +148,7 @@ Author: Pino Toscano <pino@debian.org>
  
      strcpy(buffer, erlpath);
  
-@@ -359,9 +359,9 @@
+@@ -353,9 +353,9 @@
      char *p;
      char *abspath;
      char *bindir;            /* Location of executables. */
