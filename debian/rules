@@ -287,7 +287,7 @@ endef
 manpages: manpages-stamp
 manpages-stamp: $(INSTALL_RULE)
 	dh_testdir
-	target=$$(basename $$(find make -type d |grep /)) ; \
+	target=$$(basename $$(dirname $$(find make -name otp.mk))) ; \
 	PATH=$(ROOT_DIR)/bin:$$PATH ; \
 	for m in lib/diameter lib/snmp lib/dialyzer lib/erl_interface lib/common_test erts ; do \
 	    ${MAKE} -j ${JOBS} -C $$m/doc/src man ERL_TOP=$(ROOT_DIR) TARGET=$$target ; \
@@ -415,7 +415,7 @@ binary-indep: build-stamp docs-stamp
 	dh_shlibdeps -i
 	dh_gencontrol -i
 	dh_md5sums -i
-	dh_builddeb -i -- -Z xz
+	dh_builddeb -i
 
 binary-arch: $(BINARY_TARGETS)
 
@@ -452,7 +452,7 @@ binary-erlang-base: build-stamp
 	dh_gencontrol -a -Nerlang-base -Nerlang-base-hipe -- \
 		-Verlang-base='$(ERLANGBASE)'
 	dh_md5sums -a -Nerlang-base-hipe
-	dh_builddeb -a -Nerlang-base-hipe -- -Z xz
+	dh_builddeb -a -Nerlang-base-hipe
 
 binary-erlang-base-hipe: build-stamp
 	dh_testdir
@@ -482,7 +482,7 @@ binary-erlang-base-hipe: build-stamp
 	dh_gencontrol -perlang-base-hipe -- \
 		-Vlibsctp:Version='$(LIBSCTPDEP)'
 	dh_md5sums -perlang-base-hipe
-	dh_builddeb -perlang-base-hipe -- -Z xz
+	dh_builddeb -perlang-base-hipe
 
 binary: binary-indep binary-arch
 

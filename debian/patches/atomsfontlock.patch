@@ -7,7 +7,7 @@ Debian-Bug: https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=597248
 
 --- a/lib/tools/emacs/erlang.el
 +++ b/lib/tools/emacs/erlang.el
-@@ -1417,8 +1417,17 @@
+@@ -1441,8 +1441,17 @@
  
  (defun erlang-syntax-table-init ()
    (erlang-ensure-syntax-table-is-initialized)

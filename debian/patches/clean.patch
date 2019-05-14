@@ -5,7 +5,7 @@ a hack to remove them.
 
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -1101,6 +1101,7 @@
+@@ -1100,6 +1100,7 @@
  	rm -f *~ *.bak config.log config.status prebuilt.files ibin/*
  	cd erts && ERL_TOP=$(ERL_TOP) $(MAKE) clean
  	cd lib  && ERL_TOP=$(ERL_TOP) $(MAKE) clean BUILD_ALL=true
@@ -13,7 +13,7 @@ a hack to remove them.
  
  distclean: clean
  	find . -type f -name SKIP              -print | xargs $(RM)
-@@ -1142,3 +1143,205 @@
+@@ -1141,3 +1142,205 @@
  		|| $(MAKE) BOOTSTRAP_ROOT=$(BOOTSTRAP_ROOT) bootstrap_root_clean
  
  # ----------------------------------------------------------------------
@@ -183,23 +183,23 @@ a hack to remove them.
 +	rm -rf $(ERL_TOP)/make/$(TARGET)
 +	rm -rf $(ERL_TOP)/Makefile
 +	rm -rf $(ERL_TOP)/system/doc/html/applications.html
-+	rm -rf $(ERL_TOP)/system/doc/html/design_principles
-+	rm -rf $(ERL_TOP)/system/doc/html/efficiency_guide
-+	rm -rf $(ERL_TOP)/system/doc/html/embedded
-+	rm -rf $(ERL_TOP)/system/doc/html/getting_started
++	rm -rf $(ERL_TOP)/system/doc/html/design_principles/*
++	rm -rf $(ERL_TOP)/system/doc/html/efficiency_guide/*
++	rm -rf $(ERL_TOP)/system/doc/html/embedded/*
++	rm -rf $(ERL_TOP)/system/doc/html/getting_started/*
 +	rm -rf $(ERL_TOP)/system/doc/html/highlights.html
 +	rm -rf $(ERL_TOP)/system/doc/html/incompatible.html
 +	rm -rf $(ERL_TOP)/system/doc/html/index.html
-+	rm -rf $(ERL_TOP)/system/doc/html/installation_guide
-+	rm -rf $(ERL_TOP)/system/doc/html/js
++	rm -rf $(ERL_TOP)/system/doc/html/installation_guide/source/*
++	rm -rf $(ERL_TOP)/system/doc/html/js/*
 +	rm -rf $(ERL_TOP)/system/doc/html/man_index.html
-+	rm -rf $(ERL_TOP)/system/doc/html/oam
++	rm -rf $(ERL_TOP)/system/doc/html/oam/*
 +	rm -rf $(ERL_TOP)/system/doc/html/otp-system-documentation.eix
-+	rm -rf $(ERL_TOP)/system/doc/html/programming_examples
-+	rm -rf $(ERL_TOP)/system/doc/html/reference_manual
-+	rm -rf $(ERL_TOP)/system/doc/html/system_architecture_intro
-+	rm -rf $(ERL_TOP)/system/doc/html/system_principles
-+	rm -rf $(ERL_TOP)/system/doc/html/tutorial
++	rm -rf $(ERL_TOP)/system/doc/html/programming_examples/*
++	rm -rf $(ERL_TOP)/system/doc/html/reference_manual/*
++	rm -rf $(ERL_TOP)/system/doc/html/system_architecture_intro/*
++	rm -rf $(ERL_TOP)/system/doc/html/system_principles/*
++	rm -rf $(ERL_TOP)/system/doc/html/tutorial/*
 +	rm -rf $(ERL_TOP)/system/doc/installation_guide/INSTALL-CROSS.xml
 +	rm -rf $(ERL_TOP)/system/doc/installation_guide/INSTALL-WIN32.xml
 +	rm -rf $(ERL_TOP)/system/doc/installation_guide/INSTALL.xml

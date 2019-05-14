@@ -125,7 +125,7 @@
 .\" ========================================================================
 .\"
 .IX Title "ERLANG-DEPENDS 1"
-.TH ERLANG-DEPENDS 1 "2017\-07\-02" "1:20.0+dfsg\-1" "Erlang packages for Debian GNU/Linux"
+.TH ERLANG-DEPENDS 1 "2018\-05\-03" "1:21.0~rc1+dfsg\-1" "Erlang packages for Debian GNU/Linux"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -155,7 +155,6 @@ ${erlang\-base:Depends},
 ${erlang\-dev:Depends},
 ${erlang\-asn1:Depends},
 ${erlang\-common-test:Depends},
-${erlang\-corba:Depends},
 ${erlang\-crypto:Depends},
 ${erlang\-debugger:Depends},
 ${erlang\-dialyzer:Depends},
@@ -163,7 +162,7 @@ ${erlang\-edoc:Depends},
 ${erlang\-eldap:Depends},
 ${erlang\-et:Depends},
 ${erlang\-eunit:Depends},
-${erlang\-ic:Depends},
+${erlang\-ftp:Depends},
 ${erlang\-inets:Depends},
 ${erlang\-megaco:Depends},
 ${erlang\-mnesia:Depends},
@@ -178,6 +177,7 @@ ${erlang\-snmp:Depends},
 ${erlang\-ssh:Depends},
 ${erlang\-ssl:Depends},
 ${erlang\-syntax-tools:Depends},
+${erlang\-tftp:Depends},
 ${erlang\-tools:Depends},
 ${erlang\-wx:Depends},
 ${erlang\-xmerl:Depends}.
@@ -215,8 +215,17 @@ of erlang\-dev package because the test_server application was removed from the
 Erlang distribution.
 .PP
 Variables ${erlang\-gs:Depends}, ${erlang\-percept:Depends}, ${erlang\-typer:Depends}
-were dropped in version 1:20.0\-dfsg\-1 of erlang\-dev package because the
+were dropped in version 1:20.0+dfsg\-1 of erlang\-dev package because the
 gs, percept and type applications were removed from the Erlang distribution.
+.PP
+Variables ${erlang\-ftp:Depends} and ${erlang\-tftp:Depends} were added in
+version 1:21.0~rc1+dfsg\-1 of erlang\-dev package because the ftp and tftp
+applications were split out from inets and included to the Erlang distribution
+separately.
+.PP
+Variables ${erlang\-corba:Depends}, ${erlang\-ic:Depends}
+were dropped in version 1:21.0~rc1+dfsg\-1 of erlang\-dev package because the
+corba and ic applications were removed from the Erlang distribution.
 .PP
 For compatibility with older versions the variables
 ${erlang\-nox:Depends} and ${erlang\-x11:Depends} also work (even since the
