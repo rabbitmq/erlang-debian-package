@@ -100,14 +100,14 @@ For Debian Stretch the file would look like this:
 deb https://dl.bintray.com/rabbitmq-erlang/debian stretch erlang
 ```
 
-To use the most recent `20.x` patch release available, switch the component
-to `erlang-20.x`:
+To use the most recent `21.x` patch release available, switch the component
+to `erlang-21.x`:
 
 ```
-deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-20.x
+deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-21.x
 ```
 
-`erlang-21.x`, `erlang-19.x`, and `erlang-16.x` are the components for Erlang 21.x,
+`erlang-20.x`, `erlang-19.x`, and `erlang-16.x` are the components for Erlang 20.x,
 19.x and R16B03, respectively.
 
 
