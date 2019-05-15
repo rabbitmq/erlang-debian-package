@@ -83,6 +83,8 @@ Another is what Erlang/OTP release version should be provisioned. It is possible
 a specific series (e.g. `20.x`) or install the most recent version available. The choice
 determines what Debian repository `component` will be configured.
 
+It is possible to pin the package to a specific version. This will be covered below.
+
 Consider the following repository file at `/etc/apt/sources.list.d/bintray.rabbitmq.list`:
 
 ```
@@ -122,29 +124,12 @@ Then packages can be installed just like with the standard Debian repositories:
 ```sh
 # This is recommended. Metapackages such as erlang and erlang-nox must only be used
 # with apt version pinning. They do not pin their dependency versions.
-sudo apt-get install -y erlang-base-hipe \
+sudo apt-get install -y erlang-base \
                         erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
                         erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
                         erlang-runtime-tools erlang-snmp erlang-ssl \
                         erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
 ```
-
-
-### Erlang Master Packages
-
-Packages from the `master` branch of the Erland/OTP Git repository are also produced.
-To get them, specify `erlang-22.x` for source component:
-
-```
-deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-22.x
-```
-
-Only a few most recent commits are kept in the repository, so older versions usually
-become unavailable every day or few days depending on commit activity.
-
-Because of the rapid build churn and the fact that Erlang 22.x is currently under heavy
-development, such packages are only available via the `erlang-22.x` component and won't
-be considered by installations that target `erlang`.
 
 
 ### Package/Repository Pinning (Apt Preferences)
@@ -155,7 +140,7 @@ repositories that provide packages under the same name.
 
 To add insult to injury, meta-packages such as `erlang-nox` do not pin the version of their
 dependencies. It means that out-of-the-box, if for instance you
-install `erlang-nox` 1:16.b.3.1-1 on Debian Stretch, it may pull
+install `erlang-nox` 1:20.3.8.21-1 on Debian Stretch, it may pull
 `erlang-base` 1:19.2.1+dfsg-2+deb9u1 from the official Debian
 repository.
 
@@ -173,7 +158,7 @@ Pin-Priority: 1000
 After updating `apt` preferences it is necessary to run `apt-get update`:
 
 ```sh
-sudo apt-get update
+sudo apt-get update -y
 ```
 
 
