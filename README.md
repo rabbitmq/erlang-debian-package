@@ -17,28 +17,37 @@ distributions are currently supported:
 
  * Ubuntu 18.04 (Bionic)
  * Ubuntu 16.04 (Xenial)
+ * Debian Buster
  * Debian Stretch
- * Debian Jessie
 
 For each distribution, the following release series of Erlang/OTP are packaged:
 
- * `21.x` (the latest patch release)
+ * `22.x` (the latest patch release)
+ * `21.x` (ditto)
  * `20.x` (ditto)
  * `19.x` (ditto)
- * [Erlang master](https://github.com/erlang/otp) that will eventually become become Erlang 22.0 in the future.
+ * [Erlang master](https://github.com/erlang/otp)
  * `R16B03-1` (a single release)
 
 ## Apt Repository Setup
 
+### Enable apt HTTPS Transport
+
+In order for apt to be able to download Erlang packages from Bintray,
+the `apt-transport-https` package must be installed:
+
+```sh
+sudo apt-get install apt-transport-https
+```
+
 ### Signing Key
 
-In order to use the repository, add a key used to sign RabbitMQ releases to `apt-key`:
+For apt to be able to verify package signatures and trust them, add
+the [signing key used to sign RabbitMQ releases](https://www.rabbitmq.com/signatures.html) to `apt-key`:
 
 ```sh
 wget -O - 'https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc' | sudo apt-key add -
 ```
-
-This will instruct apt to trust packages signed by that key.
 
 ### Source List File
 
@@ -65,8 +74,8 @@ from the Debian or Ubuntu release used:
 
  * `bionic` for Ubuntu 18.04
  * `xenial` for Ubuntu 16.04
+ * `buster` for Debian Buster
  * `stretch` for Debian Stretch
- * `jessie` for Debian Jessie
 
 ### Erlang/OTP Version
 
@@ -74,10 +83,12 @@ Another is what Erlang/OTP release version should be provisioned. It is possible
 a specific series (e.g. `20.x`) or install the most recent version available. The choice
 determines what Debian repository `component` will be configured.
 
+It is possible to pin the package to a specific version. This will be covered below.
+
 Consider the following repository file at `/etc/apt/sources.list.d/bintray.rabbitmq.list`:
 
 ```
-deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang
+deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang
 ```
 
 It configures apt to install the most recent Erlang/OTP version available in the
@@ -86,17 +97,17 @@ repository and use packages for Ubuntu 18.04 (Bionic).
 For Debian Stretch the file would look like this:
 
 ```
-deb http://dl.bintray.com/rabbitmq-erlang/debian stretch erlang
+deb https://dl.bintray.com/rabbitmq-erlang/debian stretch erlang
 ```
 
-To use the most recent `20.x` patch release available, switch the component
-to `erlang-20.x`:
+To use the most recent `21.x` patch release available, switch the component
+to `erlang-21.x`:
 
 ```
-deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-20.x
+deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-21.x
 ```
 
-`erlang-21.x`, `erlang-19.x`, and `erlang-16.x` are the components for Erlang 21.x,
+`erlang-20.x`, `erlang-19.x`, and `erlang-16.x` are the components for Erlang 20.x,
 19.x and R16B03, respectively.
 
 
@@ -105,32 +116,20 @@ deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-20.x
 After updating the list of `apt` sources it is necessary to run `apt-get update`:
 
 ```sh
-sudo apt-get update
+sudo apt-get update -7
 ```
 
 Then packages can be installed just like with the standard Debian repositories:
 
 ```sh
-# or "erlang"
-sudo apt-get install erlang-nox
+# This is recommended. Metapackages such as erlang and erlang-nox must only be used
+# with apt version pinning. They do not pin their dependency versions.
+sudo apt-get install -y erlang-base \
+                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
+                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
+                        erlang-runtime-tools erlang-snmp erlang-ssl \
+                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
 ```
-
-
-### Erlang Master Packages
-
-Packages from the `master` branch of the Erland/OTP Git repository are also produced.
-To get them, specify `erlang-22.x` for source component:
-
-```
-deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-22.x
-```
-
-Only a few most recent commits are kept in the repository, so older versions usually
-become unavailable every day or few days depending on commit activity.
-
-Because of the rapid build churn and the fact that Erlang 22.x is currently under heavy
-development, such packages are only available via the `erlang-22.x` component and won't
-be considered by installations that target `erlang`.
 
 
 ### Package/Repository Pinning (Apt Preferences)
@@ -141,7 +140,7 @@ repositories that provide packages under the same name.
 
 To add insult to injury, meta-packages such as `erlang-nox` do not pin the version of their
 dependencies. It means that out-of-the-box, if for instance you
-install `erlang-nox` 1:16.b.3.1-1 on Debian Stretch, it may pull
+install `erlang-nox` 1:20.3.8.21-1 on Debian Stretch, it may pull
 `erlang-base` 1:19.2.1+dfsg-2+deb9u1 from the official Debian
 repository.
 
@@ -159,7 +158,7 @@ Pin-Priority: 1000
 After updating `apt` preferences it is necessary to run `apt-get update`:
 
 ```sh
-sudo apt-get update
+sudo apt-get update -y
 ```
 
 
