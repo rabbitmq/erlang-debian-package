@@ -298,7 +298,7 @@ endef
 manpages: manpages-stamp
 manpages-stamp: $(INSTALL_RULE)
 	dh_testdir
-	target=$$(basename $$(find make -type d |grep /)) ; \
+	target=$$(basename $$(dirname $$(find make -name otp.mk))) ; \
 	PATH=$(ROOT_DIR)/bin:$$PATH ; \
 	for m in lib/diameter lib/snmp lib/dialyzer lib/erl_interface lib/common_test erts ; do \
 	    ${MAKE} -j ${JOBS} -C $$m/doc/src man ERL_TOP=$(ROOT_DIR) TARGET=$$target ; \
