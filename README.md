@@ -24,9 +24,7 @@ For each distribution, the following release series of Erlang/OTP are packaged:
 
  * `21.x` (the latest patch release)
  * `20.x` (ditto)
- * `19.x` (ditto)
- * [Erlang master](https://github.com/erlang/otp) that will eventually become become Erlang 22.0 in the future.
- * `R16B03-1` (a single release)
+ * [Erlang master](https://github.com/erlang/otp)
 
 ## Apt Repository Setup
 
@@ -105,7 +103,7 @@ deb http://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-20.x
 After updating the list of `apt` sources it is necessary to run `apt-get update`:
 
 ```sh
-sudo apt-get update
+sudo apt-get update -y
 ```
 
 Then packages can be installed just like with the standard Debian repositories:
