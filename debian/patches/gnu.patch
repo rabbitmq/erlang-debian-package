@@ -22,7 +22,7 @@ Author: Pino Toscano <pino@debian.org>
      win32)
  	# The ethread library requires _WIN32_WINNT of at least 0x0403.
  	# -D_WIN32_WINNT=* from CPPFLAGS is saved in ETHR_DEFS.
-@@ -1181,7 +1181,7 @@
+@@ -1207,7 +1207,7 @@
  fi
  
  case $host_os in
@@ -47,7 +47,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -4833,6 +4833,11 @@
+@@ -4899,6 +4899,11 @@
      *x = addr;
      return 0;
  }
@@ -61,7 +61,7 @@ Author: Pino Toscano <pino@debian.org>
  
 --- a/erts/etc/common/erlexec.c
 +++ b/erts/etc/common/erlexec.c
-@@ -1602,7 +1602,7 @@
+@@ -1604,7 +1604,7 @@
      if (!bindir) {
  	/* Determine bindir from absolute path to executable */
  	char *p;
@@ -70,7 +70,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, argv[0], sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1616,7 +1616,7 @@
+@@ -1618,7 +1618,7 @@
      if (!rootdir) {
  	/* Determine rootdir from absolute path to bindir */
  	char *p;
