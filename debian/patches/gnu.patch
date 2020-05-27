@@ -19,10 +19,10 @@ Author: Pino Toscano <pino@debian.org>
  case $host_os in
 -    linux*) CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE";; 
 +    linux*|*gnu*) CPPFLAGS="$CPPFLAGS -D_GNU_SOURCE";; 
-     win32)
- 	# The ethread library requires _WIN32_WINNT of at least 0x0403.
- 	# -D_WIN32_WINNT=* from CPPFLAGS is saved in ETHR_DEFS.
-@@ -1207,7 +1207,7 @@
+     aix*|os400*)
+         # * _ALL_SOURCE: Required to get the winsize structure for TIOCSWINSZ.
+         # * _LINUX_SOURCE_COMPAT: Not required, but makes some libc functions
+@@ -1212,7 +1212,7 @@
  fi
  
  case $host_os in
@@ -47,7 +47,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -4899,6 +4899,11 @@
+@@ -4904,6 +4904,11 @@
      *x = addr;
      return 0;
  }
@@ -61,7 +61,7 @@ Author: Pino Toscano <pino@debian.org>
  
 --- a/erts/etc/common/erlexec.c
 +++ b/erts/etc/common/erlexec.c
-@@ -1604,7 +1604,7 @@
+@@ -1611,7 +1611,7 @@
      if (!bindir) {
  	/* Determine bindir from absolute path to executable */
  	char *p;
@@ -70,7 +70,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, argv[0], sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1618,7 +1618,7 @@
+@@ -1625,7 +1625,7 @@
      if (!rootdir) {
  	/* Determine rootdir from absolute path to bindir */
  	char *p;

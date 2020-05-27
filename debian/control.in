@@ -8,7 +8,7 @@ Build-Depends: debhelper (>= 9.0.0), autoconf (>= 2.50), openssl, libssl-dev, m4
  libncurses5-dev, unixodbc-dev, bison, flex, ed, zlib1g-dev,
  libwxgtk3.0-dev, libx11-dev, dctrl-tools, xsltproc,
  libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev,
- libsctp-dev [linux-any], libsystemd-dev [linux-any], autotools-dev
+ libsctp-dev [linux-any], libsystemd-dev [linux-any], erlang-base:native <cross>
 Build-Depends-Indep: libxml2-utils, fop, default-jdk | sun-java6-jdk
 Build-Conflicts: autoconf2.13, libwxgtk2.4-dev, libwxgtk2.6-dev, libwxgtk2.8-dev
 Homepage: http://www.erlang.org/
@@ -23,7 +23,7 @@ Recommends: ${libsctp:Version}, erlang-crypto (= ${binary:Version}), erlang-synt
 Suggests: erlang-tools (= ${binary:Version}),  erlang, erlang-manpages, erlang-doc
 Conflicts: erlang (<< ${source:Version}), erlang-base-hipe, erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
 Replaces: erlang (<< ${source:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${source:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-typer (<< 1:20.0+dfsg), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
-Provides: erlang-abi (= 17.0), erlang-pcre (= 8.44), erlang-abi-17.0, erlang-pcre-8.44
+Provides: erlang-abi (= @ABI_VERSION@), erlang-pcre (= @PCRE_VERSION@), erlang-abi-@ABI_VERSION@, erlang-pcre-@PCRE_VERSION@
 Breaks: rabbitmq-server (<< 3.7.7)
 Description: Erlang/OTP virtual machine and base applications
  This package contains the Erlang/OTP runtime implementation, which is
@@ -38,14 +38,14 @@ Description: Erlang/OTP virtual machine and base applications
 
 
 Package: erlang-base-hipe
-Architecture: amd64 i386 powerpc ppc64 ppc64el sparc solaris-i386
+Architecture: @HIPE_ARCHES@
 Multi-Arch: allowed
 Depends: procps, adduser, ${shlibs:Depends}, ${misc:Depends}
 Recommends: ${libsctp:Version}, erlang-crypto (= ${binary:Version}), erlang-syntax-tools (= ${binary:Version})
 Suggests: erlang-tools (= ${binary:Version}), erlang, erlang-manpages, erlang-doc
 Conflicts: erlang (<< ${source:Version}), erlang-base, erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
 Replaces: erlang (<< ${source:Version}), erlang-base, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${source:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-typer (<< 1:20.0+dfsg), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
-Provides: erlang-abi (= 17.0), erlang-pcre (= 8.44), erlang-abi-17.0, erlang-pcre-8.44
+Provides: erlang-abi (= @ABI_VERSION@), erlang-pcre (= @PCRE_VERSION@), erlang-abi-@ABI_VERSION@, erlang-pcre-@PCRE_VERSION@
 Breaks: rabbitmq-server (<< 3.7.7)
 Description: Erlang/OTP HiPE enabled virtual machine and base applications
  This package contains the Erlang/OTP runtime implementation, which is

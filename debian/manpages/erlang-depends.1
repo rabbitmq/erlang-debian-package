@@ -125,7 +125,7 @@
 .\" ========================================================================
 .\"
 .IX Title "ERLANG-DEPENDS 1"
-.TH ERLANG-DEPENDS 1 "2018\-05\-03" "1:21.0~rc1+dfsg\-1" "Erlang packages for Debian GNU/Linux"
+.TH ERLANG-DEPENDS 1 "2019\-10\-01" "1:22.1.1+dfsg\-2" "Erlang packages for Debian GNU/Linux"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -148,6 +148,11 @@ Also, ${erlang\-abi:Depends} substitution adds current erlang \s-1ABI\s0 virtual
 package to substvar files. It is useful if your package uses C-based
 extensions which may break in case of \s-1ABI\s0 changes. It was introduced in
 version 1:11.b.4\-4 of erlang\-dev package.
+.PP
+If your package stores precompiled PCRE regexps then it likely requires rebuild
+when the PCRE library in Erlang updates. For those packages ${erlang\-pcre:Depends}
+substitution adds current erlang \s1PCRE\s0 virtual package to subsstvar files.
+It was introduced in version 1:22.1.1+dfsg\-2 of erlang\-dev.
 .PP
 If you want to fine tune your package dependencies then you may want to use
 substvars for all Erlang packages you need. Currently they are:

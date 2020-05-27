@@ -27,7 +27,7 @@ case "$1" in
 
     configure)
         # Create epmd user
-        adduser --quiet --system --group --no-create-home --home /var/run/epmd epmd
+        adduser --quiet --system --group --no-create-home --home /run/epmd epmd
     ;;
 
     *)

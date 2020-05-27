@@ -20,8 +20,12 @@ export HOME := $(ROOT_DIR)/debian
 -include ${ROOT_DIR}/lib/snmp/vsn.mk
 -include ${ROOT_DIR}/lib/hipe/vsn.mk
 SOURCE_VERSION=$(shell dpkg-parsechangelog | sed -ne's!^Version: \(.*\)-.*!\1!p')
-ABI_VERSION=$(shell cat debian/control | sed -ne's!^Provides: erlang-abi-\([^ ,]*\).*!\1!p' | head -1)
-HIPE_ARCHES=$(shell cat debian/control | grep '^Architecture:' | egrep -v '(all|any)' | sed -e 's/^Architecture: *//')
+
+PCRE_MAJOR=$(shell cat erts/emulator/pcre/pcre.h | grep PCRE_MAJOR | sed -e's/.*\s\([0-9]\+\).*/\1/')
+PCRE_MINOR=$(shell cat erts/emulator/pcre/pcre.h | grep PCRE_MINOR | sed -e's/.*\s\([0-9]\+\).*/\1/')
+PCRE_VERSION=$(PCRE_MAJOR).$(PCRE_MINOR)
+ABI_VERSION=17.0
+HIPE_ARCHES=amd64 i386 powerpc ppc64 ppc64el sparc solaris-i386
 
 ifeq ($(findstring debug,$(DEB_BUILD_OPTIONS)),debug)
 BUILD_HIPE := no
@@ -38,6 +42,13 @@ BINARY_TARGETS=binary-erlang-base binary-erlang-base-hipe
 INSTALL_RULE=install-stnd-stamp install-hipe-stamp
 TMPINSTALL_DIR=debian/erlang-hipe
 ERLANGBASE=erlang-base (= $${binary:Version}) | erlang-base-hipe (= $${binary:Version})
+endif
+
+USE_ESOCKET := $(shell echo ${DEB_HOST_ARCH} | egrep -c "hurd" | sed -es/1/no/ -es/0/yes/)
+ifeq ($(USE_ESOCKET), no)
+ESOCKET_OPT=--disable-esock
+else
+ESOCKET_OPT=--enable-esock
 endif
 
 USE_KERNEL_POLL := $(shell echo ${DEB_HOST_ARCH} | egrep -c "hurd" | sed -es/1/no/ -es/0/yes/)
@@ -78,6 +89,11 @@ JAVA_OPTIONS=-Xlint -source 1.7 -target 1.7
 
 JOBS=4
 
+debian/control: debian/control.in
+	sed -e's/@PCRE_VERSION@/$(PCRE_VERSION)/g' \
+	    -e's/@ABI_VERSION@/$(ABI_VERSION)/g' \
+	    -e's/@HIPE_ARCHES@/$(HIPE_ARCHES)/g' <$< >$@
+
 clean:
 	dh_testdir
 	dh_testroot
@@ -104,7 +120,9 @@ clean:
 	#
 	# Remove files, which were generated from templates
 	for i in debian/*.in debian/scripts/*.in ; do \
-	     rm -f $${i%%.in} ; \
+	    if [ "$$i" != "debian/control.in" ] ; then \
+		rm -f $${i%%.in} ; \
+	    fi ; \
 	done
 	#
 	# *.install were also generated on-the-fly
@@ -120,7 +138,7 @@ clean:
 	dh_clean -Xtest.erl.orig
 
 automake: automake-stamp
-automake-stamp:
+automake-stamp: debian/control
 	dh_testdir
 	#
 	# Return error if there are known nonfree docs in upstream tarball
@@ -185,12 +203,14 @@ configure-hipe-stamp: automake-stamp
 		    $(THREAD_OPTS) \
 		    --enable-hipe \
 		    $(KERNEL_POLL_OPT) \
+		    $(ESOCKET_OPT) \
 		    --enable-sctp \
 		    $(CLOCK_GETTIME_OPT) \
 		    --enable-dynamic-ssl-lib \
 		    --with-ssl-rpath=no \
 		    --enable-ethread-pre-pentium4-compatibility \
 		    --enable-shared-zlib \
+		    --disable-builtin-zlib \
 		    --without-ssl-zlib \
 		    --disable-silent-rules
 	#
@@ -216,12 +236,14 @@ configure-stnd-stamp: automake-stamp
 		    $(THREAD_OPTS) \
 		    --disable-hipe \
 		    $(KERNEL_POLL_OPT) \
+		    $(ESOCKET_OPT) \
 		    --enable-sctp \
 		    $(CLOCK_GETTIME_OPT) \
 		    --enable-dynamic-ssl-lib \
 		    --with-ssl-rpath=no \
 		    --enable-ethread-pre-pentium4-compatibility \
 		    --enable-shared-zlib \
+		    --disable-builtin-zlib \
 		    --without-ssl-zlib \
 		    --disable-silent-rules
 	#
@@ -357,17 +379,20 @@ build-stamp: $(INSTALL_RULE)
 	dh_testdir
 	#
 	for i in debian/*.in debian/scripts/*.in ; do \
-	    sed -e's/@VERSION@/$(VSN)/g' \
-	     	-e's/@SOURCE_VERSION@/$(SOURCE_VERSION)/g' \
-	     	-e's/@HIPE_ARCHES@/$(HIPE_ARCHES)/g' \
-	     	-e's/@ABI_VERSION@/$(ABI_VERSION)/g' \
-	     	-e's/@EI_VSN@/$(EI_VSN)/g' \
-	     	-e's/@JINTERFACE_VSN@/$(JINTERFACE_VSN)/g' \
-	     	-e's/@IC_VSN@/$(IC_VSN)/g' \
-		-e's/@COMMON_TEST_VSN@/$(COMMON_TEST_VSN)/g' \
-		-e's/@SNMP_VSN@/$(SNMP_VSN)/g' \
-		-e's/@DIAMETER_VSN@/$(DIAMETER_VSN)/g' \
-		-e's/@TOOLS_VSN@/$(TOOLS_VSN)/g' <$$i >$${i%%.in} ; \
+	    if [ "$$i" != "debian/control.in" ] ; then \
+	    	sed -e's/@VERSION@/$(VSN)/g' \
+	     	    -e's/@SOURCE_VERSION@/$(SOURCE_VERSION)/g' \
+	     	    -e's/@HIPE_ARCHES@/$(HIPE_ARCHES)/g' \
+	     	    -e's/@ABI_VERSION@/$(ABI_VERSION)/g' \
+	     	    -e's/@PCRE_VERSION@/$(PCRE_VERSION)/g' \
+	     	    -e's/@EI_VSN@/$(EI_VSN)/g' \
+	     	    -e's/@JINTERFACE_VSN@/$(JINTERFACE_VSN)/g' \
+	     	    -e's/@IC_VSN@/$(IC_VSN)/g' \
+		    -e's/@COMMON_TEST_VSN@/$(COMMON_TEST_VSN)/g' \
+		    -e's/@SNMP_VSN@/$(SNMP_VSN)/g' \
+		    -e's/@DIAMETER_VSN@/$(DIAMETER_VSN)/g' \
+		    -e's/@TOOLS_VSN@/$(TOOLS_VSN)/g' <$$i >$${i%%.in} ; \
+	    fi ; \
 	done
 	sed -e's/@VERSION@/$(VSN)/g' <debian/in.erlang-doc.doc-base.erlang-erts \
 	    >debian/erlang-doc.doc-base.erlang-erts
