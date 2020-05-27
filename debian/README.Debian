@@ -15,6 +15,18 @@ install erlang-manpages (for manual pages) and/or erlang-doc
 
 ----------------
 
+Starting from version 1:22.0.7+dfsg-2 erlang-wx is built using wxWidgets GTK 3
+implementation. This means that it uses Wayland backend if available. And since
+wxGLCanvas still doesn't support Wayland, any application that uses wxGLCanvas
+module has to be executed with x11 backend (see
+https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=900678 and
+https://trac.wxwidgets.org/ticket/17702 for additional information).
+To do that, one can use the GDK_BACKEND environment variable, for example
+
+GDK_BACKEND=x11 wings3d
+
+----------------
+
 Starting from version 1:21.2.2+dfsg-1 the erlang-base and erlang-base-hipe
 packages provide systemd socket and unit files for the epmd daemon, which
 are enabled by default. This causes the executed epmd to be owned by a separate
