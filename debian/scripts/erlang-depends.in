@@ -6,6 +6,7 @@
 % The current Erlang version
 -define(VERSION, "@SOURCE_VERSION@").
 -define(ABI_VERSION, "@ABI_VERSION@").
+-define(PCRE_VERSION, "@PCRE_VERSION@").
 
 % The list of HiPE enabled architectures (with added 'all' architecture),
 % isn't used yet
@@ -96,7 +97,9 @@ main(Options) ->
 			[]
 		end,
 	    deladdsubstvar(Verbosity, Package, Variables2, "erlang-abi:Depends",
-			   "erlang-abi-" ++ ?ABI_VERSION),
+			   "erlang-abi (= " ++ ?ABI_VERSION ++ ")"),
+	    deladdsubstvar(Verbosity, Package, Variables2, "erlang-pcre:Depends",
+			   "erlang-pcre (= " ++ ?PCRE_VERSION ++ ")"),
 	    deladdsubstvar(Verbosity, Package, Variables2, "erlang-base:Depends",
 			   "erlang-base (>= " ++ ?VERSION ++
 			   ") | erlang-base-hipe (>= " ++ ?VERSION ++ ")"),
