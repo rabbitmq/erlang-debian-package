@@ -14,7 +14,7 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
        </xsl:otherwise>
      </xsl:choose>
    </xsl:template>
-@@ -859,7 +859,7 @@
+@@ -860,7 +860,7 @@
    <xsl:template match="desc">
      <xsl:text>&#10;.RS</xsl:text>
      <xsl:apply-templates/>
@@ -22,17 +22,6 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
 +    <xsl:text>&#10;.RE&#10;</xsl:text>
    </xsl:template>
  
- 
---- a/lib/megaco/doc/src/Makefile
-+++ b/lib/megaco/doc/src/Makefile
-@@ -159,8 +159,6 @@
- 	$(INSTALL_DATA) $(INFO_FILE) "$(RELSYSDIR)"
- 	$(INSTALL_DIR) "$(RELEASE_PATH)/man/man3"
- 	$(INSTALL_DATA) $(MAN3DIR)/* "$(RELEASE_PATH)/man/man3"
--	$(INSTALL_DIR)  "$(RELSYSDIR)/doc/standard"
--	$(INSTALL_DATA) $(STANDARDS) "$(RELSYSDIR)/doc/standard"
- 
- release_spec:
  
 --- a/lib/stdlib/doc/src/re.xml
 +++ b/lib/stdlib/doc/src/re.xml
@@ -65,3 +54,17 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
  
  include vsn.mk
  VSN = $(TOOLS_VSN)
+--- a/lib/megaco/doc/src/Makefile
++++ b/lib/megaco/doc/src/Makefile
+@@ -40,10 +40,7 @@
+             $(XML_PART_FILES) $(XML_CHAPTER_FILES)
+ 
+ STANDARD_DIR = ../standard
+-STANDARDS = $(STANDARD_DIR)/rfc3525.txt \
+-            $(STANDARD_DIR)/rfc4234.txt \
+-            $(STANDARD_DIR)/rfc4566.txt \
+-            $(STANDARD_DIR)/implementors_guide_v10-13.pdf
++STANDARDS = 
+ 
+ NO_CHUNKS = megaco_edist_compress.xml megaco_user.xml megaco_encoder.xml \
+ 	megaco_transport.xml megaco_tcp.xml megaco_udp.xml \
