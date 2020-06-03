@@ -22,10 +22,14 @@ distributions are currently supported:
 
 For each distribution, the following release series of Erlang/OTP are packaged:
 
- * `22.x` (the latest patch release)
- * `21.x` (ditto)
- * `20.x` (ditto)
+ * `23.x`
+ * `22.x` 
+ * `21.x`
+ * `20.x`
  * [Erlang master](https://github.com/erlang/otp)
+ 
+ For every release series, only the latest minor series is supported.
+ 
 
 ## Apt Repository Setup
 
