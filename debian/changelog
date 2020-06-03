@@ -1,3 +1,10 @@
+erlang (1:23.0.2-2) unstable; urgency=medium
+
+  * Switch from libwxgtk3.0-dev to libwxgtk3.0-gtk3-dev, like the upstream
+    Debian package.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Wed, 03 Jun 2020 08:36:32 +0200
+
 erlang (1:23.0.2-1) unstable; urgency=medium
 
   * New upstream release.
