@@ -12,156 +12,30 @@ are not monolithic and use the same dependency tree as the official Debian packa
 
 ## Supported Erlang/OTP and Debian/Ubuntu Combinations
 
-Packages are published to a [Debian repository on Bintray](https://bintray.com/rabbitmq-erlang/debian). The following
-distributions are currently supported:
+Packages are published to a [Launchpad PPA](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang)
+and [Cloudsmith.io](https://cloudsmith.io/~rabbitmq/repos/rabbitmq-erlang/packages/?sort=-version&q=filename%3Adeb%24).
 
+The following distributions are currently [supported](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang):
+
+ * Ubuntu 20.04 (Focal)
  * Ubuntu 18.04 (Bionic)
  * Ubuntu 16.04 (Xenial)
+ * Debian Bullseye
  * Debian Buster
- * Debian Stretch
 
-For each distribution, the following release series of Erlang/OTP are packaged:
+For each distribution, the following release series of Erlang/OTP can be produced:
 
  * `23.x`
- * `22.x` 
- * `21.x`
- * `20.x`
- * [Erlang master](https://github.com/erlang/otp)
+ * `22.x`
+
+and so on.
  
- For every release series, only the latest minor series is supported.
+For every release series, only the latest minor series is supported.
  
 
 ## Apt Repository Setup
 
-### Enable apt HTTPS Transport
-
-In order for apt to be able to download Erlang packages from Bintray,
-the `apt-transport-https` package must be installed:
-
-```sh
-sudo apt-get install apt-transport-https
-```
-
-### Signing Key
-
-For apt to be able to verify package signatures and trust them, add
-the [signing key used to sign RabbitMQ releases](https://www.rabbitmq.com/signatures.html) to `apt-key`:
-
-```sh
-wget -O - 'https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc' | sudo apt-key add -
-```
-
-### Source List File
-
-As with all 3rd party Apt (Debian) repositories, a file describing the repository
-must be placed under the `/etc/apt/sources.list.d/` directory.
-`/etc/apt/sources.list.d/bintray.rabbitmq.list` is the recommended location.
-
-The file should have a source (repository) definition line that uses the following
-pattern:
-
-```
-# See below for supported distribution and component values
-deb https://dl.bintray.com/rabbitmq-erlang/debian $distribution $component
-```
-
-The next couple of sections discusses what distribution and component values
-are supported.
-
-### Distribution
-
-In order to set up an apt repository that provides the correct package, a few
-decisions have to be made. One is determining the distribution name. It comes
-from the Debian or Ubuntu release used:
-
- * `bionic` for Ubuntu 18.04
- * `xenial` for Ubuntu 16.04
- * `buster` for Debian Buster
- * `stretch` for Debian Stretch
-
-### Erlang/OTP Version
-
-Another is what Erlang/OTP release version should be provisioned. It is possible to track
-a specific series (e.g. `20.x`) or install the most recent version available. The choice
-determines what Debian repository `component` will be configured.
-
-It is possible to pin the package to a specific version. This will be covered below.
-
-Consider the following repository file at `/etc/apt/sources.list.d/bintray.rabbitmq.list`:
-
-```
-deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang
-```
-
-It configures apt to install the most recent Erlang/OTP version available in the
-repository and use packages for Ubuntu 18.04 (Bionic).
-
-For Debian Stretch the file would look like this:
-
-```
-deb https://dl.bintray.com/rabbitmq-erlang/debian stretch erlang
-```
-
-To use the most recent `21.x` patch release available, switch the component
-to `erlang-21.x`:
-
-```
-deb https://dl.bintray.com/rabbitmq-erlang/debian bionic erlang-21.x
-```
-
-`erlang-20.x`, `erlang-19.x`, and `erlang-16.x` are the components for Erlang 20.x,
-19.x and R16B03, respectively.
-
-
-### Installing Packages
-
-After updating the list of `apt` sources it is necessary to run `apt-get update`:
-
-```sh
-sudo apt-get update -y
-```
-
-Then packages can be installed just like with the standard Debian repositories:
-
-```sh
-# This is recommended. Metapackages such as erlang and erlang-nox must only be used
-# with apt version pinning. They do not pin their dependency versions.
-sudo apt-get install -y erlang-base \
-                        erlang-asn1 erlang-crypto erlang-eldap erlang-ftp erlang-inets \
-                        erlang-mnesia erlang-os-mon erlang-parsetools erlang-public-key \
-                        erlang-runtime-tools erlang-snmp erlang-ssl \
-                        erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
-```
-
-
-### Package/Repository Pinning (Apt Preferences)
-
-Since Erlang/OTP packages are available for any Debian and Ubuntu distribution,
-once this repository is added via a source file there will be two or even more
-repositories that provide packages under the same name.
-
-To add insult to injury, meta-packages such as `erlang-nox` do not pin the version of their
-dependencies. It means that out-of-the-box, if for instance you
-install `erlang-nox` 1:20.3.8.21-1 on Debian Stretch, it may pull
-`erlang-base` 1:19.2.1+dfsg-2+deb9u1 from the official Debian
-repository.
-
-[`apt_preferences(5)`](https://manpages.debian.org/stretch/apt/apt_preferences.5.en.html)
-can be used to instruct `apt` to prefer packages from this repository.
-
-Place a file with following contents to `/etc/apt/preferences.d/erlang`:
-
-```
-Package: erlang*
-Pin: release o=Bintray
-Pin-Priority: 1000
-```
-
-After updating `apt` preferences it is necessary to run `apt-get update`:
-
-```sh
-sudo apt-get update -y
-```
+See the section on [provisioning modern Erlang versions from Launchpad](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang) in the RabbitMQ Ubuntu and Debian installation guide.
 
 
 ## Differences from Other Debian Package Providers
@@ -235,7 +109,7 @@ is indirectly tested.
 
 ## Copyright and License
 
-(c) 2018-current Pivotal Software, Inc.
+(c) 2018-2021 VMware, Inc and its affiliates.
 
 Released under the [Apache Software License 2.0](https://github.com/rabbitmq/erlang-rpm-packaging/blob/master/Erlang_ASL2_LICENSE.txt),
 same as Erlang/OTP starting with 18.0.
