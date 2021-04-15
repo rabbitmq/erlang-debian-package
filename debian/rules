@@ -91,7 +91,7 @@ JAVA_OPTIONS=-Xlint -source 1.8 -target 1.8
 
 JOBS=4
 
-debian/control: debian/control.in
+debian/control: debian/control.in debian/rules
 	sed -e's/@PCRE_VERSION@/$(PCRE_VERSION)/g' \
 	    -e's/@ABI_VERSION@/$(ABI_VERSION)/g' \
 	    -e's/@HIPE_ARCHES@/$(HIPE_ARCHES)/g' <$< >$@
@@ -436,7 +436,7 @@ binary-indep: build-stamp docs-stamp
 	dh_installdirs -i
 	dh_install -i --sourcedir=$(TMPINSTALL_DIR)
 	dh_lintian -i
-	dh_installdocs -i -A debian/README.Debian debian/TODO.Debian debian/AUTHORS
+	dh_installdocs -i -A debian/README.Debian debian/AUTHORS
 	dh_installemacsen -i
 	dh_installexamples -i
 	dh_installchangelogs -i
@@ -470,7 +470,7 @@ binary-erlang-base: build-stamp
 		$(ROOT_DIR)/debian/erlang-base/usr/share/apps/konsole/erlang.desktop
 	#
 	dh_lintian -a -Nerlang-base-hipe
-	dh_installdocs -a -Nerlang-base-hipe -A debian/README.Debian debian/TODO.Debian debian/AUTHORS
+	dh_installdocs -a -Nerlang-base-hipe -A debian/README.Debian debian/AUTHORS
 	dh_installchangelogs -a -Nerlang-base-hipe
 	dh_installemacsen -a -Nerlang-base-hipe
 	dh_installexamples -a -Nerlang-base-hipe
@@ -504,7 +504,7 @@ binary-erlang-base-hipe: build-stamp
 		$(ROOT_DIR)/debian/erlang-base-hipe/usr/share/apps/konsole/erlang.desktop
 	#
 	dh_lintian -perlang-base-hipe
-	dh_installdocs -perlang-base-hipe debian/README.Debian debian/TODO.Debian debian/AUTHORS
+	dh_installdocs -perlang-base-hipe debian/README.Debian debian/AUTHORS
 	dh_installchangelogs -perlang-base-hipe
 	dh_installemacsen -perlang-base-hipe
 	dh_installexamples -perlang-base-hipe

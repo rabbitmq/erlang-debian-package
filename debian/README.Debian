@@ -56,7 +56,20 @@ systemctl daemon-reload
 
 and start epmd.socket. After that epmd will listen on loopback only.
 
-Alternatively, you could use a firewall to block unwanted connections to epmd.
+Alternatively, you could add the following directives to the epmd.socket:
+
+systemctl edit epmd.socket
+
+And then add:
+
+[Socket]
+IPAddressDeny=any
+IPAddressAllow=localhost
+
+(An option takes a list of networks for its value.
+See systemd.resource-control(5) for details.)
+
+And of course, you could use a firewall to block unwanted connections to epmd.
 
 If you never plan to use distributed Erlang, you can disable or even mask the
 epmd units, e.g.

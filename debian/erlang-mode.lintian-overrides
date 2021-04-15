@@ -1,0 +1,2 @@
+# Link to man dir from /usr/lib to /usr/share is intentional, since erlang mode expect to find manpages in /usr/lib
+erlang-mode: breakout-link
