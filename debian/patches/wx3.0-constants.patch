@@ -8,7 +8,7 @@ Last-Update: 2014-11-25
 
 --- a/lib/wx/include/wx.hrl
 +++ b/lib/wx/include/wx.hrl
-@@ -815,7 +815,7 @@
+@@ -456,7 +456,7 @@
  % From "checkbox.h"
  -define(wxCHK_ALLOW_3RD_STATE_FOR_USER, 8192).
  -define(wxCHK_3STATE, 4096).
@@ -17,7 +17,7 @@ Last-Update: 2014-11-25
  % From "checkbox.h": wxCheckBoxState
  -define(wxCHK_UNCHECKED, 0).
  -define(wxCHK_CHECKED, 1).
-@@ -1062,10 +1062,10 @@
+@@ -853,10 +853,10 @@
  -define(wxSIZE_AUTO_WIDTH, 1).
  -define(wxSETUP, 131072).
  -define(wxMORE, 65536).
@@ -32,7 +32,7 @@ Last-Update: 2014-11-25
  -define(wxICON_MASK, (16#00000100 bor 16#00000200 bor 16#00000400 bor 16#00000800)).
  -define(wxICON_ASTERISK, ?wxICON_INFORMATION).
  -define(wxICON_STOP, ?wxICON_HAND).
-@@ -1097,8 +1097,8 @@
+@@ -1060,8 +1060,8 @@
  -define(wxTC_TOP, 0).
  -define(wxTC_FIXEDWIDTH, 32).
  -define(wxTC_RIGHTJUSTIFY, 16).
@@ -43,7 +43,7 @@ Last-Update: 2014-11-25
  -define(wxSP_VERTICAL, ?wxVERTICAL).
  -define(wxSP_HORIZONTAL, ?wxHORIZONTAL).
  -define(wxSB_VERTICAL, ?wxVERTICAL).
-@@ -1119,8 +1119,8 @@
+@@ -1082,8 +1082,8 @@
  -define(wxCB_SIMPLE, 4).
  -define(wxLB_INT_HEIGHT, 2048).
  -define(wxLB_HSCROLL, ?wxHSCROLL).
@@ -54,7 +54,7 @@ Last-Update: 2014-11-25
  -define(wxLB_OWNERDRAW, 256).
  -define(wxLB_EXTENDED, 128).
  -define(wxLB_MULTIPLE, 64).
-@@ -1596,7 +1596,7 @@
+@@ -1559,7 +1559,7 @@
  -define(wxUPDATE_UI_FROMIDLE, 2).
  % From "dialog.h"
  -define(wxDEFAULT_DIALOG_STYLE, (?wxCAPTION bor ?wxSYSTEM_MENU bor ?wxCLOSE_BOX)).
@@ -63,7 +63,7 @@ Last-Update: 2014-11-25
  % From "dirctrlg.h"
  -define(wxDIRCTRL_DIR_ONLY, 16).
  -define(wxDIRCTRL_SELECT_FIRST, 32).
-@@ -3776,7 +3776,7 @@
+@@ -3739,7 +3739,7 @@
  -define(wxSTC_KEY_LEFT, 302).
  -define(wxSTC_KEY_UP, 301).
  -define(wxSTC_KEY_DOWN, 300).
@@ -72,7 +72,7 @@ Last-Update: 2014-11-25
  -define(wxSTC_MULTILINEUNDOREDO, 4096).
  -define(wxSTC_MOD_BEFOREDELETE, 2048).
  -define(wxSTC_MOD_BEFOREINSERT, 1024).
-@@ -3858,7 +3858,7 @@
+@@ -3821,7 +3821,7 @@
  -define(wxSTC_INDIC_TT, 2).
  -define(wxSTC_INDIC_SQUIGGLE, 1).
  -define(wxSTC_INDIC_PLAIN, 0).
@@ -81,7 +81,7 @@ Last-Update: 2014-11-25
  -define(wxSTC_CASE_LOWER, 2).
  -define(wxSTC_CASE_UPPER, 1).
  -define(wxSTC_CASE_MIXED, 0).
-@@ -3883,7 +3883,7 @@
+@@ -3846,7 +3846,7 @@
  -define(wxSTC_CHARSET_BALTIC, 186).
  -define(wxSTC_CHARSET_DEFAULT, 1).
  -define(wxSTC_CHARSET_ANSI, 0).
@@ -90,7 +90,7 @@ Last-Update: 2014-11-25
  -define(wxSTC_STYLE_LASTPREDEFINED, 39).
  -define(wxSTC_STYLE_CALLTIP, 38).
  -define(wxSTC_STYLE_INDENTGUIDE, 37).
-@@ -3982,9 +3982,9 @@
+@@ -3945,9 +3945,9 @@
  -define(wxTE_PROCESS_TAB, 64).
  -define(wxTE_MULTILINE, 32).
  -define(wxTE_READONLY, 16).
@@ -102,7 +102,7 @@ Last-Update: 2014-11-25
  % From "textctrl.h": wxTextAttrAlignment
  -define(wxTEXT_ALIGNMENT_DEFAULT, 0).
  -define(wxTEXT_ALIGNMENT_LEFT, 1).
-@@ -4034,7 +4034,7 @@
+@@ -3997,7 +3997,7 @@
  -define(wxDEFAULT_FRAME_STYLE, (?wxSYSTEM_MENU bor ?wxRESIZE_BORDER bor ?wxMINIMIZE_BOX bor ?wxMAXIMIZE_BOX bor ?wxCLOSE_BOX bor ?wxCAPTION bor ?wxCLIP_CHILDREN)).
  -define(wxRESIZE_BORDER, 64).
  -define(wxTINY_CAPTION_VERT, 128).
