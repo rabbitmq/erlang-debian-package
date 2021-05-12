@@ -6,7 +6,7 @@ Priority: optional
 Standards-Version: 4.5.1
 Build-Depends: debhelper (>= 10.0.0), autoconf (>= 2.50), openssl, libssl-dev, m4,
  libncurses5-dev, unixodbc-dev, bison, flex, ed, zlib1g-dev,
- libwxgtk3.0-gtk3-dev, libx11-dev, dctrl-tools, xsltproc,
+ libwxgtk3.0-gtk3-dev, libwxgtk-webview3.0-gtk3-dev, libx11-dev, dctrl-tools, xsltproc,
  libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev,
  libsctp-dev [linux-any], libsystemd-dev [linux-any], erlang-base:native <cross>
 Build-Depends-Indep: libxml2-utils, fop, default-jdk | sun-java6-jdk
@@ -28,28 +28,6 @@ Breaks: rabbitmq-server (<< 3.7.7)
 Description: Erlang/OTP virtual machine and base applications
  This package contains the Erlang/OTP runtime implementation, which is
  configured and built without HiPE support (compiles to byte-code only),
- and minimal set of Erlang applications:
-  compiler - compiles Erlang code to byte-code;
-  erts - the Erlang runtime system application;
-  kernel - code necessary to run the Erlang runtime system itself;
-  ose - code for Enea OSE operating system;
-  sasl - the system architecture support libraries application;
-  stdlib - modules for manipulating lists, strings, files etc.
-
-
-Package: erlang-base-hipe
-Architecture: @HIPE_ARCHES@
-Multi-Arch: allowed
-Depends: procps, adduser, ${shlibs:Depends}, ${misc:Depends}
-Recommends: ${libsctp:Version}, erlang-crypto (= ${binary:Version}), erlang-syntax-tools (= ${binary:Version})
-Suggests: erlang-tools (= ${binary:Version}), erlang, erlang-manpages, erlang-doc
-Conflicts: erlang (<< ${source:Version}), erlang-base, erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
-Replaces: erlang (<< ${source:Version}), erlang-base, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${source:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-typer (<< 1:20.0+dfsg), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
-Provides: erlang-abi (= @ABI_VERSION@), erlang-pcre (= @PCRE_VERSION@), erlang-abi-@ABI_VERSION@
-Breaks: rabbitmq-server (<< 3.7.7)
-Description: Erlang/OTP HiPE enabled virtual machine and base applications
- This package contains the Erlang/OTP runtime implementation, which is
- configured and built with HiPE support (allows compiling to native code),
  and minimal set of Erlang applications:
   compiler - compiles Erlang code to byte-code;
   erts - the Erlang runtime system application;
@@ -473,7 +451,7 @@ Description: Erlang/OTP development libraries and headers
 
 Package: erlang-src
 Architecture: all
-Depends: erlang-base:any (>= ${binary:Version}) | erlang-base-hipe:any (>= ${binary:Version}), erlang-base:any (<< ${binary:Version}.0) | erlang-base-hipe:any (<< ${binary:Version}.0), ${misc:Depends}
+Depends: erlang-base:any (>= ${binary:Version}), erlang-base:any (<< ${binary:Version}.0), ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang:any (<< ${binary:Version}), erlang-base:any (<< ${binary:Version}), erlang-base-hipe:any (<< ${binary:Version}), erlang-nox (<< ${binary:Version}), erlang-x11 (<< ${binary:Version}), erlang-dev:any (<< ${binary:Version}), erlang-examples (<< ${binary:Version}), erlang-erl-docgen:any (<< ${binary:Version}), erlang-mode (<< 1:12.b.1-dfsg-2)
 Description: Erlang/OTP applications sources
@@ -484,7 +462,7 @@ Description: Erlang/OTP applications sources
 
 Package: erlang-examples
 Architecture: all
-Depends: erlang-base:any (>= ${binary:Version}) | erlang-base-hipe:any (>= ${binary:Version}), erlang-base:any (<< ${binary:Version}.0) | erlang-base-hipe:any (<< ${binary:Version}.0), ${misc:Depends}
+Depends: erlang-base:any (>= ${binary:Version}), erlang-base:any (<< ${binary:Version}.0), ${misc:Depends}
 Recommends: erlang-crypto:any, erlang-inets:any, erlang-megaco:any, erlang-public-key:any, erlang-snmp:any, erlang-ssh:any, erlang-ssl:any, erlang-syntax-tools:any
 Suggests: erlang-wx:any, erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${binary:Version}), erlang-base:any (<< ${binary:Version}), erlang-base-hipe:any (<< ${binary:Version}), erlang-nox (<< ${binary:Version}), erlang-x11 (<< ${binary:Version}), erlang-dev:any (<< ${binary:Version}), erlang-src (<< ${binary:Version}), erlang-mode (<< 1:12.b.1-dfsg-2)
@@ -515,7 +493,7 @@ Description: Erlang major editing mode for Emacs
 
 Package: erlang-nox
 Architecture: all
-Depends: erlang-base:any | erlang-base-hipe:any, erlang-asn1:any, erlang-crypto:any,
+Depends: erlang-base:any, erlang-asn1:any, erlang-crypto:any,
  erlang-diameter:any, erlang-edoc:any, erlang-eldap:any, erlang-erl-docgen:any, erlang-eunit:any,
  erlang-ftp:any, erlang-inets:any, erlang-mnesia:any, erlang-odbc:any, erlang-os-mon:any,
  erlang-parsetools:any, erlang-public-key:any, erlang-runtime-tools:any,
