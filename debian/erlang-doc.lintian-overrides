@@ -1,0 +1,2 @@
+# Links to docs from /usr/lib to /usr/share are intentional, since erlang tools expect to find docs in /usr/lib
+erlang-doc: breakout-link
