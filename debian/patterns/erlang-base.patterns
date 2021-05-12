@@ -11,7 +11,6 @@
 ./usr/lib/erlang/lib/erl_interface-.*/bin/
 ./usr/lib/erlang/lib/compiler-.*/ebin/
 ./usr/lib/erlang/lib/erts-.*/ebin/
-./usr/lib/erlang/lib/hipe-.*/ebin/
 ./usr/lib/erlang/lib/kernel-.*/ebin/
 ./usr/lib/erlang/lib/kernel-.*/include/
 ./usr/lib/erlang/lib/ose-.*/ebin/

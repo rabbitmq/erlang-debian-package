@@ -17,7 +17,6 @@
 ./usr/lib/erlang/lib/erts-.*/src/
 ./usr/lib/erlang/lib/et-.*/src/
 ./usr/lib/erlang/lib/eunit-.*/src/
-./usr/lib/erlang/lib/hipe-.*/
 ./usr/lib/erlang/lib/ftp-.*/src/
 ./usr/lib/erlang/lib/inets-.*/src/
 ./usr/lib/erlang/lib/kernel-.*/src/
