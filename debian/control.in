@@ -3,10 +3,10 @@ Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
 Uploaders: Sergei Golovan <sgolovan@debian.org>
 Section: interpreters
 Priority: optional
-Standards-Version: 4.5.0
+Standards-Version: 4.5.1
 Build-Depends: debhelper (>= 10.0.0), autoconf (>= 2.50), openssl, libssl-dev, m4,
  libncurses5-dev, unixodbc-dev, bison, flex, ed, zlib1g-dev,
- libwxgtk3.0-dev, libx11-dev, dctrl-tools, xsltproc,
+ libwxgtk3.0-gtk3-dev, libx11-dev, dctrl-tools, xsltproc,
  libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev,
  libsctp-dev [linux-any], libsystemd-dev [linux-any], erlang-base:native <cross>
 Build-Depends-Indep: libxml2-utils, fop, default-jdk | sun-java6-jdk
@@ -23,7 +23,7 @@ Recommends: ${libsctp:Version}, erlang-crypto (= ${binary:Version}), erlang-synt
 Suggests: erlang-tools (= ${binary:Version}),  erlang, erlang-manpages, erlang-doc
 Conflicts: erlang (<< ${source:Version}), erlang-base-hipe, erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
 Replaces: erlang (<< ${source:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${source:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-typer (<< 1:20.0+dfsg), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
-Provides: erlang-abi (= @ABI_VERSION@), erlang-pcre (= @PCRE_VERSION@), erlang-abi-@ABI_VERSION@, erlang-pcre-@PCRE_VERSION@
+Provides: erlang-abi (= @ABI_VERSION@), erlang-pcre (= @PCRE_VERSION@), erlang-abi-@ABI_VERSION@
 Breaks: rabbitmq-server (<< 3.7.7)
 Description: Erlang/OTP virtual machine and base applications
  This package contains the Erlang/OTP runtime implementation, which is
@@ -45,7 +45,7 @@ Recommends: ${libsctp:Version}, erlang-crypto (= ${binary:Version}), erlang-synt
 Suggests: erlang-tools (= ${binary:Version}), erlang, erlang-manpages, erlang-doc
 Conflicts: erlang (<< ${source:Version}), erlang-base, erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
 Replaces: erlang (<< ${source:Version}), erlang-base, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${source:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-typer (<< 1:20.0+dfsg), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
-Provides: erlang-abi (= @ABI_VERSION@), erlang-pcre (= @PCRE_VERSION@), erlang-abi-@ABI_VERSION@, erlang-pcre-@PCRE_VERSION@
+Provides: erlang-abi (= @ABI_VERSION@), erlang-pcre (= @PCRE_VERSION@), erlang-abi-@ABI_VERSION@
 Breaks: rabbitmq-server (<< 3.7.7)
 Description: Erlang/OTP HiPE enabled virtual machine and base applications
  This package contains the Erlang/OTP runtime implementation, which is

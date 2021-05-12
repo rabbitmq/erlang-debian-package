@@ -9,7 +9,9 @@ Author: Pino Toscano <pino@debian.org>
 
 (3) Undefines AF_LINK for GNU/Hurd;
 
-(4) Switch some PATH_MAX occurrences to MAXPATHLEN;
+(4) Switches some PATH_MAX occurrences to MAXPATHLEN;
+
+(5) Adds a workaround for 'erlc -M | sed' being stuck for GNU/Hurd.
 
 --- a/erts/configure.in
 +++ b/erts/configure.in
@@ -47,7 +49,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -4904,6 +4904,11 @@
+@@ -4937,6 +4937,11 @@
      *x = addr;
      return 0;
  }
@@ -61,7 +63,7 @@ Author: Pino Toscano <pino@debian.org>
  
 --- a/erts/etc/common/erlexec.c
 +++ b/erts/etc/common/erlexec.c
-@@ -1611,7 +1611,7 @@
+@@ -1612,7 +1612,7 @@
      if (!bindir) {
  	/* Determine bindir from absolute path to executable */
  	char *p;
@@ -70,7 +72,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, argv[0], sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1625,7 +1625,7 @@
+@@ -1626,7 +1626,7 @@
      if (!rootdir) {
  	/* Determine rootdir from absolute path to bindir */
  	char *p;
@@ -143,3 +145,15 @@ Author: Pino Toscano <pino@debian.org>
  
      /* Determine progname */
      abspath = find_prog(argv[0]);
+--- a/lib/ssl/src/Makefile
++++ b/lib/ssl/src/Makefile
+@@ -176,7 +176,8 @@
+ 
+ $(DEP_FILE): $(ERL_FILES)
+ 	@echo SED $(TARGET) $(ERL_TOP_NATIVE)
+-	$(gen_verbose)erlc -M $(ERL_FILES) \
++	$(gen_verbose)erlc -M $(ERL_FILES) > $(DEP_FILE).tmp
++	cat $(DEP_FILE).tmp \
+ 	| sed "s@[a-zA-Z]\?$(ERL_TOP_NATIVE)@../../..@g" \
+ 	| sed "s/\.$(EMULATOR)/\.$$\(EMULATOR\)/" \
+ 	| sed 's@^dtls_@$$(EBIN)/dtls_@' \
