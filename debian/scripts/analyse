@@ -9,9 +9,6 @@ the magic of regular expressions."
 # package.  Same goes for the X11 package.  Files
 # that don't match anything go into the NO-X package etc.
 
-# Files that match here might also go into
-# erlang-base-hipe.install.
-
 DIR=$1
 
 echo "erlang-base"
@@ -19,25 +16,18 @@ find debian/erlang-stnd -type f | \
     grep -E -f debian/patterns/erlang-base.patterns | \
     cut -c 20- > debian/erlang-base.install
 
-echo "erlang-base-hipe"
-find debian/erlang-hipe -type f | \
-    grep -E -f debian/patterns/erlang-base-hipe.patterns | \
-    cut -c 20- > debian/erlang-base-hipe.install
-
 # Here, files that matched above shouldn't
 # be looked at.
 
 echo "erlang-examples"
 find $DIR -type f | \
     grep -v -E -f debian/patterns/erlang-base.patterns | \
-    grep -v -E -f debian/patterns/erlang-base-hipe.patterns | \
     grep -E -f debian/patterns/erlang-examples.patterns | \
     cut -c 20- > debian/erlang-examples.install
 
 echo "erlang-src"
 find $DIR -type f | \
     grep -v -E -f debian/patterns/erlang-base.patterns | \
-    grep -v -E -f debian/patterns/erlang-base-hipe.patterns | \
     grep -v -E -f debian/patterns/erlang-examples.patterns | \
     grep -E -f debian/patterns/erlang-src.patterns | \
     cut -c 20- > debian/erlang-src.install
@@ -49,7 +39,6 @@ find $DIR -type f | \
 
 find $DIR -type f | \
     grep -v -E -f debian/patterns/erlang-base.patterns | \
-    grep -v -E -f debian/patterns/erlang-base-hipe.patterns | \
     grep -v -E -f debian/patterns/erlang-examples.patterns | \
     grep -v -E -f debian/patterns/erlang-src.patterns | \
     grep -E -f debian/patterns/erlang-dev.patterns | \
@@ -63,7 +52,6 @@ PACKAGES='asn1 common-test crypto debugger dialyzer diameter
 
 CMD='grep -v -E -e ./usr/lib/erlang/usr/include |
      grep -v -E -f debian/patterns/erlang-base.patterns |
-     grep -v -E -f debian/patterns/erlang-base-hipe.patterns |
      grep -v -E -f debian/patterns/erlang-examples.patterns |
      grep -v -E -f debian/patterns/erlang-src.patterns |
      grep -v -E -f debian/patterns/erlang-dev.patterns'
