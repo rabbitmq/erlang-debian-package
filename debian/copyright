@@ -68,10 +68,6 @@ Files: lib/eunit/*
 Copyright: 2004-2009, Richard Carlsson, Eric Merritt
 License: Apache-2.0
 
-Files: lib/hipe/llvm/*
-Copyright: 2011-2014, Yiannis Tsiouris <gtsiour@softlab.ntua.gr>
-License: Apache-2.0
-
 License: LGPL-2.1
  This library is free software; you can redistribute it and/or
  modify it under the terms of the GNU Lesser General Public
