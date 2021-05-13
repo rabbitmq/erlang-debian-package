@@ -6,7 +6,7 @@ as required by Debian policy.)
 
 --- a/erts/etc/common/erlexec.c
 +++ b/erts/etc/common/erlexec.c
-@@ -726,8 +726,10 @@
+@@ -722,8 +722,10 @@
  			error("-man not supported on Windows");
  #else
  			argv[i] = "man";

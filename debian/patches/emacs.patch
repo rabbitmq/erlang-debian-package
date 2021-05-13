@@ -5,7 +5,7 @@ section 3.
 
 --- a/lib/tools/emacs/erlang.el
 +++ b/lib/tools/emacs/erlang.el
-@@ -530,8 +530,8 @@
+@@ -534,8 +534,8 @@
  (defvar erlang-man-dirs
    '(("Man - Commands" "/man/man1" t)
      ("Man - Modules" "/man/man3" t)
@@ -16,7 +16,7 @@ section 3.
    "The man directories displayed in the Erlang menu.
  
  Each item in the list should be a list with three elements, the first
-@@ -2078,7 +2078,7 @@
+@@ -2081,7 +2081,7 @@
  
  (defun erlang-man-make-menu-item (file)
    "Create a menu item containing the name of the man page."
@@ -25,7 +25,7 @@ section 3.
         (let ((page (substring file (match-beginning 1) (match-end 1))))
           (list (capitalize page)
                 (list 'lambda '()
-@@ -2089,7 +2089,7 @@
+@@ -2092,7 +2092,7 @@
  
  (defun erlang-man-get-files (dir)
    "Return files in directory DIR."
@@ -34,7 +34,7 @@ section 3.
  
  
  (defun erlang-man-module (&optional module)
-@@ -2111,7 +2111,7 @@
+@@ -2114,7 +2114,7 @@
      (error "No Erlang module name given"))
    (let ((dir-list erlang-man-dirs)
          (pat (concat "/" (regexp-quote module)
@@ -43,7 +43,7 @@ section 3.
          (file nil)
          file-list)
      (while (and dir-list (null file))
-@@ -2345,7 +2345,7 @@
+@@ -2348,7 +2348,7 @@
                        nil)))))))))
  
  (defvar erlang-man-file-regexp
@@ -52,7 +52,7 @@ section 3.
  
  (defun erlang-man-display (file)
    "Display FILE as a `man' file.
-@@ -2357,7 +2357,7 @@
+@@ -2360,7 +2360,7 @@
        (let ((process-environment (copy-sequence process-environment)))
          (if (string-match erlang-man-file-regexp file)
              (let ((dir (substring file (match-beginning 1) (match-end 1)))
