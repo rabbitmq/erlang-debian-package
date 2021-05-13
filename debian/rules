@@ -232,7 +232,6 @@ define do-install
 	chmod 755 $(INSTALL_DIR)/usr/lib/erlang/erts-$(VSN)/bin/*.src
 	chmod 644 $(INSTALL_DIR)/usr/lib/erlang/bin/start.script
 	chmod 644 $(INSTALL_DIR)/usr/lib/erlang/lib/wx-*/examples/*/*.beam
-	chmod 644 $(INSTALL_DIR)/usr/lib/erlang/lib/wx-*/examples/*/*.xpm
 
 	# Remove some files which should be rather in erlang-doc-html package
 	find $(INSTALL_DIR)/usr/lib/erlang/lib -name info -exec rm -v {} \;
