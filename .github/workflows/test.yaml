@@ -7,6 +7,12 @@ jobs:
       image: debian:buster
     runs-on: ubuntu-latest
     steps:
+      - name: Install Git
+        run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            ca-certificates \
+            git
       - name: Checkout
         uses: actions/checkout@v2.3.4
         with:
@@ -28,7 +34,6 @@ jobs:
 
           export DEBIAN_FRONTEND=noninteractive
 
-          apt-get update
           apt-get install -y tzdata
 
           echo "Europe/London" > /etc/timezone
@@ -36,10 +41,8 @@ jobs:
 
           apt-get install -y --no-install-recommends \
             build-essential \
-            ca-certificates \
             devscripts \
             equivs \
-            git \
             gnupg \
             rsync
 
