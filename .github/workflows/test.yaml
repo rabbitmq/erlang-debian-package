@@ -16,12 +16,11 @@ jobs:
         with:
           repository: erlang/otp
           ref: maint-24
+          fetch-depth: 0
           path: erlang-sources
       - name: Build package
         run: |
           set -x
-
-          ls
 
           if test -f /etc/debian_version; then
             dist_version=debian-$(cat /etc/debian_version)
