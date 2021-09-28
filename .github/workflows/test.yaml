@@ -111,13 +111,5 @@ jobs:
 
           gbp buildpackage \
             --git-ignore-new \
-            --git-debian-branch="$branch"
-
-          # --------------------------------------------------------------------
-          # Move final package.
-          # --------------------------------------------------------------------
-
-          cd ..
-
-          mv *.dsc *.changes *.deb PACKAGES
-
+            --git-debian-branch="$branch" \
+            --no-sign
