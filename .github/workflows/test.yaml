@@ -1,10 +1,10 @@
-name: Test
+name: Test Ubuntu 20.04
 on:
   push:
 jobs:
-  test:
+  test-ubuntu-20:
     container:
-      image: debian:buster
+      image: ubuntu:20.04
     runs-on: ubuntu-latest
     steps:
       - name: Install Git
