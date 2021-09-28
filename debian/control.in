@@ -4,7 +4,7 @@ Uploaders: Sergei Golovan <sgolovan@debian.org>
 Section: interpreters
 Priority: optional
 Standards-Version: 4.5.1
-Build-Depends: debhelper (>= 10.0.0), autoconf (>= 2.50), openssl, libssl-dev, m4,
+Build-Depends: debhelper (>= 10.0.0), autoconf (>= 2.69), openssl, libssl-dev, m4,
  libncurses5-dev, unixodbc-dev, bison, flex, ed, zlib1g-dev,
  libwxgtk3.0-gtk3-dev, libwxgtk-webview3.0-gtk3-dev, libx11-dev, dctrl-tools, xsltproc,
  libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev,
@@ -18,7 +18,7 @@ Vcs-Git: https://salsa.debian.org/erlang-team/packages/erlang.git
 Package: erlang-base
 Architecture: any
 Multi-Arch: allowed
-Depends: procps, adduser, ${misc:Depends}
+Depends: procps, adduser, ${shlibs:Depends}, ${misc:Depends}
 Recommends: ${libsctp:Version}, erlang-crypto (= ${binary:Version}), erlang-syntax-tools (= ${binary:Version})
 Suggests: erlang-tools (= ${binary:Version}),  erlang, erlang-manpages, erlang-doc
 Conflicts: erlang (<< ${source:Version}), erlang-base-hipe, erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2), erlang-doc-html (<< 1:13.b.4)
@@ -39,7 +39,7 @@ Description: Erlang/OTP virtual machine and base applications
 Package: erlang-asn1
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, ${misc:Depends}
+Depends: ${erlang-base}, ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP modules for ASN.1 support
@@ -50,7 +50,7 @@ Description: Erlang/OTP modules for ASN.1 support
 Package: erlang-common-test
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, erlang-crypto (= ${binary:Version}), erlang-debugger (= ${binary:Version}), erlang-ftp (= ${binary:Version}), erlang-inets (= ${binary:Version}), erlang-observer (= ${binary:Version}), erlang-runtime-tools (= ${binary:Version}), erlang-snmp (= ${binary:Version}), erlang-ssh (= ${binary:Version}), erlang-syntax-tools (= ${binary:Version}), erlang-tools (= ${binary:Version}), erlang-xmerl (= ${binary:Version}), libjs-jquery, libjs-jquery-tablesorter, ${misc:Depends}
+Depends: ${erlang-base}, erlang-crypto (= ${binary:Version}), erlang-debugger (= ${binary:Version}), erlang-ftp (= ${binary:Version}), erlang-inets (= ${binary:Version}), erlang-observer (= ${binary:Version}), erlang-runtime-tools (= ${binary:Version}), erlang-snmp (= ${binary:Version}), erlang-ssh (= ${binary:Version}), erlang-syntax-tools (= ${binary:Version}), erlang-tools (= ${binary:Version}), erlang-xmerl (= ${binary:Version}), libjs-jquery, libjs-jquery-tablesorter, ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP application for automated testing
@@ -69,7 +69,7 @@ Description: Erlang/OTP application for automated testing
 Package: erlang-crypto
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, ${misc:Depends}
+Depends: ${erlang-base}, ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP cryptographic modules
@@ -94,7 +94,7 @@ Description: Erlang/OTP application for debugging and testing
 Package: erlang-dialyzer
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, erlang-syntax-tools (=${binary:Version}), ${misc:Depends}
+Depends: ${erlang-base}, erlang-syntax-tools (=${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang-wx (= ${binary:Version}), erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP discrepancy analyzer application
@@ -221,7 +221,7 @@ Description: Erlang/OTP manual pages
 Package: erlang-megaco
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, erlang-asn1 (= ${binary:Version}), erlang-runtime-tools (= ${binary:Version}), ${misc:Depends}
+Depends: ${erlang-base}, erlang-asn1 (= ${binary:Version}), erlang-runtime-tools (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang-debugger (= ${binary:Version}), erlang-et (= ${binary:Version}), erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP implementation of Megaco/H.248 protocol
@@ -257,7 +257,7 @@ Description: Erlang/OTP application for investigating distributed systems
 Package: erlang-odbc
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, ${misc:Depends}
+Depends: ${erlang-base}, ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP interface to SQL databases
@@ -268,7 +268,7 @@ Description: Erlang/OTP interface to SQL databases
 Package: erlang-os-mon
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, erlang-mnesia (= ${binary:Version}), erlang-snmp (= ${binary:Version}), ${misc:Depends}
+Depends: ${erlang-base}, erlang-mnesia (= ${binary:Version}), erlang-snmp (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP operating system monitor
@@ -317,7 +317,7 @@ Description: Erlang/OTP release management tool
 Package: erlang-runtime-tools
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, erlang-mnesia (= ${binary:Version}), ${misc:Depends}
+Depends: ${erlang-base}, erlang-mnesia (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP runtime tracing/debugging tools
@@ -390,7 +390,7 @@ Description: Erlang/OTP TFTP client and server
 Package: erlang-tools
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, erlang-runtime-tools (= ${binary:Version}), ${misc:Depends}
+Depends: ${erlang-base}, erlang-runtime-tools (= ${binary:Version}), ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP various tools
@@ -418,7 +418,7 @@ Description: Erlang/OTP various tools
 Package: erlang-wx
 Architecture: any
 Multi-Arch: allowed
-Depends: ${erlang-base}, ${misc:Depends}
+Depends: ${erlang-base}, ${shlibs:Depends}, ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang (<< ${source:Version}), erlang-base (<< ${binary:Version}), erlang-base-hipe, erlang-nox (<< ${source:Version}), erlang-x11 (<< ${binary:Version}), erlang-src (<< ${source:Version}), erlang-dev (<< ${binary:Version}), erlang-examples (<< ${source:Version}), erlang-mode (<< 1:12.b.1-dfsg-2), erlang-doc (<< ${source:Upstream-Version}), erlang-doc (>> ${source:Upstream-Version}-999), erlang-manpages (<= 1:11.b.1-2)
 Description: Erlang/OTP bindings to wxWidgets
