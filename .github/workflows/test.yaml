@@ -1,14 +1,18 @@
-name: Test
+name: Test Ubuntu 18.04
 on:
   push:
 jobs:
-  test:
+  test-ubuntu-18:
     container:
-      image: debian:buster
+      image: ubuntu:18.04
     runs-on: ubuntu-latest
     steps:
-      - name: Install Git
+      - name: Install Git 2.18+
         run: |
+          apt-get update
+          apt-get install -y --no-install-recommends \
+            software-properties-common
+          add-apt-repository -y ppa:git-core/ppa
           apt-get update
           apt-get install -y --no-install-recommends \
             ca-certificates \
