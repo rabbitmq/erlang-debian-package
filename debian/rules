@@ -63,6 +63,13 @@ endif
 LIBSCTP=$(shell grep-status -s Depends -PX libsctp-dev |sed -e 's!.*\(libsctp[0-9]*\).*!\1!')
 LIBSCTPDEP=$(shell grep-status -s Version -PX $(LIBSCTP) | sed -e's!^Version: \(.*\)-[^-]*!$(LIBSCTP) (>= \1)!')
 
+USE_SCTP := $(shell echo ${DEB_HOST_ARCH} | egrep -c "bsd|hurd" | sed -es/1/no/ -es/0/yes/)
+ifeq ($(USE_SCTP), no)
+SCTP_OPT=--disable-sctp
+else
+SCTP_OPT=--enable-sctp
+endif
+
 ifeq ($(findstring debug,$(DEB_BUILD_OPTIONS)),debug)
 CFLAGS=-g -O2 -fno-strict-aliasing
 GEN_OPT_FLGS=-O2 -fno-strict-aliasing
@@ -165,7 +172,7 @@ automake-stamp: debian/control
 	done
 	#
 	# Regenerate configure scripts using autoconf
-	./otp_build autoconf
+	./otp_build update_configure --no-commit
 	#
 	touch automake-stamp
 
@@ -190,7 +197,7 @@ configure-stnd-stamp: automake-stamp
 		    $(KERNEL_POLL_OPT) \
 		    $(ESOCKET_OPT) \
 		    $(SYSTEMD_OPT) \
-		    --enable-sctp \
+		    $(SCTP_OPT) \
 		    $(CLOCK_GETTIME_OPT) \
 		    --enable-dynamic-ssl-lib \
 		    --with-ssl-rpath=no \
