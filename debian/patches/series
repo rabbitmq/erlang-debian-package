@@ -1,3 +1,4 @@
+autoconfversion.patch
 clean.patch
 man.patch
 emacs.patch
