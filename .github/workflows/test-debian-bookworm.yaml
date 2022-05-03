@@ -1,10 +1,10 @@
-name: Test Debian Buster
+name: Test Debian Bookworm
 on:
   push:
 jobs:
-  test-debian-buster:
+  test-debian-bookworm:
     container:
-      image: debian:buster
+      image: debian:bookworm
     runs-on: ubuntu-latest
     steps:
       - name: Install Git
