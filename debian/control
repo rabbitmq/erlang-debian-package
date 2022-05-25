@@ -3,7 +3,7 @@ Maintainer: Debian Erlang Packagers <pkg-erlang-devel@lists.alioth.debian.org>
 Uploaders: Sergei Golovan <sgolovan@debian.org>
 Section: interpreters
 Priority: optional
-Standards-Version: 4.5.1
+Standards-Version: 4.6.0
 Build-Depends: debhelper (>= 10.0.0), autoconf (>= 2.71), openssl, libssl-dev, m4,
  libncurses5-dev, unixodbc-dev, bison, flex, ed, zlib1g-dev,
  libwxgtk3.0-gtk3-dev, libwxgtk-webview3.0-gtk3-dev, libx11-dev, dctrl-tools, xsltproc,
@@ -117,6 +117,7 @@ Description: Erlang/OTP implementation of RFC 6733 protocol
 Package: erlang-doc
 Section: doc
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends}
 Suggests: erlang:any
 Conflicts: erlang-doc-html, erlang-base:any (<< 1:13.b.4), erlang-base-hipe:any
@@ -450,6 +451,7 @@ Description: Erlang/OTP development libraries and headers
 
 Package: erlang-src
 Architecture: all
+Multi-Arch: foreign
 Depends: erlang-base:any (>= ${binary:Version}), erlang-base:any (<< ${binary:Version}.0), ${misc:Depends}
 Suggests: erlang, erlang-manpages, erlang-doc
 Replaces: erlang:any (<< ${binary:Version}), erlang-base:any (<< ${binary:Version}), erlang-base-hipe:any, erlang-nox (<< ${binary:Version}), erlang-x11 (<< ${binary:Version}), erlang-dev:any (<< ${binary:Version}), erlang-examples (<< ${binary:Version}), erlang-erl-docgen:any (<< ${binary:Version}), erlang-mode (<< 1:12.b.1-dfsg-2)
@@ -461,6 +463,7 @@ Description: Erlang/OTP applications sources
 
 Package: erlang-examples
 Architecture: all
+Multi-Arch: foreign
 Depends: erlang-base:any (>= ${binary:Version}), erlang-base:any (<< ${binary:Version}.0), ${misc:Depends}
 Recommends: erlang-crypto:any, erlang-inets:any, erlang-megaco:any, erlang-public-key:any, erlang-snmp:any, erlang-ssh:any, erlang-ssl:any, erlang-syntax-tools:any
 Suggests: erlang-wx:any, erlang, erlang-manpages, erlang-doc
@@ -492,6 +495,7 @@ Description: Erlang major editing mode for Emacs
 
 Package: erlang-nox
 Architecture: all
+Multi-Arch: foreign
 Depends: erlang-base:any, erlang-asn1:any, erlang-crypto:any,
  erlang-diameter:any, erlang-edoc:any, erlang-eldap:any, erlang-erl-docgen:any, erlang-eunit:any,
  erlang-ftp:any, erlang-inets:any, erlang-mnesia:any, erlang-odbc:any, erlang-os-mon:any,
@@ -506,6 +510,7 @@ Description: Erlang/OTP applications that don't require X Window System
 
 Package: erlang-x11
 Architecture: all
+Multi-Arch: foreign
 Depends: erlang-base:any, erlang-nox,
  erlang-common-test:any, erlang-debugger:any, erlang-dialyzer:any, erlang-et:any,
  erlang-megaco:any, erlang-observer:any, erlang-reltool:any,
@@ -520,6 +525,7 @@ Description: Erlang/OTP applications that require X Window System
 
 Package: erlang
 Architecture: all
+Multi-Arch: foreign
 Depends: erlang-base:any, erlang-dev:any, erlang-asn1:any,
  erlang-common-test:any, erlang-crypto:any, erlang-debugger:any,
  erlang-dialyzer:any, erlang-diameter:any, erlang-edoc:any, erlang-eldap:any,
