@@ -174,7 +174,7 @@ automake-stamp: debian/control
 	done
 	#
 	# Regenerate configure scripts using autoconf
-	./otp_build update_configure --no-commit
+	./otp_build autoconf
 	#
 	touch automake-stamp
 
