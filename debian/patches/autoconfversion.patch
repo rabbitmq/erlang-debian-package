@@ -1,3 +1,16 @@
+--- a/make/configure.ac
++++ b/make/configure.ac
+@@ -18,7 +18,7 @@ dnl limitations under the License.
+ dnl
+ dnl %CopyrightEnd%
+ 
+-AC_PREREQ([2.71])dnl
++AC_PREREQ([2.69)dnl
+ 
+ AC_INIT
+ 
+diff --git a/otp_build b/otp_build
+index 7b35b39fc2..7fed8449ed 100755
 --- a/otp_build
 +++ b/otp_build
 @@ -19,7 +19,7 @@
