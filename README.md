@@ -17,6 +17,7 @@ and [Cloudsmith.io](https://cloudsmith.io/~rabbitmq/repos/rabbitmq-erlang/packag
 
 The following distributions are currently [supported](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang):
 
+ * Ubuntu 22.04 (Jammy)
  * Ubuntu 20.04 (Focal)
  * Ubuntu 18.04 (Bionic)
  * Ubuntu 16.04 (Xenial)
@@ -109,7 +110,7 @@ is indirectly tested.
 
 ## Copyright and License
 
-(c) 2018-2021 VMware, Inc and its affiliates.
+(c) 2018-2022 VMware, Inc and its affiliates.
 
 Released under the [Apache Software License 2.0](https://github.com/rabbitmq/erlang-rpm-packaging/blob/master/Erlang_ASL2_LICENSE.txt),
 same as Erlang/OTP starting with 18.0.
