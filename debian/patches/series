@@ -1,4 +1,5 @@
 clean.patch
+gnu.patch
 man.patch
 emacs.patch
 docs.patch
