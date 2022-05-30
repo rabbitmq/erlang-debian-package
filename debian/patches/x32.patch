@@ -5,7 +5,7 @@ Last-Modified: Sun, 27 Dec 2015 12:39:07 +0300
 
 --- a/erts/lib_src/pthread/ethread.c
 +++ b/erts/lib_src/pthread/ethread.c
-@@ -196,7 +196,7 @@
+@@ -190,7 +190,7 @@
  void
  ethr_x86_cpuid__(int *eax, int *ebx, int *ecx, int *edx)
  {
@@ -14,12 +14,12 @@ Last-Modified: Sun, 27 Dec 2015 12:39:07 +0300
      int have_cpuid;
      /*
       * If it is possible to toggle eflags bit 21,
-@@ -223,7 +223,7 @@
+@@ -217,7 +217,7 @@
  	return;
      }
  #endif
 -#if ETHR_SIZEOF_PTR == 4 && defined(__PIC__) && __PIC__
 +#if ETHR_SIZEOF_PTR == 4 && (!defined(__x86_64__) || !(__x86_64__ && __ILP32__)) && defined(__PIC__) && __PIC__
      /*
-      * When position independet code is used in 32-bit mode, the B register
+      * When position independent code is used in 32-bit mode, the B register
       * is used for storage of global offset table address, and we may not

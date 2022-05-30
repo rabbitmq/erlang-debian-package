@@ -17,7 +17,7 @@ set -e
 case "$1" in
     remove|upgrade)
         echo -n "Searching for services which depend on erlang and should be stopped... "
-        if which systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
+        if command -v systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
             # native service files:
             services1=$(systemctl list-unit-files '*.s*' | grep -P '(static|enabled)' | cut -f 1 -d ' ' | sed -e's:^:/lib/systemd/*/:')
             # generated service files:
@@ -50,7 +50,7 @@ case "$1" in
             echo "Stopping services which depend on erlang"
             failed=""
             for service in $services ; do
-                if which systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
+                if command -v systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
                     echo -n "  $service: stopping... "
                     if systemctl stop $service 2>/dev/null
                     then
@@ -62,7 +62,7 @@ case "$1" in
                 else
                     rl=$(runlevel | awk '{print $2}')
                     for service in $services ; do
-                        if which invoke-rc.d >/dev/null ; then
+                        if command -v invoke-rc.d >/dev/null ; then
                             idl="invoke-rc.d ${service}"
                         elif [ -f /usr/share/file-rc/rc -o -f /usr/lib/file-rc/rc ] && [ -f /etc/runlevel.conf ] ; then
                             idl=$(filerc $rl $service)
@@ -107,7 +107,7 @@ esac
 case "$1" in
     remove|upgrade)
         echo -n "Killing epmd... "
-        if which pgrep >/dev/null ; then
+        if command -v pgrep >/dev/null ; then
             pid=$(pgrep epmd | head -1)
             if [ -z "$pid" ] ; then
                 echo "it is not running."

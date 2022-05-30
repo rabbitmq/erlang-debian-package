@@ -6,9 +6,9 @@ Description: GCJ 4.4 passes the test for JDK 1.5 but doesn't implement
 Forwarded: yes
 Last-updated: Sat, 13 Feb 2010 10:08:42 +0300
 
---- a/erts/configure.in
-+++ b/erts/configure.in
-@@ -3411,7 +3411,8 @@
+--- a/erts/configure.ac
++++ b/erts/configure.ac
+@@ -3397,7 +3397,8 @@
    dnl Make sure it's at least JDK 1.6
    AC_CACHE_CHECK(for JDK version 1.6, 
       ac_cv_prog_javac_ver_1_6,

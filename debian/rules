@@ -82,6 +82,8 @@ endif
 
 JAVA_OPTIONS=-Xlint -source 1.8 -target 1.8
 
+export LC_ALL := C.UTF-8
+
 JOBS=4
 
 debian/control: debian/control.in debian/rules
@@ -172,7 +174,7 @@ automake-stamp: debian/control
 	done
 	#
 	# Regenerate configure scripts using autoconf
-	./otp_build update_configure --no-commit
+	./otp_build autoconf
 	#
 	touch automake-stamp
 
@@ -250,9 +252,9 @@ define do-install
 
 	# Install systemd units for epmd
 	if [ "$(USE_CLOCK_GETTIME)" = "yes" ] ; then \
-	    install -m 755 -d $(INSTALL_DIR)/lib/systemd/system ; \
-	    install -m 644 debian/epmd.service $(INSTALL_DIR)/lib/systemd/system ; \
-	    install -m 644 debian/epmd.socket $(INSTALL_DIR)/lib/systemd/system ; \
+	    install -m 755 -d $(INSTALL_DIR)/usr/lib/systemd/system ; \
+	    install -m 644 debian/epmd.service $(INSTALL_DIR)/usr/lib/systemd/system ; \
+	    install -m 644 debian/epmd.socket $(INSTALL_DIR)/usr/lib/systemd/system ; \
 	fi
 endef
 

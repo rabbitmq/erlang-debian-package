@@ -49,8 +49,8 @@ Last-modified: Thu, 09 Dec 2010 10:45:56 +0300
  # Macros
  # ----------------------------------------------------
  
--SUB_DIRECTORIES = c_src src doc/src examples emacs
-+SUB_DIRECTORIES = c_src src examples emacs doc/src
+-SUB_DIRECTORIES = src doc/src examples emacs
++SUB_DIRECTORIES = src examples emacs doc/src
  
  include vsn.mk
  VSN = $(TOOLS_VSN)
