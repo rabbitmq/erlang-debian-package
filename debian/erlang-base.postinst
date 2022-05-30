@@ -45,7 +45,7 @@ case "$1" in
     configure)
         if [ -z "$2" ] || dpkg --compare-versions "$2" ge-nl "1:10.b.10-3" ; then
             echo -n "Searching for services which depend on erlang and should be started... "
-            if which systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
+            if command -v systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
                 help="systemctl start <service>"
                 # native service files:
                 services1=$(systemctl list-unit-files '*.s*' | grep -P '(static|enabled)' | cut -f 1 -d ' ' | sed -e's:^:/lib/systemd/*/:')
@@ -81,7 +81,7 @@ case "$1" in
                 failed=""
                 rl=$(runlevel | awk '{print $2}')
                 for service in $services ; do
-                    if which systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
+                    if command -v systemctl >/dev/null && systemctl >/dev/null 2>&1 ; then
                         echo -n "  $service: starting... "
                         if systemctl start $service 2>/dev/null
                         then
@@ -91,7 +91,7 @@ case "$1" in
                             failed="$failed $service"
                         fi
                     else
-                        if which invoke-rc.d >/dev/null ; then
+                        if command -v invoke-rc.d >/dev/null ; then
                             idl="invoke-rc.d ${service}"
                         elif [ -f /usr/share/file-rc/rc -o -f /usr/lib/file-rc/rc ] && [ -f /etc/runlevel.conf ] ; then
                             idl=$(filerc $rl $service)

@@ -1,4328 +1,529 @@
-erlang (1:24.3.4-1) unstable; urgency=medium
+erlang (1:25.0-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 03 May 2022 06:25:00 +0000
+ -- RabbitMQ Team <info@rabbitmq.com>  Wed, 25 May 2022 09:12:53 +0000
 
-erlang (1:24.3.3-1) unstable; urgency=medium
+erlang (1:25.0+dfsg-1) experimental; urgency=medium
 
   * New upstream release.
+  * Upload to experimental.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 29 Mar 2022 13:56:29 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 19 May 2022 12:44:25 +0300
 
-erlang (1:24.3.2-1) unstable; urgency=medium
+erlang (1:25.0~rc3+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Mar 2022 17:33:43 +0000
-
-erlang (1:24.3.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Mar 2022 16:00:54 +0000
-
-erlang (1:24.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Mar 2022 07:55:11 +0000
-
-erlang (1:24.2.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Feb 2022 08:52:27 +0000
-
-erlang (1:24.2.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 25 Jan 2022 16:55:26 +0000
-
-erlang (1:24.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 15 Dec 2021 14:07:32 +0000
-
-erlang (1:24.1.7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 22 Nov 2021 08:38:31 +0000
-
-erlang (1:24.1.6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 18 Nov 2021 15:17:58 +0000
-
-erlang (1:24.1.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Nov 2021 17:54:46 +0000
-
-erlang (1:24.1.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 02 Nov 2021 08:15:35 +0000
-
-erlang (1:24.1.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 27 Oct 2021 06:56:52 +0000
-
-erlang (1:24.1.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Oct 2021 06:38:21 +0000
-
-erlang (1:24.1.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 30 Sep 2021 11:17:31 +0000
-
-erlang (1:24.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 22 Sep 2021 10:27:44 +0000
-
-erlang (1:24.0.6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 03 Sep 2021 07:05:17 +0000
-
-erlang (1:24.0.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 30 Jul 2021 09:25:28 +0000
-
-erlang (1:24.0.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 22 Jul 2021 07:33:23 +0000
-
-erlang (1:24.0.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 28 Jun 2021 13:25:30 +0000
-
-erlang (1:24.0.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 31 May 2021 22:54:08 +0000
-
-erlang (1:24.0.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 20 May 2021 15:30:06 +0000
-
-erlang (1:24.0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 12 May 2021 22:24:16 +0000
-
-erlang (1:23.3.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 10 May 2021 13:33:44 +0000
-
-erlang (1:23.3.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 May 2021 08:08:39 +0000
-
-erlang (1:23.3.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 27 Apr 2021 13:41:26 +0000
-
-erlang (1:23.3.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 30 Mar 2021 08:20:52 +0000
-
-erlang (1:23.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Mar 2021 08:59:25 +0000
-
-erlang (1:23.2.7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 03 Mar 2021 08:59:32 +0000
-
-erlang (1:23.2.6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 25 Feb 2021 09:03:50 +0000
-
-erlang (1:23.2.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 16 Feb 2021 08:59:26 +0000
-
-erlang (1:23.2.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 04 Feb 2021 12:57:43 +0000
-
-erlang (1:23.2.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Jan 2021 12:15:23 +0000
-
-erlang (1:23.2.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Jan 2021 10:41:31 +0000
-
-erlang (1:23.2.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 21 Dec 2020 09:50:26 +0000
-
-erlang (1:23.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Dec 2020 07:30:06 +0000
-
-erlang (1:23.1.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Dec 2020 08:44:40 +0000
-
-erlang (1:23.1.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 20 Nov 2020 12:35:25 +0000
-
-erlang (1:23.1.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 17 Nov 2020 14:06:23 +0000
-
-erlang (1:23.1.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 05 Nov 2020 14:42:07 +0000
-
-erlang (1:23.1.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Oct 2020 15:40:12 +0000
-
-erlang (1:23.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 23 Sep 2020 11:25:05 +0000
-
-erlang (1:23.0.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 11 Sep 2020 06:45:14 +0000
-
-erlang (1:23.0.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 21 Jul 2020 14:28:08 +0000
-
-erlang (1:23.0.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 28 May 2020 16:05:48 +0000
-
-erlang (1:23.0.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 27 May 2020 13:53:23 +0000
-
-erlang (1:22.3.4.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 May 2020 10:36:04 +0000
-
-erlang (1:22.3.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 May 2020 11:34:40 +0000
-
-erlang (1:22.3.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 27 Apr 2020 11:49:43 +0000
-
-erlang (1:22.3.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Apr 2020 11:33:29 +0000
-
-erlang (1:22.3.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 06 Apr 2020 13:08:01 +0000
-
-erlang (1:22.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 16 Mar 2020 13:04:31 +0000
-
-erlang (1:22.2.8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 28 Feb 2020 12:29:46 +0000
-
-erlang (1:22.2.7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Feb 2020 08:50:36 +0000
-
-erlang (1:22.2.6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 05 Feb 2020 13:41:12 +0000
-
-erlang (1:22.2.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Feb 2020 12:16:34 +0000
-
-erlang (1:22.2.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 28 Jan 2020 09:42:17 +0000
-
-erlang (1:22.2.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 20 Jan 2020 11:37:20 +0000
-
-erlang (1:22.2.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 13 Jan 2020 10:30:11 +0000
-
-erlang (1:22.2.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 19 Dec 2019 10:50:13 +0000
-
-erlang (1:22.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 10 Dec 2019 12:41:06 +0000
-
-erlang (1:22.1.8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Nov 2019 12:21:49 +0000
-
-erlang (1:22.1.7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Nov 2019 05:06:25 +0000
-
-erlang (1:22.1.6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 07 Nov 2019 11:00:48 +0000
-
-erlang (1:22.1.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 28 Oct 2019 11:19:20 +0000
-
-erlang (1:22.1.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 22 Oct 2019 07:56:08 +0000
-
-erlang (1:22.1.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Oct 2019 10:13:22 +0000
-
-erlang (1:22.1.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Oct 2019 09:29:46 +0000
-
-erlang (1:22.1.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 27 Sep 2019 12:37:04 +0000
-
-erlang (1:22.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 17 Sep 2019 13:58:21 +0000
-
-erlang (1:22.0.7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Jul 2019 09:27:58 +0000
-
-erlang (1:22.0.6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 10 Jul 2019 08:15:30 +0000
-
-erlang (1:22.0.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 03 Jul 2019 08:35:53 +0000
-
-erlang (1:22.0.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Jun 2019 08:18:27 +0000
-
-erlang (1:22.0.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 13 Jun 2019 08:37:20 +0000
-
-erlang (1:22.0.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Jun 2019 12:43:14 +0000
-
-erlang (1:22.0.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 20 May 2019 12:57:41 +0000
-
-erlang (1:22.0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 14 May 2019 14:56:02 +0000
-
-erlang (1:22.0~rc1.444-g0f091e92c7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 16:08:18 +0000
-
-erlang (1:22.0~rc1.433-ge739ec80b5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 14:16:12 +0000
-
-erlang (1:22.0~rc1.424-g2dd3dfaec9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 14:10:16 +0000
-
-erlang (1:22.0~rc1.422-g949ddf1328-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 12:53:46 +0000
-
-erlang (1:22.0~rc1.420-gda13166940-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 12:02:33 +0000
-
-erlang (1:22.0~rc1.418-g270f6adc10-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 11:59:35 +0000
-
-erlang (1:22.0~rc1.417-g3a9bf3eb73-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 11:13:11 +0000
-
-erlang (1:22.0~rc1.398-gcf26ad7c81-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 10:25:48 +0000
-
-erlang (1:22.0~rc1.390-g10d1e62616-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 10:18:02 +0000
-
-erlang (1:22.0~rc1.388-g2a8b9385db-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 10:11:01 +0000
-
-erlang (1:22.0~rc1.385-gc102b3fd3f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 09:49:31 +0000
-
-erlang (1:22.0~rc1.384-gd19f68f99c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 09:36:33 +0000
-
-erlang (1:22.0~rc1.382-g5f324f5077-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 09:17:39 +0000
-
-erlang (1:22.0~rc1.380-g96bc98aefa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 08:48:18 +0000
-
-erlang (1:22.0~rc1.377-g22868eccf7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 08:07:30 +0000
-
-erlang (1:22.0~rc1.375-g324d0a9537-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 07:59:06 +0000
-
-erlang (1:22.0~rc1.370-g185fae668e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Mar 2019 07:34:57 +0000
-
-erlang (1:22.0~rc1.366-g1129d7b6c9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Mar 2019 13:30:37 +0000
-
-erlang (1:22.0~rc1.365-g2467e3832d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Mar 2019 12:41:46 +0000
-
-erlang (1:22.0~rc1.363-g3a7bc65f71-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Mar 2019 08:11:20 +0000
-
-erlang (1:22.0~rc1.360-g515c1d380d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Mar 2019 13:53:49 +0000
-
-erlang (1:22.0~rc1.355-g757910dbbb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Mar 2019 13:52:21 +0000
-
-erlang (1:22.0~rc1.328-g36561e1468-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Mar 2019 13:22:57 +0000
-
-erlang (1:22.0~rc1.321-g6c68afe055-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Mar 2019 12:40:16 +0000
-
-erlang (1:22.0~rc1.315-g14713b3b28-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Mar 2019 12:30:53 +0000
-
-erlang (1:22.0~rc1.310-g47b496da10-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Mar 2019 08:20:26 +0000
-
-erlang (1:22.0~rc1.308-g875eef340a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 14:42:07 +0000
-
-erlang (1:22.0~rc1.306-ge82d57d194-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 14:33:26 +0000
-
-erlang (1:22.0~rc1.304-g85f55f6103-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 13:59:27 +0000
-
-erlang (1:22.0~rc1.303-g0faf5d5fbe-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 12:46:52 +0000
-
-erlang (1:22.0~rc1.287-g1c329d9b36-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 11:57:47 +0000
-
-erlang (1:22.0~rc1.285-gd0d122c905-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 11:56:47 +0000
-
-erlang (1:22.0~rc1.283-gfb29059f63-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 11:55:29 +0000
-
-erlang (1:22.0~rc1.281-gedf4529bf2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 11:54:03 +0000
-
-erlang (1:22.0~rc1.279-g63820aafb9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Mar 2019 10:42:13 +0000
-
-erlang (1:22.0~rc1.275-g6f97929787-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Mar 2019 17:38:17 +0000
-
-erlang (1:22.0~rc1.273-g80f103c649-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Mar 2019 15:10:06 +0000
-
-erlang (1:22.0~rc1.269-g702ef9b0fa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 14 Mar 2019 15:48:29 +0000
-
-erlang (1:22.0~rc1.267-gffa252a6e6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 13 Mar 2019 14:17:02 +0000
-
-erlang (1:22.0~rc1.262-g3e5ef9fcf6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 13 Mar 2019 11:37:24 +0000
-
-erlang (1:22.0~rc1.260-g18974565f8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 13 Mar 2019 11:25:53 +0000
-
-erlang (1:22.0~rc1.247-g9ddac28d0a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 13 Mar 2019 07:42:02 +0000
-
-erlang (1:22.0~rc1.245-gf07092b40e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 12 Mar 2019 16:26:48 +0000
-
-erlang (1:22.0~rc1.244-g1518224b7f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 12 Mar 2019 13:27:08 +0000
-
-erlang (1:22.0~rc1.241-g0ffc834655-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Mar 2019 11:44:17 +0000
-
-erlang (1:22.0~rc1.239-g82e727974f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Sat, 09 Mar 2019 07:40:56 +0000
-
-erlang (1:22.0~rc1.237-g6bbf8fd852-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 14:02:11 +0000
-
-erlang (1:22.0~rc1.234-gf39d734ed6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 13:43:48 +0000
-
-erlang (1:22.0~rc1.232-g9c019dfdf0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 13:20:25 +0000
-
-erlang (1:22.0~rc1.230-g3066a5bf51-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 10:50:24 +0000
-
-erlang (1:22.0~rc1.224-g08030f43f4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 10:48:20 +0000
-
-erlang (1:22.0~rc1.222-g79f6f0a9ff-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 10:43:21 +0000
-
-erlang (1:22.0~rc1.206-gf3b978852f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 10:42:13 +0000
-
-erlang (1:22.0~rc1.195-gf7b6a48eaf-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 10:03:40 +0000
-
-erlang (1:22.0~rc1.191-g0c9d6cb2ab-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 09:25:12 +0000
-
-erlang (1:22.0~rc1.189-gae6a710613-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 08 Mar 2019 08:57:39 +0000
-
-erlang (1:22.0~rc1.182-gc70a0aaeac-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 07 Mar 2019 13:46:21 +0000
-
-erlang (1:22.0~rc1.173-g3d431b5f84-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 07 Mar 2019 13:37:09 +0000
-
-erlang (1:22.0~rc1.170-g9703147397-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 07 Mar 2019 13:28:05 +0000
-
-erlang (1:22.0~rc1.164-gde8256ce9a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 07 Mar 2019 09:00:32 +0000
-
-erlang (1:22.0~rc1.160-ga41fbea767-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 22:47:33 +0000
-
-erlang (1:22.0~rc1.157-g328e988b47-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 16:06:14 +0000
-
-erlang (1:22.0~rc1.151-g50a2582b39-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 15:16:30 +0000
-
-erlang (1:22.0~rc1.145-gdd606f4c81-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 15:11:30 +0000
-
-erlang (1:22.0~rc1.143-g2169b5ba0a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 14:04:21 +0000
-
-erlang (1:22.0~rc1.140-g31bff2cdb1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 11:45:23 +0000
-
-erlang (1:22.0~rc1.130-ge7ece9449c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Mar 2019 16:27:51 +0000
-
-erlang (1:22.0~rc1.128-gd18d49447d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Mar 2019 15:40:11 +0000
-
-erlang (1:22.0~rc1.126-g4a8569345b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Mar 2019 14:35:18 +0000
-
-erlang (1:22.0~rc1.125-g9956a80c30-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Mar 2019 10:11:45 +0000
-
-erlang (1:22.0~rc1.124-g1378b465cf-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Mar 2019 09:14:59 +0000
-
-erlang (1:22.0~rc1.123-g714d36b393-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 17:06:48 +0000
-
-erlang (1:22.0~rc1.120-gac6d4ea0f4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 16:48:53 +0000
-
-erlang (1:22.0~rc1.118-g939dba97de-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 16:47:45 +0000
-
-erlang (1:22.0~rc1.111-g2052caebf9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 15:16:26 +0000
-
-erlang (1:22.0~rc1.109-g232a39c043-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 15:10:11 +0000
-
-erlang (1:22.0~rc1.105-g58bc124618-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 15:05:19 +0000
-
-erlang (1:22.0~rc1.99-g0341e571fb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 12:18:34 +0000
-
-erlang (1:22.0~rc1.95-g91498c1b74-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 11:49:28 +0000
-
-erlang (1:22.0~rc1.90-gcf5e7c6bc5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 11:13:39 +0000
-
-erlang (1:22.0~rc1.87-g4d72eedc0d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 11:08:58 +0000
-
-erlang (1:22.0~rc1.83-g2a52745467-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 11:05:41 +0000
-
-erlang (1:22.0~rc1.72-g0d080124ca-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 10:59:38 +0000
-
-erlang (1:22.0~rc1.70-gaab126fca9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 10:57:35 +0000
-
-erlang (1:22.0~rc1.67-g3a6424de23-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 09:06:06 +0000
-
-erlang (1:22.0~rc1.66-gf6b6441ed3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 08:50:24 +0000
-
-erlang (1:22.0~rc1.64-gb826c2ab15-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 08:48:53 +0000
-
-erlang (1:22.0~rc1.48-g80a44304d2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Mar 2019 08:47:53 +0000
-
-erlang (1:22.0~rc1.46-ga94b54d456-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 01 Mar 2019 07:39:46 +0000
-
-erlang (1:22.0~rc1.43-gd4229d29cb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 28 Feb 2019 14:27:28 +0000
-
-erlang (1:22.0~rc1.41-gcc12aeb0ce-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 28 Feb 2019 11:38:53 +0000
-
-erlang (1:22.0~rc1.35-gcee872cda9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 28 Feb 2019 11:25:53 +0000
-
-erlang (1:22.0~rc1.32-g236436e82f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 28 Feb 2019 08:34:45 +0000
-
-erlang (1:22.0~rc1.11-gb0f099c8a7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 27 Feb 2019 14:07:56 +0000
-
-erlang (1:22.0~rc1.5-g0c3014ec38-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 27 Feb 2019 13:52:48 +0000
-
-erlang (1:22.0~rc1.2-g8967a65b28-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 27 Feb 2019 12:22:35 +0000
-
-erlang (1:22.0~2049.g42f0f3fcbc-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 15:14:36 +0000
-
-erlang (1:22.0~2045.g9ff209580d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 14:09:49 +0000
-
-erlang (1:22.0~2044.g8aef5fbcd7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 14:08:04 +0000
-
-erlang (1:22.0~2042.g34c88dfb82-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 12:39:19 +0000
-
-erlang (1:22.0~2040.g7c1388ddaa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 11:40:23 +0000
-
-erlang (1:22.0~2038.g4a4e6f28a9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 11:34:20 +0000
-
-erlang (1:22.0~2035.g593eec697a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 10:55:15 +0000
-
-erlang (1:22.0~2032.gae62af76ce-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 10:45:52 +0000
-
-erlang (1:22.0~2030.g5045fe8660-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 10:24:26 +0000
-
-erlang (1:22.0~2028.g2c06e174d6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 09:06:07 +0000
-
-erlang (1:22.0~2026.gb3dbf45fdb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 07:56:49 +0000
-
-erlang (1:22.0~2024.g731b26b719-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 07:13:02 +0000
-
-erlang (1:22.0~2022.gc13aea731b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 25 Feb 2019 07:12:01 +0000
-
-erlang (1:22.0~2018.g6053c0e4d7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Sat, 23 Feb 2019 20:44:55 +0000
-
-erlang (1:22.0~2015.ga729949b8b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 18:52:21 +0000
-
-erlang (1:22.0~1721.g9f324bf871-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 18:16:53 +0000
-
-erlang (1:22.0~1718.g4cb28a7101-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 12:36:14 +0000
-
-erlang (1:22.0~1715.gd49b77d0c2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 12:35:14 +0000
-
-erlang (1:22.0~1711.g1af28d672d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 10:44:49 +0000
-
-erlang (1:22.0~1710.gd0ce82e6a1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 10:31:37 +0000
-
-erlang (1:22.0~1704.g305204ffb8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 10:18:29 +0000
-
-erlang (1:22.0~1681.g8172af0a19-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 09:51:05 +0000
-
-erlang (1:22.0~1678.g1c9c039449-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 09:37:49 +0000
-
-erlang (1:22.0~1674.g2597120931-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 09:26:50 +0000
-
-erlang (1:22.0~1673.g4327304462-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 22 Feb 2019 08:16:44 +0000
-
-erlang (1:22.0~1671.g6cfe2e6b8c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 14:11:07 +0000
-
-erlang (1:22.0~1668.gae62537073-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 14:02:10 +0000
-
-erlang (1:22.0~1650.g388fe9d0ef-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 12:11:20 +0000
-
-erlang (1:22.0~1635.g1ebe4074d5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 09:47:34 +0000
-
-erlang (1:22.0~1630.ge0bdf58230-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 08:55:43 +0000
-
-erlang (1:22.0~1628.g5d679d602d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 08:49:41 +0000
-
-erlang (1:22.0~1626.g8305e0f2db-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 08:33:25 +0000
-
-erlang (1:22.0~1619.gd1c00c6914-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 21 Feb 2019 07:11:20 +0000
-
-erlang (1:22.0~1616.g1bb47d7af1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Feb 2019 17:02:24 +0000
-
-erlang (1:22.0~1612.gdf63dd1158-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Feb 2019 16:36:59 +0000
-
-erlang (1:22.0~1609.g733c12bd6c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Feb 2019 12:11:36 +0000
-
-erlang (1:22.0~1608.g6c4149f24b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Feb 2019 09:13:17 +0000
-
-erlang (1:22.0~1607.g68fd17a445-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Feb 2019 09:01:57 +0000
-
-erlang (1:22.0~1605.g50ce3f30ca-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Feb 2019 16:16:44 +0000
-
-erlang (1:22.0~1602.g1468c77c81-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Feb 2019 14:30:18 +0000
-
-erlang (1:22.0~1600.gd39fd7534d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Feb 2019 14:20:10 +0000
-
-erlang (1:22.0~1597.g8d6174377c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Feb 2019 09:16:17 +0000
-
-erlang (1:22.0~1594.g9b0f2141bb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Feb 2019 08:48:46 +0000
-
-erlang (1:22.0~1591.g6c0c1f6935-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 19 Feb 2019 06:32:56 +0000
-
-erlang (1:22.0~1580.g88042fbf8b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 19:39:30 +0000
-
-erlang (1:22.0~1574.gc73eea04a4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 16:41:20 +0000
-
-erlang (1:22.0~1572.gfde162310c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 14:47:39 +0000
-
-erlang (1:22.0~1548.g95b6946972-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 12:41:56 +0000
-
-erlang (1:22.0~1549.g1c5c381fda-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 12:24:10 +0000
-
-erlang (1:22.0~1547.gba4f410e34-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 12:03:26 +0000
-
-erlang (1:22.0~1540.g54305aba43-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 11:50:26 +0000
-
-erlang (1:22.0~1535.g67523dd74b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 11:46:16 +0000
-
-erlang (1:22.0~1526.g2174af8288-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 11:43:13 +0000
-
-erlang (1:22.0~1523.gd89ac6959f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 09:29:25 +0000
-
-erlang (1:22.0~1520.g45c2c2bb6b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 07:35:58 +0000
-
-erlang (1:22.0~1516.g76da23bb4e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 16:16:25 +0000
-
-erlang (1:22.0~1513.g480baa51c6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 14:36:54 +0000
-
-erlang (1:22.0~1508.gdd02fd37b7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 14:01:29 +0000
-
-erlang (1:22.0~1505.g9b5a9ea1e8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 13:15:51 +0000
-
-erlang (1:22.0~1502.g83e5069e94-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 09:30:11 +0000
-
-erlang (1:22.0~1501.gbe02806923-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 09:24:46 +0000
-
-erlang (1:22.0~1499.g05320ffbaa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 09:16:40 +0000
-
-erlang (1:22.0~1496.gb4466ab778-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 15 Feb 2019 09:04:47 +0000
-
-erlang (1:22.0~1491.g11d4a893e5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 14 Feb 2019 14:42:24 +0000
-
-erlang (1:22.0~1488.g5da74b8849-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 14 Feb 2019 13:47:17 +0000
-
-erlang (1:22.0~1483.g3103cc205c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 14 Feb 2019 12:08:38 +0000
-
-erlang (1:22.0~1477.ge54daec589-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 14 Feb 2019 10:53:35 +0000
-
-erlang (1:22.0~1473.g2d04d0459d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 14 Feb 2019 10:12:10 +0000
-
-erlang (1:22.0~1467.gb2692ec96b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 14 Feb 2019 09:44:51 +0000
-
-erlang (1:22.0~1465.g39848adf40-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 13 Feb 2019 11:44:14 +0000
-
-erlang (1:22.0~1461.ge872bc4d9f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 13 Feb 2019 05:38:42 +0000
-
-erlang (1:22.0~1457.g03ede89106-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 12 Feb 2019 10:25:45 +0000
-
-erlang (1:22.0~1454.gb5fa09f0dd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Feb 2019 14:56:14 +0000
-
-erlang (1:22.0~1451.g0699796062-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Feb 2019 13:45:14 +0000
-
-erlang (1:22.0~1439.g657dea6308-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Feb 2019 11:36:24 +0000
-
-erlang (1:22.0~1437.g8f2e7b2c10-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Feb 2019 10:37:48 +0000
-
-erlang (1:22.0~1435.gab5debc086-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Feb 2019 09:21:34 +0000
-
-erlang (1:22.0~1434.g5a5e34ab31-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Feb 2019 08:01:29 +0000
-
-erlang (1:22.0~1431.geac67ca983-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 11 Feb 2019 05:39:47 +0000
-
-erlang (1:22.0~1429.g20b76b6c53-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 07 Feb 2019 15:17:12 +0000
-
-erlang (1:22.0~1427.g2609355956-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Feb 2019 15:04:43 +0000
-
-erlang (1:22.0~1421.g3542afbdc4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Feb 2019 10:39:14 +0000
-
-erlang (1:22.0~1418.g152c7863a8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Feb 2019 10:38:09 +0000
-
-erlang (1:22.0~1415.g4cd582c2ed-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Feb 2019 10:33:20 +0000
-
-erlang (1:22.0~1413.g9050bb9443-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Feb 2019 09:32:20 +0000
-
-erlang (1:22.0~1408.gc44caa428b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Feb 2019 14:59:54 +0000
-
-erlang (1:22.0~1404.ge8ddbc58fd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Feb 2019 13:52:33 +0000
-
-erlang (1:22.0~1401.g6c7c3a1660-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 05 Feb 2019 13:41:41 +0000
-
-erlang (1:22.0~1398.ge82637d6f0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 14:10:06 +0000
-
-erlang (1:22.0~1397.g4b3c3ae0bd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 11:31:06 +0000
-
-erlang (1:22.0~1389.g791b151f20-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 11:30:04 +0000
-
-erlang (1:22.0~1383.gc66d0d2396-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 11:02:50 +0000
-
-erlang (1:22.0~1380.g4bdbb313f6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 10:58:42 +0000
-
-erlang (1:22.0~1375.g784fb8d859-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 10:53:46 +0000
-
-erlang (1:22.0~1235.gbc0aef4bb6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 01 Feb 2019 11:45:00 +0000
-
-erlang (1:22.0~1233.g572e233d8e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 01 Feb 2019 10:18:34 +0000
-
-erlang (1:22.0~1230.g6719ef2d14-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 01 Feb 2019 09:28:04 +0000
-
-erlang (1:22.0~1227.g7635968efa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 01 Feb 2019 08:05:55 +0000
-
-erlang (1:22.0~1225.g98c2966da3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 01 Feb 2019 07:53:54 +0000
-
-erlang (1:22.0~1221.g5ab76d9263-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 31 Jan 2019 18:46:07 +0000
-
-erlang (1:22.0~1217.g10b400a043-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 31 Jan 2019 13:37:45 +0000
-
-erlang (1:22.0~1214.g135f98f448-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 30 Jan 2019 10:30:38 +0000
-
-erlang (1:22.0~1212.g5b0f748c15-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 30 Jan 2019 10:20:35 +0000
-
-erlang (1:22.0~1210.g80bf6298d2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 30 Jan 2019 09:56:30 +0000
-
-erlang (1:22.0~1198.g4c25910dca-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 30 Jan 2019 09:34:04 +0000
-
-erlang (1:22.0~1196.gde136fbb15-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 30 Jan 2019 09:02:26 +0000
-
-erlang (1:22.0~1194.g5904e27d7b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 30 Jan 2019 08:54:27 +0000
-
-erlang (1:22.0~1191.g2728fca404-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 30 Jan 2019 08:50:28 +0000
-
-erlang (1:22.0~1188.g4451713ea8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 29 Jan 2019 11:47:47 +0000
-
-erlang (1:22.0~1185.g2f296e1a44-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 29 Jan 2019 06:35:17 +0000
-
-erlang (1:22.0~1179.g2b603d86db-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 29 Jan 2019 06:34:12 +0000
-
-erlang (1:22.0~1177.g6af940b1c1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 28 Jan 2019 17:35:10 +0000
-
-erlang (1:22.0~1175.g1ea703443f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 17:06:30 +0000
-
-erlang (1:22.0~1170.g3f28b63ae6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 17:04:49 +0000
-
-erlang (1:22.0~1166.g6fe596c68b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 13:17:23 +0000
-
-erlang (1:22.0~1164.gd6d493ab1d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 12:29:03 +0000
-
-erlang (1:22.0~1164.g5ed2f3d975-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 12:06:39 +0000
-
-erlang (1:22.0~1161.g7cd0271e22-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 11:07:55 +0000
-
-erlang (1:22.0~1157.g3284d6f9e2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 08:42:58 +0000
-
-erlang (1:22.0~1153.g677efa620e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 08:34:41 +0000
-
-erlang (1:22.0~1149.g49eb25c805-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 24 Jan 2019 16:54:20 +0000
-
-erlang (1:22.0~1145.g3d909edaad-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 24 Jan 2019 11:31:59 +0000
-
-erlang (1:22.0~1142.ga0104bc16c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 24 Jan 2019 07:54:01 +0000
-
-erlang (1:22.0~1133.g5a9adb7b9b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 23 Jan 2019 14:40:01 +0000
-
-erlang (1:22.0~1130.ge67375f81e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 23 Jan 2019 10:21:28 +0000
-
-erlang (1:22.0~1127.gcacf240d0f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 23 Jan 2019 09:54:54 +0000
-
-erlang (1:22.0~1124.g1d2d2aef11-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 23 Jan 2019 09:31:52 +0000
-
-erlang (1:22.0~1115.g3601418c73-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 23 Jan 2019 09:28:41 +0000
-
-erlang (1:22.0~1112.g5cd9c35347-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 22 Jan 2019 18:52:26 +0000
-
-erlang (1:22.0~1110.g71c276be5d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 22 Jan 2019 11:25:30 +0000
-
-erlang (1:22.0~1105.g4940eef4e6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 22 Jan 2019 09:41:49 +0000
-
-erlang (1:22.0~1101.g01098dfa65-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 22 Jan 2019 08:56:25 +0000
-
-erlang (1:22.0~1098.g9c80754137-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 21 Jan 2019 13:49:48 +0000
-
-erlang (1:22.0~1073.g88cc8d25ab-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 21 Jan 2019 12:23:38 +0000
-
-erlang (1:22.0~1071.g1ef4e7a346-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 21 Jan 2019 10:58:41 +0000
-
-erlang (1:22.0~1068.ga11ddd5862-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 18 Jan 2019 18:23:02 +0000
-
-erlang (1:22.0~1066.gcf334a67db-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 18 Jan 2019 13:29:09 +0000
-
-erlang (1:22.0~1059.g53dfd68c48-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 18 Jan 2019 10:33:09 +0000
-
-erlang (1:22.0~1047.g75e0c60189-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 18 Jan 2019 08:46:43 +0000
-
-erlang (1:22.0~1042.g2a95d46dd6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 18 Jan 2019 08:19:26 +0000
-
-erlang (1:22.0~1039.g0e11bf631d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 18 Jan 2019 08:15:33 +0000
-
-erlang (1:22.0~1036.gf0f655fb36-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 17 Jan 2019 14:48:08 +0000
-
-erlang (1:22.0~1031.g9627785145-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 17 Jan 2019 12:26:52 +0000
-
-erlang (1:22.0~1027.g401bd13ffd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 11:53:50 +0000
-
-erlang (1:22.0~1024.g735ae78289-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 10:53:04 +0000
-
-erlang (1:22.0~1033.gedb27b7909-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 10:39:02 +0000
-
-erlang (1:22.0~1029.g634be8f9e4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 10:34:33 +0000
-
-erlang (1:22.0~1025.gb7da6cc832-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 09:15:46 +0000
-
-erlang (1:22.0~1022.g9d29eb39fa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 09:12:39 +0000
-
-erlang (1:22.0~1019.g08fe72c08b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 08:57:09 +0000
-
-erlang (1:22.0~1011.g1319199c3c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 15:55:31 +0000
-
-erlang (1:22.0~1007.gf067489630-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 15:50:25 +0000
-
-erlang (1:22.0~1004.g93f5c76523-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 15:42:36 +0000
-
-erlang (1:22.0~1000.g6408518693-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 15:24:32 +0000
-
-erlang (1:22.0~996.ga9b0c987fc-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 15:01:42 +0000
-
-erlang (1:22.0~990.g39b4b728d5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 14:33:48 +0000
-
-erlang (1:22.0~988.g3af685e24e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 10:57:08 +0000
-
-erlang (1:22.0~984.g67ec51fe37-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 15 Jan 2019 10:49:38 +0000
-
-erlang (1:22.0~981.g597bf59d49-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 14 Jan 2019 15:19:41 +0000
-
-erlang (1:22.0~959.gfd682dd3b1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 14 Jan 2019 12:43:36 +0000
-
-erlang (1:22.0~954.ge72e7e0c97-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 11 Jan 2019 08:58:29 +0000
-
-erlang (1:22.0~952.g4f046cf919-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 11 Jan 2019 08:44:44 +0000
-
-erlang (1:22.0~946.g4dcc43c786-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Jan 2019 15:43:49 +0000
-
-erlang (1:22.0~943.g27092854c0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Jan 2019 14:53:02 +0000
-
-erlang (1:22.0~939.g8c9eee40c1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Jan 2019 10:21:09 +0000
-
-erlang (1:22.0~936.gb215d0d2e3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Jan 2019 10:15:37 +0000
-
-erlang (1:22.0~934.gcb9993b931-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Jan 2019 09:10:05 +0000
-
-erlang (1:22.0~931.gf3d7370784-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 10 Jan 2019 08:56:53 +0000
-
-erlang (1:22.0~925.g783ef85d5c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 09 Jan 2019 19:00:50 +0000
-
-erlang (1:22.0~923.g09879be761-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 09 Jan 2019 13:31:15 +0000
-
-erlang (1:22.0~919.g648a86aa9c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 09 Jan 2019 09:04:22 +0000
-
-erlang (1:22.0~916.g9009934d56-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Jan 2019 16:14:18 +0000
-
-erlang (1:22.0~911.g609e818e9e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Jan 2019 15:44:58 +0000
-
-erlang (1:22.0~908.ga9235a9545-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Jan 2019 15:18:21 +0000
-
-erlang (1:22.0~905.gc31ebd0ec2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Jan 2019 14:37:19 +0000
-
-erlang (1:22.0~900.gf20807ff46-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Jan 2019 12:22:04 +0000
-
-erlang (1:22.0~895.g0d218ea065-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Jan 2019 11:25:23 +0000
-
-erlang (1:22.0~888.ge2fdbdf150-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 08 Jan 2019 09:35:55 +0000
-
-erlang (1:22.0~885.g7969ceefad-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 17:52:17 +0000
-
-erlang (1:22.0~882.g7c37c10ff1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 15:37:10 +0000
-
-erlang (1:22.0~879.g50615884e3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 14:56:18 +0000
-
-erlang (1:22.0~876.g753a9e62bd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 14:48:40 +0000
-
-erlang (1:22.0~873.ga0360c361e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 14:45:03 +0000
-
-erlang (1:22.0~870.g46d966b02f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 13:47:27 +0000
-
-erlang (1:22.0~868.g3db7e967cf-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 13:42:10 +0000
-
-erlang (1:22.0~866.g3f5c2d32d3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 07 Jan 2019 11:11:26 +0000
-
-erlang (1:22.0~863.gbd1131fba3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 03 Jan 2019 15:38:19 +0000
-
-erlang (1:22.0~857.g9e2a1901fd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 02 Jan 2019 14:33:20 +0000
-
-erlang (1:22.0~855.gd3f7bb27b1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 02 Jan 2019 14:22:46 +0000
-
-erlang (1:22.0~817.gadf89a61d3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 28 Dec 2018 09:29:18 +0000
-
-erlang (1:22.0~815.g6d39c458fb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 21 Dec 2018 14:36:23 +0000
-
-erlang (1:22.0~807.gc70717d448-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 20 Dec 2018 09:20:07 +0000
-
-erlang (1:22.0~802.g12d4c5b8ec-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 20 Dec 2018 09:05:47 +0000
-
-erlang (1:22.0~798.g11b53eb696-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 19 Dec 2018 15:21:44 +0000
-
-erlang (1:22.0~790.g2b8964ea8b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 19 Dec 2018 10:53:26 +0000
-
-erlang (1:22.0~787.g356df3912d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Dec 2018 13:49:35 +0000
-
-erlang (1:22.0~780.g641cc2dad5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Dec 2018 10:46:24 +0000
-
-erlang (1:22.0~778.g017c5635b9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Dec 2018 10:43:38 +0000
-
-erlang (1:22.0~776.g0211d24488-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Dec 2018 09:10:11 +0000
-
-erlang (1:22.0~761.g501ff83ade-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 14 Dec 2018 13:16:41 +0000
-
-erlang (1:22.0~758.g96db55840b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 14 Dec 2018 10:08:28 +0000
-
-erlang (1:22.0~745.ga5d4caa2ac-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 14 Dec 2018 07:56:50 +0000
-
-erlang (1:22.0~742.g663c14e6fd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 13 Dec 2018 19:56:27 +0000
-
-erlang (1:22.0~733.g9959b13153-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 13 Dec 2018 17:46:38 +0000
-
-erlang (1:22.0~730.g56f93ad10f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 13 Dec 2018 11:21:45 +0000
-
-erlang (1:22.0~722.g472b066978-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 13 Dec 2018 09:43:26 +0000
-
-erlang (1:22.0~719.g6ac458a401-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 13 Dec 2018 09:29:16 +0000
-
-erlang (1:22.0~717.g3e58c9be25-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 13 Dec 2018 09:28:08 +0000
-
-erlang (1:22.0~714.gdcf9c02e46-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 11 Dec 2018 15:30:41 +0000
-
-erlang (1:22.0~712.gbdbea55aa5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 11 Dec 2018 11:13:13 +0000
-
-erlang (1:22.0~3840.g1fda01cb73-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 10 Dec 2018 10:05:29 +0000
-
-erlang (1:22.0~3838.g4c91f4bbb5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Dec 2018 14:06:12 +0000
-
-erlang (1:22.0~3837.gfae4c020d4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Dec 2018 12:24:55 +0000
-
-erlang (1:22.0~3834.g6bc0607499-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Dec 2018 11:37:31 +0000
-
-erlang (1:22.0~3831.g689f9d5cf0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Dec 2018 11:33:26 +0000
-
-erlang (1:22.0~3829.gea7d6c39f2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Dec 2018 10:58:45 +0000
-
-erlang (1:22.0~3816.g551e153319-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Dec 2018 10:21:31 +0000
-
-erlang (1:22.0~3810.g111661b950-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Dec 2018 09:21:12 +0000
-
-erlang (1:22.0~3807.g5cc2687c40-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Dec 2018 09:19:54 +0000
-
-erlang (1:22.0~3805.g66a3c14bf5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 05 Dec 2018 13:55:10 +0000
-
-erlang (1:22.0~3803.g70ba4ed97a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 05 Dec 2018 11:26:11 +0000
-
-erlang (1:22.0~3800.g09b620eae7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 04 Dec 2018 13:40:58 +0000
-
-erlang (1:22.0~3789.g27e2677c08-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 04 Dec 2018 11:30:25 +0000
-
-erlang (1:22.0~3786.g6ce31fab75-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 04 Dec 2018 09:42:18 +0000
-
-erlang (1:22.0~3781.g715a743bf2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 14:07:35 +0000
-
-erlang (1:22.0~3778.g7515f713da-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 13:44:08 +0000
-
-erlang (1:22.0~3774.g28d77314ce-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 12:17:53 +0000
-
-erlang (1:22.0~3769.g34c107793e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 11:23:34 +0000
-
-erlang (1:22.0~3765.g1ce6e64c27-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 10:41:28 +0000
-
-erlang (1:22.0~3762.g4b52744f70-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 10:31:47 +0000
-
-erlang (1:22.0~3759.g5d54149906-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 10:16:37 +0000
-
-erlang (1:22.0~3756.g91bbf541b1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 10:01:42 +0000
-
-erlang (1:22.0~3753.g5eb265f798-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 09:34:36 +0000
-
-erlang (1:22.0~3749.gcd7a8c3fea-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 09:24:11 +0000
-
-erlang (1:22.0~3741.gc85094dddf-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 08:41:10 +0000
-
-erlang (1:22.0~3738.gb2f07297e8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Dec 2018 07:31:43 +0000
-
-erlang (1:22.0~3735.g8ca061c300-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 30 Nov 2018 13:56:47 +0000
-
-erlang (1:22.0~3729.gae799c9de1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 30 Nov 2018 09:49:22 +0000
-
-erlang (1:22.0~3727.g336b54dbc8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 30 Nov 2018 09:39:22 +0000
-
-erlang (1:22.0~3722.g113ca3ee35-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 29 Nov 2018 16:07:30 +0000
-
-erlang (1:22.0~3720.gb20ccfb376-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 29 Nov 2018 11:13:18 +0000
-
-erlang (1:22.0~3712.g99267eabed-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 29 Nov 2018 09:00:41 +0000
-
-erlang (1:22.0~3707.gd5a72ec4a1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 28 Nov 2018 21:25:15 +0000
-
-erlang (1:22.0~3705.g71215060ab-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 28 Nov 2018 11:47:08 +0000
-
-erlang (1:22.0~3703.gd9eebcb24f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 28 Nov 2018 11:08:48 +0000
-
-erlang (1:22.0~3700.g489b5eddf4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 28 Nov 2018 10:55:48 +0000
-
-erlang (1:22.0~3694.gda90cf437e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 28 Nov 2018 10:42:23 +0000
-
-erlang (1:22.0~3690.gc326c098ad-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 27 Nov 2018 16:02:40 +0000
-
-erlang (1:22.0~3684.gc5c579d305-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 27 Nov 2018 13:18:34 +0000
-
-erlang (1:22.0~3681.g5d698dd744-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 27 Nov 2018 08:38:26 +0000
-
-erlang (1:22.0~3679.g423f078e3b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 27 Nov 2018 06:08:23 +0000
-
-erlang (1:22.0~3676.g056b5ef1ba-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 26 Nov 2018 17:10:50 +0000
-
-erlang (1:22.0~3673.g80ee7211fa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 26 Nov 2018 12:48:06 +0000
-
-erlang (1:22.0~3669.g9db0c37b94-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 26 Nov 2018 08:57:00 +0000
-
-erlang (1:22.0~3667.g0f0a30046d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 23 Nov 2018 09:01:21 +0000
-
-erlang (1:22.0~3662.g9c11423347-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 23 Nov 2018 08:44:09 +0000
-
-erlang (1:22.0~3657.g9ac4cc58aa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 22 Nov 2018 15:14:17 +0000
-
-erlang (1:22.0~3654.g253d146786-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 22 Nov 2018 15:05:19 +0000
-
-erlang (1:22.0~3649.ga411b7dedd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 22 Nov 2018 09:29:43 +0000
-
-erlang (1:22.0~3646.ge83c98c7ca-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 21 Nov 2018 09:35:22 +0000
-
-erlang (1:22.0~3643.gee3c9d55b2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 21 Nov 2018 09:12:58 +0000
-
-erlang (1:22.0~3638.geabd949074-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 21 Nov 2018 08:56:45 +0000
-
-erlang (1:22.0~3627.g0bcc9fa7fb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 20 Nov 2018 12:57:45 +0000
-
-erlang (1:22.0~3624.g19c5d33d9d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 20 Nov 2018 12:53:28 +0000
-
-erlang (1:22.0~3619.g0fc332c2ba-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 19 Nov 2018 16:28:22 +0000
-
-erlang (1:22.0~3601.g04d70c6360-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 19 Nov 2018 08:09:56 +0000
-
-erlang (1:22.0~3599.g5873f86728-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 16 Nov 2018 13:32:02 +0000
-
-erlang (1:22.0~3596.gd7f9029afb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 16 Nov 2018 11:37:43 +0000
-
-erlang (1:22.0~3589.g605117974b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 16 Nov 2018 10:38:00 +0000
-
-erlang (1:22.0~3587.gb3b84d91ce-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 16 Nov 2018 09:33:15 +0000
-
-erlang (1:22.0~3583.g1a34e05126-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 16 Nov 2018 09:07:35 +0000
-
-erlang (1:22.0~3579.gd02702d382-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 15 Nov 2018 18:58:34 +0000
-
-erlang (1:22.0~3577.gbca55d663a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 15 Nov 2018 18:54:24 +0000
-
-erlang (1:22.0~3574.g58076e7db3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 15 Nov 2018 15:08:14 +0000
-
-erlang (1:22.0~3570.geddc6f7aa1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 15 Nov 2018 11:25:05 +0000
-
-erlang (1:22.0~807.gf7f40ec6b1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 14 Nov 2018 12:26:56 +0000
-
-erlang (1:22.0~802.g0acccc3289-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 14 Nov 2018 09:39:35 +0000
-
-erlang (1:22.0~799.gd322536cf0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 14 Nov 2018 08:38:37 +0000
-
-erlang (1:22.0~793.ga2d97d7039-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 12 Nov 2018 10:32:44 +0000
-
-erlang (1:22.0~788.g7f6e0bc237-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 12 Nov 2018 08:53:38 +0000
-
-erlang (1:22.0~786.g1fef584a05-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 12 Nov 2018 08:44:27 +0000
-
-erlang (1:22.0~783.g95ece845a2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 09 Nov 2018 16:46:57 +0000
-
-erlang (1:22.0~780.g3e5ede0422-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 09 Nov 2018 15:07:46 +0000
-
-erlang (1:22.0~770.g19a2f17f67-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 09 Nov 2018 14:24:05 +0000
-
-erlang (1:22.0~763.g506855722d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 09 Nov 2018 11:50:41 +0000
-
-erlang (1:22.0~760.g00485ab085-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 08 Nov 2018 13:42:18 +0000
-
-erlang (1:22.0~751.g9f841760f5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 08 Nov 2018 13:39:37 +0000
-
-erlang (1:22.0~748.g09754191c9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 08 Nov 2018 11:03:43 +0000
-
-erlang (1:22.0~745.g505b01e6b5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 08 Nov 2018 09:54:55 +0000
-
-erlang (1:22.0~742.gc8c0ccd33b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 07 Nov 2018 20:52:28 +0000
-
-erlang (1:22.0~739.gc14cb0c921-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 07 Nov 2018 09:15:55 +0000
-
-erlang (1:22.0~737.gabde22933f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 06 Nov 2018 11:20:47 +0000
-
-erlang (1:22.0~730.gc2a3104849-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 06 Nov 2018 08:38:45 +0000
-
-erlang (1:22.0~727.g35ec009f24-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 05 Nov 2018 09:27:22 +0000
-
-erlang (1:22.0~724.g0fe9270863-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Nov 2018 11:35:47 +0000
-
-erlang (1:22.0~721.ge89cc379a3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Nov 2018 09:58:31 +0000
-
-erlang (1:22.0~718.gad8ef2bda1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Nov 2018 09:18:53 +0000
-
-erlang (1:22.0~715.g9c33f00f78-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Nov 2018 09:10:41 +0000
-
-erlang (1:22.0~710.g070aa4d433-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Nov 2018 09:01:01 +0000
-
-erlang (1:22.0~708.gf668717abf-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Nov 2018 08:40:32 +0000
-
-erlang (1:22.0~702.g69797ce56c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 02 Nov 2018 08:32:21 +0000
-
-erlang (1:22.0~699.g32f1d0a39d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 01 Nov 2018 16:58:34 +0000
-
-erlang (1:22.0~697.gf052c5a50e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 01 Nov 2018 13:40:36 +0000
-
-erlang (1:22.0~689.ga1dd7f0487-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 01 Nov 2018 11:45:14 +0000
-
-erlang (1:22.0~684.g46c1dec651-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 01 Nov 2018 11:26:19 +0000
-
-erlang (1:22.0~681.g6df8d04126-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 01 Nov 2018 11:12:02 +0000
-
-erlang (1:22.0~678.ge869c3b6ba-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 01 Nov 2018 10:34:10 +0000
-
-erlang (1:22.0~673.g2bfd31825f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 01 Nov 2018 10:21:55 +0000
-
-erlang (1:22.0~670.gfa6994f5c8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 31 Oct 2018 15:33:17 +0000
-
-erlang (1:22.0~640.ga03b0b0298-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 30 Oct 2018 11:13:40 +0000
-
-erlang (1:22.0~633.g47433ac7a4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 30 Oct 2018 09:53:40 +0000
-
-erlang (1:22.0~630.g298a1d56f8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 30 Oct 2018 07:13:28 +0000
-
-erlang (1:22.0~628.gb36b359d4c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 29 Oct 2018 14:07:09 +0000
-
-erlang (1:22.0~626.ga9c0347526-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 29 Oct 2018 11:06:00 +0000
-
-erlang (1:22.0~620.g831e4bef1d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 29 Oct 2018 09:22:43 +0000
-
-erlang (1:22.0~615.gf145ef83ea-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 29 Oct 2018 08:47:13 +0000
-
-erlang (1:22.0~612.g6b4de1a87a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 29 Oct 2018 08:38:23 +0000
-
-erlang (1:22.0~609.g78af1f300b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 29 Oct 2018 08:21:34 +0000
-
-erlang (1:22.0~605.gdd8ed8ee81-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 25 Oct 2018 17:19:24 +0000
-
-erlang (1:22.0~602.gabfb394084-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 25 Oct 2018 17:11:28 +0000
-
-erlang (1:22.0~600.g56521d60b5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Oct 2018 11:29:54 +0000
-
-erlang (1:22.0~598.g58bea75b67-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Oct 2018 10:57:45 +0000
-
-erlang (1:22.0~591.g8d34db5c23-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Oct 2018 10:54:37 +0000
-
-erlang (1:22.0~589.g885ec15333-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Oct 2018 09:56:26 +0000
-
-erlang (1:22.0~588.g6ec47f5158-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Oct 2018 09:44:29 +0000
-
-erlang (1:22.0~586.g87015bf28b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Oct 2018 08:18:26 +0000
-
-erlang (1:22.0~582.g652f844eeb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 24 Oct 2018 08:16:26 +0000
-
-erlang (1:22.0~574.g0dc6118fcc-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 23 Oct 2018 21:48:12 +0000
-
-erlang (1:22.0~571.g6ee8932355-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 23 Oct 2018 14:41:04 +0000
-
-erlang (1:22.0~569.ge9f1addd06-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 23 Oct 2018 14:08:29 +0000
-
-erlang (1:22.0~566.gbe27826d45-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 23 Oct 2018 13:44:18 +0000
-
-erlang (1:22.0~563.gcaf1586989-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 23 Oct 2018 07:28:43 +0000
-
-erlang (1:22.0~560.gd5ad94075c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 22 Oct 2018 16:27:26 +0000
-
-erlang (1:22.0~558.g890f24e9d3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 22 Oct 2018 10:09:10 +0000
-
-erlang (1:22.0~554.gad7e7b50fa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 22 Oct 2018 08:14:15 +0000
-
-erlang (1:22.0~551.g75f51e0f85-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Sun, 21 Oct 2018 16:33:23 +0000
-
-erlang (1:22.0~549.g7f5279f9e0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 19 Oct 2018 12:34:43 +0000
-
-erlang (1:22.0~544.g8fdc678f4f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 19 Oct 2018 09:58:09 +0000
-
-erlang (1:22.0~538.g8103e5626e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 19 Oct 2018 09:22:25 +0000
-
-erlang (1:22.0~534.g9694fbebb9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 19 Oct 2018 07:20:01 +0000
-
-erlang (1:22.0~532.g71dad92bbd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 18 Oct 2018 15:09:03 +0000
-
-erlang (1:22.0~526.g0d02946d94-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 18 Oct 2018 11:09:59 +0000
-
-erlang (1:22.0~524.gd8c30a6895-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 17 Oct 2018 18:47:16 +0000
-
-erlang (1:22.0~519.ge3bea67151-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 17 Oct 2018 07:47:04 +0000
-
-erlang (1:22.0~515.ge18ee8b3d0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 17 Oct 2018 06:06:54 +0000
-
-erlang (1:22.0~511.gb20482625c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 16 Oct 2018 19:15:06 +0000
-
-erlang (1:22.0~508.gc61ce5d231-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 16 Oct 2018 11:40:42 +0000
-
-erlang (1:22.0~501.g04b6f35a2b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 16 Oct 2018 08:47:18 +0000
-
-erlang (1:22.0~498.g8e65d31faa-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 12 Oct 2018 16:01:45 +0000
-
-erlang (1:22.0~499.ge620c8c507-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 12 Oct 2018 12:42:01 +0000
-
-erlang (1:22.0~495.gc89305463a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 12 Oct 2018 08:10:29 +0000
-
-erlang (1:22.0~493.gff2eb3daa9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 19:51:42 +0000
-
-erlang (1:22.0~483.ge8da077caf-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 13:49:15 +0000
-
-erlang (1:22.0~479.g76e2f04bff-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 12:38:06 +0000
-
-erlang (1:22.0~473.gbde605cb9c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 10:38:16 +0000
-
-erlang (1:22.0~470.g4d879e8342-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 10:26:46 +0000
-
-erlang (1:22.0~467.g8e4923c57a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 10:23:38 +0000
-
-erlang (1:22.0~465.g4748c8c324-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 08:08:04 +0000
-
-erlang (1:22.0~460.ge3d7986840-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 07:42:53 +0000
-
-erlang (1:22.0~456.g04ba7977a3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 11 Oct 2018 06:48:56 +0000
-
-erlang (1:22.0~453.gb5a62a61b9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 09 Oct 2018 13:51:05 +0000
-
-erlang (1:22.0~451.gf4f409ff28-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 09 Oct 2018 11:22:22 +0000
-
-erlang (1:22.0~448.g5e40833534-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 08 Oct 2018 14:14:10 +0000
-
-erlang (1:22.0~435.g471e2ac8af-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 08 Oct 2018 13:13:38 +0000
-
-erlang (1:22.0~430.ga6b3f3d267-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 08 Oct 2018 13:02:23 +0000
-
-erlang (1:22.0~427.g870f4f4518-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 08 Oct 2018 06:17:20 +0000
-
-erlang (1:22.0~424.ge2a1ec914d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 08 Oct 2018 06:01:41 +0000
-
-erlang (1:22.0~420.g3ea2ff5697-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 08 Oct 2018 05:50:24 +0000
-
-erlang (1:22.0~418.g1b4ad9a2d6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 04 Oct 2018 10:14:08 +0000
-
-erlang (1:22.0~415.gf862407dfe-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 04 Oct 2018 08:03:30 +0000
-
-erlang (1:22.0~412.ga4c2d2389e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 04 Oct 2018 06:41:43 +0000
-
-erlang (1:22.0~409.gd05cc71292-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 03 Oct 2018 16:57:15 +0000
-
-erlang (1:22.0~404.g58acbbbb3d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 03 Oct 2018 13:16:31 +0000
-
-erlang (1:22.0~401.g5ecd1c97c0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 03 Oct 2018 11:45:39 +0000
-
-erlang (1:22.0~399.gfd3674286e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 03 Oct 2018 11:40:09 +0000
-
-erlang (1:22.0~396.g6209a4626f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 01 Oct 2018 13:36:53 +0000
-
-erlang (1:22.0~394.g71a6e006f7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 01 Oct 2018 10:02:05 +0000
-
-erlang (1:22.0~382.gb7f129755d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 01 Oct 2018 09:58:06 +0000
-
-erlang (1:22.0~381.g5c5428bbf4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 01 Oct 2018 09:52:10 +0000
-
-erlang (1:22.0~379.gba7e9c39a9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 01 Oct 2018 09:45:59 +0000
-
-erlang (1:22.0~369.g0f0a8cb581-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 01 Oct 2018 08:54:12 +0000
-
-erlang (1:22.0~366.gcf78a63a6e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 01 Oct 2018 08:19:49 +0000
-
-erlang (1:22.0~363.gb0af859401-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 28 Sep 2018 12:53:02 +0000
-
-erlang (1:22.0~361.g7d941c529d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 28 Sep 2018 12:10:27 +0000
-
-erlang (1:22.0~351.g08ef38b2c9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 26 Sep 2018 09:37:53 +0000
-
-erlang (1:22.0~349.g1d5d8a8c5c-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 25 Sep 2018 11:15:25 +0000
-
-erlang (1:22.0~346.ge6c3dd9f70-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 25 Sep 2018 06:49:40 +0000
-
-erlang (1:22.0~893.g494cb3be4a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 24 Sep 2018 11:25:02 +0000
-
-erlang (1:22.0~892.g7f5a7bcdb5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 24 Sep 2018 09:29:34 +0000
-
-erlang (1:22.0~889.g672a164719-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 24 Sep 2018 04:52:37 +0000
-
-erlang (1:22.0~886.g433ef9a58f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 21 Sep 2018 18:42:53 +0000
-
-erlang (1:22.0~884.gf26d11aa57-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 21 Sep 2018 12:24:04 +0000
-
-erlang (1:22.0~880.g6e014f7780-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 21 Sep 2018 11:03:26 +0000
-
-erlang (1:22.0~877.ge3cdf8208a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 21 Sep 2018 10:30:47 +0000
-
-erlang (1:22.0~875.gab62dd2e77-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 20 Sep 2018 13:39:07 +0000
-
-erlang (1:22.0~872.g4e3e46e3d1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 20 Sep 2018 12:53:41 +0000
-
-erlang (1:22.0~865.g7fbb86c77f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 20 Sep 2018 09:01:59 +0000
-
-erlang (1:22.0~862.g81f7ac4dae-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 19 Sep 2018 14:13:06 +0000
-
-erlang (1:22.0~859.g5dd0487617-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 19 Sep 2018 12:58:30 +0000
-
-erlang (1:22.0~854.g71be11e97d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 19 Sep 2018 09:34:41 +0000
-
-erlang (1:22.0~850.gc6c86e7a85-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 19 Sep 2018 08:04:10 +0000
-
-erlang (1:22.0~849.g70cb8976c3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 19 Sep 2018 07:48:19 +0000
-
-erlang (1:22.0~818.gb2c338cb8d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 14:36:15 +0000
-
-erlang (1:22.0~812.g146bcbf1f4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 13:28:12 +0000
-
-erlang (1:22.0~805.gbe712f872f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 12:44:15 +0000
-
-erlang (1:22.0~794.g716d9c2256-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 10:04:04 +0000
-
-erlang (1:22.0~791.gcf60596671-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 09:39:30 +0000
-
-erlang (1:22.0~788.ga98b691b65-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 08:26:34 +0000
-
-erlang (1:22.0~784.g09d3cb6cc1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 08:14:13 +0000
-
-erlang (1:22.0~781.g2336ca0e15-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 18 Sep 2018 08:12:36 +0000
-
-erlang (1:22.0~778.gb13ef106fb-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 13:44:06 +0000
-
-erlang (1:22.0~766.gfd3d7e7ce6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 13:24:31 +0000
-
-erlang (1:22.0~762.gb91036d475-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 11:15:28 +0000
-
-erlang (1:22.0~758.g9eb252b378-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 10:57:20 +0000
-
-erlang (1:22.0~742.g125d8095ec-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 09:29:58 +0000
-
-erlang (1:22.0~738.g93bf02fef9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 08:27:44 +0000
-
-erlang (1:22.0~735.g94e49f0b8e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 08:18:08 +0000
-
-erlang (1:22.0~727.g9649db932e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 17 Sep 2018 08:16:32 +0000
-
-erlang (1:22.0~721.g0348488330-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 14 Sep 2018 07:52:39 +0000
+  * New upstream release candidate.
+  * Upload to experimental.
+  * Refresh patches.
 
-erlang (1:22.0~702.gd1ff3b3bec-1) unstable; urgency=medium
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 15 Apr 2022 08:39:22 +0300
 
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 12 Sep 2018 14:45:39 +0000
-
-erlang (1:22.0~2885.g2eccf112d0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 10 Sep 2018 13:03:06 +0000
-
-erlang (1:22.0~2882.gd46bcb823a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 10 Sep 2018 10:07:01 +0000
-
-erlang (1:22.0~2878.gb641db169a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 10 Sep 2018 09:41:49 +0000
-
-erlang (1:22.0~2873.g81d122a59e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Sep 2018 11:55:47 +0000
-
-erlang (1:22.0~2870.gabd31c81ee-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Sep 2018 11:54:07 +0000
-
-erlang (1:22.0~2866.g5be6eed229-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Sep 2018 08:13:56 +0000
-
-erlang (1:22.0~2862.g8017f8298d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 07 Sep 2018 07:54:40 +0000
-
-erlang (1:22.0~2858.g2917410f3e-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 13:35:25 +0000
-
-erlang (1:22.0~2855.gea908f25c2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 13:25:09 +0000
-
-erlang (1:22.0~2852.g60f9f349e1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 12:24:02 +0000
-
-erlang (1:22.0~2841.g6635442094-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 11:34:46 +0000
-
-erlang (1:22.0~2838.g22c94c8d9b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 10:01:07 +0000
-
-erlang (1:22.0~2835.g26e03d10c6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 05 Sep 2018 13:46:56 +0000
-
-erlang (1:22.0~2831.gac9312736a-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 05 Sep 2018 11:38:30 +0000
-
-erlang (1:22.0~2830.g66b797b4ae-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 05 Sep 2018 11:26:40 +0000
-
-erlang (1:22.0~2828.g092f4847f4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 05 Sep 2018 07:41:20 +0000
-
-erlang (1:22.0~2824.g1808df5505-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 04 Sep 2018 15:46:01 +0000
-
-erlang (1:22.0~2823.g0b2e1c581b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 04 Sep 2018 12:40:21 +0000
-
-erlang (1:22.0~2819.gc227e4aa03-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 04 Sep 2018 12:05:51 +0000
-
-erlang (1:22.0~2814.g31e7b5ab0b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 03 Sep 2018 07:53:44 +0000
-
-erlang (1:22.0~2812.g869537a9bf-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 31 Aug 2018 08:09:56 +0000
-
-erlang (1:22.0~2809.gdf870366a2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 31 Aug 2018 06:25:17 +0000
-
-erlang (1:22.0~2807.gcd9ba7cff2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 31 Aug 2018 06:00:56 +0000
-
-erlang (1:22.0~2805.g572fed3810-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 30 Aug 2018 16:14:13 +0000
-
-erlang (1:22.0~2800.g72f64e2886-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 30 Aug 2018 14:09:20 +0000
-
-erlang (1:22.0~2792.g0e0398dd50-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 28 Aug 2018 14:59:44 +0000
-
-erlang (1:22.0~2790.g547b4ec004-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 28 Aug 2018 13:41:02 +0000
-
-erlang (1:22.0~2789.gef6995cf39-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 28 Aug 2018 12:11:56 +0000
-
-erlang (1:22.0~2787.g33a74d1f48-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 27 Aug 2018 15:31:15 +0000
-
-erlang (1:22.0~2784.g3b7517df17-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 27 Aug 2018 14:35:36 +0000
-
-erlang (1:22.0~2777.g0960ef90d7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 27 Aug 2018 14:02:29 +0000
-
-erlang (1:22.0~2734.g2ce155ca0d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 23 Aug 2018 14:13:58 +0000
-
-erlang (1:22.0~2731.gc30530b3b3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 23 Aug 2018 12:34:59 +0000
-
-erlang (1:22.0~2714.ga1a72225ec-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 23 Aug 2018 12:29:50 +0000
-
-erlang (1:22.0~2697.g15785a2f91-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 23 Aug 2018 08:22:39 +0000
-
-erlang (1:22.0~2696.g431da58a80-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 23 Aug 2018 07:50:26 +0000
-
-erlang (1:22.0~2691.g9a95f6f1cd-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 22 Aug 2018 10:19:23 +0000
-
-erlang (1:22.0~2687.g1b9829f789-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 21 Aug 2018 15:55:04 +0000
-
-erlang (1:22.0~2682.g9672921fb8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 21 Aug 2018 13:09:41 +0000
-
-erlang (1:22.0~2679.gbcba1f2613-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 21 Aug 2018 12:16:41 +0000
-
-erlang (1:22.0~2675.gcc40705b86-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 21 Aug 2018 10:11:11 +0000
-
-erlang (1:22.0~2672.gbe45eaca8f-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 20 Aug 2018 13:35:52 +0000
-
-erlang (1:22.0~2667.g48a3d57d45-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 17 Aug 2018 08:11:57 +0000
-
-erlang (1:22.0~2660.gd5af8b1f34-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 16 Aug 2018 14:17:56 +0000
-
-erlang (1:22.0~2657.gaa98242ff4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 16 Aug 2018 14:16:37 +0000
-
-erlang (1:22.0~2654.gfc99e2824d-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 16 Aug 2018 11:36:44 +0000
-
-erlang (1:22.0~2650.gcb3eeadcc9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 16 Aug 2018 10:59:09 +0000
-
-erlang (1:22.0~2648.gda50aabe00-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 16 Aug 2018 10:52:23 +0000
-
-erlang (1:22.0~2643.g5a65083ec6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 15 Aug 2018 10:39:26 +0000
-
-erlang (1:22.0~2626.ge5905ee30b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 15 Aug 2018 04:04:10 +0000
-
-erlang (1:22.0~2624.gf5fc145463-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 14 Aug 2018 15:24:15 +0000
-
-erlang (1:22.0~2620.g794fcba226-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 14 Aug 2018 14:14:15 +0000
-
-erlang (1:22.0~2617.g9ccd5b239b-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 14 Aug 2018 13:57:50 +0000
-
-erlang (1:22.0~2614.g054c8fc927-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 14 Aug 2018 13:51:42 +0000
-
-erlang (1:22.0~2611.gedccc905d6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 14 Aug 2018 07:27:05 +0000
-
-erlang (1:22.0~2609.gb0a453f9f9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 13 Aug 2018 14:30:47 +0000
+erlang (1:25.0~rc2+dfsg-1) experimental; urgency=medium
 
-erlang (1:22.0~2601.g481c68c498-1) unstable; urgency=medium
-
-  * New upstream release.
+  * New upstream release candidate.
+  * Upload to experimental.
+  * Refresh patches.
+  * Switch build locale to C.UTF-8 because of UTF-8 encoded JAVA sources.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 13 Aug 2018 11:38:16 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 24 Mar 2022 15:57:53 +0300
 
-erlang (1:22.0~2598.g7c68906985-1) unstable; urgency=medium
+erlang (1:25.0~rc1+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release candidate.
+  * Upload to experimental.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 13 Aug 2018 10:31:42 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 16 Feb 2022 18:52:24 +0300
 
-erlang (1:22.0~2593.gd255de157b-1) unstable; urgency=medium
+erlang (1:24.2.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 13 Aug 2018 08:31:32 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 07 Feb 2022 10:48:20 +0300
 
-erlang (1:22.0~2590.gfc90829239-1) unstable; urgency=medium
+erlang (1:24.2+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 13 Aug 2018 08:10:06 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 15 Dec 2021 19:39:20 +0300
 
-erlang (1:22.0~2584.gb4a0a7fee1-1) unstable; urgency=medium
+erlang (1:24.1.7+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Sat, 11 Aug 2018 14:09:15 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 10 Dec 2021 12:51:44 +0300
 
-erlang (1:22.0~2575.gf732e69d86-1) unstable; urgency=medium
+erlang (1:24.1.5+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Sat, 11 Aug 2018 13:49:23 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 17 Nov 2021 08:32:50 +0300
 
-erlang (1:22.0~373.gb55b9d7b82-1) unstable; urgency=medium
+erlang (1:24.1.4+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 10 Aug 2018 11:02:54 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 08 Nov 2021 17:19:55 +0300
 
-erlang (1:22.0~353.g2e46944fce-1) unstable; urgency=medium
+erlang (1:24.1.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Remove an unused lintian override.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 10 Aug 2018 10:18:51 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 01 Oct 2021 13:54:07 +0300
 
-erlang (1:22.0~350.g82be947e99-1) unstable; urgency=medium
+erlang (1:24.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
+  * Replace calls to 'which', which is deprecated, by calls to
+    'command -v' in maintainer scripts.
+  * Mark the erlang, erlang-doc, erlang-examples, erlang-nox, erlang-src,
+    erlang-x11 packages as multi-arch foreign.
+  * Move epmd.service and epmd.socket to /usr/lib/systemd/system/.
+  * Bump standards version to 4.6.0.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 10 Aug 2018 06:53:36 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 28 Sep 2021 10:15:57 +0300
 
-erlang (1:22.0~347.g4e4dcf8b8d-1) unstable; urgency=medium
+erlang (1:24.0.6+dfsg-2) unstable; urgency=medium
 
-  * New upstream release.
+  * Upload to unstable.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 19:43:57 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 04 Sep 2021 09:50:21 +0300
 
-erlang (1:22.0~345.g747e9df470-1) unstable; urgency=medium
+erlang (1:24.0.6+dfsg-1) experimental; urgency=medium
 
   * New upstream release.
+  * Change the autoconf version to 2.71 in the otp_build script.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 15:21:24 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 03 Sep 2021 14:11:04 +0300
 
-erlang (1:22.0~342.gf2c683c321-1) unstable; urgency=medium
+erlang (1:24.0.5+dfsg-2) unstable; urgency=medium
 
-  * New upstream release.
+  * Upload to unstable.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 15:15:09 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 17 Aug 2021 14:20:13 +0300
 
-erlang (1:22.0~339.g74d0077a82-1) unstable; urgency=medium
+erlang (1:24.0.5+dfsg-1) experimental; urgency=medium
 
   * New upstream release.
+  * Use ./otp_build update_configure instead of ./otp_build autoconf which is
+    a noop now.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 14:14:17 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 02 Aug 2021 07:25:51 +0300
 
-erlang (1:22.0~336.gbd1f73ed57-1) unstable; urgency=medium
+erlang (1:24.0.4+dfsg-1) experimental; urgency=medium
 
   * New upstream release.
+  * Explicitly use --disable-sctp configure option for bsd and hurd
+    architectures.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 12:38:49 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 22 Jul 2021 13:01:20 +0300
 
-erlang (1:22.0~334.g659481f795-1) unstable; urgency=medium
+erlang (1:24.0.3+dfsg-1) experimental; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 12:23:57 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 01 Jul 2021 23:10:04 +0300
 
-erlang (1:22.0~330.g60eefb225a-1) unstable; urgency=medium
+erlang (1:24.0.2+dfsg-1) experimental; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 12:15:47 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 26 Jun 2021 10:54:00 +0300
 
-erlang (1:22.0~327.g2c19a6010e-1) unstable; urgency=medium
+erlang (1:24.0~rc3+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release candidate.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 09 Aug 2018 07:30:18 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 22 Apr 2021 08:45:21 +0300
 
-erlang (1:22.0~322.gd3eebb798c-1) unstable; urgency=medium
+erlang (1:24.0~rc2+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release candidate.
+  * Refresh patches.
+  * Rename another PATH_MAX occurrence to enable build for GNU/Hurd and
+    GNU/kFreeBSD.
+  * Adapt debian/watch to the currently implemented release scheme.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 08 Aug 2018 13:20:42 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 26 Mar 2021 15:44:51 +0300
 
-erlang (1:22.0~320.ga582364c31-1) unstable; urgency=medium
+erlang (1:24.0~rc1+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release candidate.
+  * Refresh patches.
+  * Remove obsolete patch which adapted erlang-wx to wxwidgets-3.0.
+  * Remove obsolete patch which fixed a function prototype in beam_load.c.
+  * Remove the erlang-base-hipe binary package because HiPE support has been
+    dropped upstream in favor of JIT.
+  * Add libwxgtk-webview3.0-gtk3-dev to the list of build dependencies to
+    enable webview support in erlang-wx.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 08 Aug 2018 11:34:18 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 03 Mar 2021 20:42:02 +0300
 
-erlang (1:22.0~318.gdf93c4203e-1) unstable; urgency=medium
+erlang (1:23.2.6+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 08 Aug 2018 11:26:24 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 25 Feb 2021 12:34:59 +0300
 
-erlang (1:22.0~313.g83bf5bea4b-1) unstable; urgency=medium
+erlang (1:23.2.5+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 07 Aug 2018 11:09:39 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 19 Feb 2021 11:27:52 +0300
 
-erlang (1:22.0~310.g66d69480b3-1) unstable; urgency=medium
+erlang (1:23.2.4+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 07 Aug 2018 09:42:18 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 05 Feb 2021 09:36:40 +0300
 
-erlang (1:22.0~305.gb5bb8600a4-1) unstable; urgency=medium
+erlang (1:23.2.3+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 06 Aug 2018 10:13:03 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 21 Jan 2021 11:43:21 +0300
 
-erlang (1:22.0~302.g40de8cc445-1) unstable; urgency=medium
+erlang (1:23.2.2+dfsg-1) unstable; urgency=medium
 
-  * New upstream release.
+  * New upstream release, which includes a fix for CVE-2020-35733 (the ssl
+    application 10.2 accepts and trusts an invalid X.509 certificate chain
+    to a trusted root Certification Authority, closes: #980199).
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 03 Aug 2018 11:09:23 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 16 Jan 2021 08:50:49 +0300
 
-erlang (1:22.0~296.ga2c92e7a93-1) unstable; urgency=medium
+erlang (1:23.2.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 03 Aug 2018 09:23:45 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 21 Dec 2020 13:16:47 +0300
 
-erlang (1:22.0~294.g6eb0ac8290-1) unstable; urgency=medium
+erlang (1:23.2+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
+  * Bump standards version to 4.5.1.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 03 Aug 2018 07:51:45 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 16 Dec 2020 15:07:09 +0300
 
-erlang (1:22.0~291.gbaf4d126ba-1) unstable; urgency=medium
+erlang (1:23.1.5+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 03 Aug 2018 07:43:39 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 07 Dec 2020 12:01:49 +0300
 
-erlang (1:22.0~287.g93a83f7e6c-1) unstable; urgency=medium
+erlang (1:23.1.4+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 03 Aug 2018 07:41:27 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 21 Nov 2020 17:03:12 +0300
 
-erlang (1:22.0~284.g5d41aa941d-1) unstable; urgency=medium
+erlang (1:23.1.2+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 31 Jul 2018 13:27:25 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 11 Nov 2020 11:30:20 +0300
 
-erlang (1:22.0~281.ga44b5b2c34-1) unstable; urgency=medium
+erlang (1:23.1.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 31 Jul 2018 13:23:43 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 04 Oct 2020 08:52:49 +0300
 
-erlang (1:22.0~278.g6616e11390-1) unstable; urgency=medium
+erlang (1:23.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 31 Jul 2018 12:45:41 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 23 Sep 2020 22:22:49 +0300
 
-erlang (1:22.0~277.g7cf99f85b5-1) unstable; urgency=medium
+erlang (1:23.0.4+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 30 Jul 2018 14:01:56 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 11 Sep 2020 10:37:31 +0300
 
-erlang (1:22.0~274.g93a7cfeded-1) unstable; urgency=medium
+erlang (1:23.0.3+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Document IPAddressDeny and IPAddressAllow options for epmd.socket in
+    README.Debian.
+  * Remove the obsolete TODO.Debian.
+  * Override some lintian warnings about link breakouts.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 30 Jul 2018 13:59:14 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 21 Jul 2020 18:46:49 +0300
 
-erlang (1:22.0~280.gd9d694ca3e-1) unstable; urgency=medium
+erlang (1:23.0.2+dfsg-3) unstable; urgency=medium
 
-  * New upstream release.
+  * Add a patch which fixes FTBFS for GNU/Hurd.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 26 Jul 2018 07:59:31 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 23 Jun 2020 15:35:09 +0300
 
-erlang (1:22.0~269.gd7e303cb79-1) unstable; urgency=medium
+erlang (1:23.0.2+dfsg-2) unstable; urgency=medium
 
-  * New upstream release.
+  * Upload of the new major upstream release to unstable.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 25 Jul 2018 08:57:40 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 21 Jun 2020 19:12:02 +0300
 
-erlang (1:22.0~266.gfc12f69350-1) unstable; urgency=medium
+erlang (1:23.0.2+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release. Upload to experimental.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 24 Jul 2018 12:20:46 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 29 May 2020 10:21:23 +0300
 
-erlang (1:22.0~264.gf1e97507e7-1) unstable; urgency=medium
+erlang (1:23.0.1+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release. Upload to experimental.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 24 Jul 2018 07:09:05 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 22 May 2020 10:57:08 +0300
 
-erlang (1:22.0~262.ga6f8c69c4e-1) unstable; urgency=medium
+erlang (1:23.0+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release. Upload to experimental.
+  * Refresh patches.
+  * Remove symlinks to no longer shipped erl_interface include files and
+    libraries.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 24 Jul 2018 07:05:10 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 20 May 2020 12:03:52 +0300
 
-erlang (1:22.0~246.gc814c388d5-1) unstable; urgency=medium
+erlang (1:22.3.3+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Switch to versioned virtual packages erlang-abi and erlang-pcre,
+    retain providing the old ones for backward compatibility.
+  * Bump the erlang-pcre version since some changes incompatible for the
+    current build of elixir-lang were introduced (closes: #958841).
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 20 Jul 2018 13:43:39 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 28 Apr 2020 10:22:10 +0300
 
-erlang (1:22.0~240.g78f5b89a9a-1) unstable; urgency=medium
+erlang (1:22.3.2+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 20 Jul 2018 13:39:33 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 10 Apr 2020 16:37:16 +0300
 
-erlang (1:22.0~236.g70b445f291-1) unstable; urgency=medium
+erlang (1:22.3+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 20 Jul 2018 12:26:49 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 18 Mar 2020 12:46:36 +0300
 
-erlang (1:22.0~233.gc4865b2b0b-1) unstable; urgency=medium
+erlang (1:22.2.8+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Move the epmd user home directory to /run/epmd from /var/run/epmd.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 19 Jul 2018 12:31:48 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 29 Feb 2020 11:08:45 +0300
 
-erlang (1:22.0~230.g866b073857-1) unstable; urgency=medium
+erlang (1:22.2.7+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 18 Jul 2018 13:04:47 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 18 Feb 2020 14:10:08 +0300
 
-erlang (1:22.0~221.g79cfc74939-1) unstable; urgency=medium
+erlang (1:22.2.4+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 18 Jul 2018 12:24:20 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 03 Feb 2020 00:11:55 +0300
 
-erlang (1:22.0~218.g64d7d7ab81-1) unstable; urgency=medium
+erlang (1:22.2.3+dfsg-2) unstable; urgency=medium
 
-  * New upstream release.
+  * Disable the builtin socket (as a nif) support for the hurd-i386
+    architecture because it cannot be built there.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 18 Jul 2018 10:22:57 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 26 Jan 2020 22:54:24 +0300
 
-erlang (1:22.0~216.g0e9c319480-1) unstable; urgency=medium
+erlang (1:22.2.3+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 17 Jul 2018 08:48:02 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 20 Jan 2020 16:22:23 +0300
 
-erlang (1:22.0~214.geb785f640e-1) unstable; urgency=medium
+erlang (1:22.2.2+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 16 Jul 2018 17:30:14 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 14 Jan 2020 08:14:08 +0300
 
-erlang (1:22.0~210.g736f6d4867-1) unstable; urgency=medium
+erlang (1:22.2.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Explicitly add libx11-dev to build dependencies to fix building
+    of the erlang-wx package.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 16 Jul 2018 16:48:38 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sat, 04 Jan 2020 14:01:08 +0300
 
-erlang (1:22.0~207.geaa840c370-1) unstable; urgency=medium
+erlang (1:22.2+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
+  * Remove upwards-stack.patch since it has been applied upstream.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 16 Jul 2018 16:11:18 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 10 Dec 2019 13:46:49 +0300
 
-erlang (1:22.0~204.gabeceecf61-1) unstable; urgency=medium
+erlang (1:22.1.8+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 16 Jul 2018 15:53:00 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 24 Nov 2019 17:20:36 +0300
 
-erlang (1:22.0~201.gb92f367811-1) unstable; urgency=medium
+erlang (1:22.1.7+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 16 Jul 2018 15:46:34 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 11 Nov 2019 14:47:26 +0300
 
-erlang (1:22.0~199.gbe69b6295c-1) unstable; urgency=medium
+erlang (1:22.1.6+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 16 Jul 2018 14:45:04 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 06 Nov 2019 14:18:03 +0300
 
-erlang (1:22.0~196.g9f3426df63-1) unstable; urgency=medium
+erlang (1:22.1.5+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 13 Jul 2018 11:33:16 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Tue, 29 Oct 2019 09:25:34 +0300
 
-erlang (1:22.0~194.g22a6c1ab6d-1) unstable; urgency=medium
+erlang (1:22.1.1+dfsg-3) unstable; urgency=medium
 
-  * New upstream release.
+  * Fix a typo in the clean target of debian/rules.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 13 Jul 2018 10:30:06 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 03 Oct 2019 10:48:07 +0300
 
-erlang (1:22.0~179.g6f1bdd7817-1) unstable; urgency=medium
+erlang (1:22.1.1+dfsg-2) unstable; urgency=medium
 
-  * New upstream release.
+  * Make erlang-base and erlang-base-hipe provide the erlang-pcre-<version>
+    virtual package to help tracking if elixir-lang or any other package
+    that uses precompiled regexs needs rebuild (closes: #941124).
+  * Use the version of upwards-stack.patch which has been approved upstream.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 12 Jul 2018 14:55:10 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 03 Oct 2019 07:55:19 +0300
 
-erlang (1:22.0~177.ge95e03fe54-1) unstable; urgency=medium
+erlang (1:22.1.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 12 Jul 2018 14:49:02 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 27 Sep 2019 22:49:39 +0300
 
-erlang (1:22.0~174.g7b206e455d-1) unstable; urgency=medium
+erlang (1:22.1+dfsg-1) unstable; urgency=medium
 
   * New upstream release.
+  * Refresh patches.
+  * Document the upwards-stack.patch patch.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 11 Jul 2018 20:12:49 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 20 Sep 2019 13:45:18 +0300
 
-erlang (1:22.0~170.gc7a831d68e-1) unstable; urgency=medium
+erlang (1:22.0.7+dfsg-3) unstable; urgency=medium
 
-  * New upstream release.
+  * Add a patch which determines correctly if stack goes upwards to make
+    the re module working on hppa (closes: #939804).
+  * Bump standards version to 4.4.0.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 11 Jul 2018 19:29:32 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 15 Sep 2019 13:41:43 +0300
 
-erlang (1:22.0~165.gc1a309bea8-1) unstable; urgency=medium
+erlang (1:22.0.7+dfsg-2) unstable; urgency=medium
 
-  * New upstream release.
+  * Switch to the GTK-3 based implementation of wxWidgets (closes: #933480).
+  * Document usage of GDK_BACKEND=x11 for wxGLCanvas in README.Debian.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 11 Jul 2018 09:33:52 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 08 Sep 2019 20:50:38 +0300
 
-erlang (1:22.0~151.ge7cd3ad822-1) unstable; urgency=medium
+erlang (1:22.0.7+dfsg-1) unstable; urgency=medium
 
-  * New upstream release.
+  * New upstream bugfix release.
+  * Override lintian error on EPMD systemd service file without init.d script
+    since it isn't required for EPMD to run.
+  * Force using system-wide zlib.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 11 Jul 2018 08:07:32 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 15 Jul 2019 13:57:16 +0300
 
-erlang (1:22.0~147.ge36538a04a-1) unstable; urgency=medium
+erlang (1:22.0.5+dfsg-2) unstable; urgency=medium
 
-  * New upstream release.
+  * Reupload as a source package to promote to testing.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 10 Jul 2018 16:55:02 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Mon, 08 Jul 2019 12:26:55 +0300
 
-erlang (1:22.0~144.g177a3470d5-1) unstable; urgency=medium
+erlang (1:22.0.5+dfsg-1) unstable; urgency=medium
 
-  * New upstream release.
+  * New upstream bugfix release.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 09 Jul 2018 08:24:53 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 07 Jul 2019 09:20:44 +0300
 
-erlang (1:22.0~136.gaeea56792c-1) unstable; urgency=medium
+erlang (1:22.0.4+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream bugfix release. Upload to experimental.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 09 Jul 2018 08:02:35 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 19 Jun 2019 10:40:35 +0300
 
-erlang (1:22.0~134.g10a0882f33-1) unstable; urgency=medium
+erlang (1:22.0.3+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream bugfix release. Upload to experimental.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 06 Jul 2018 12:51:44 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 13 Jun 2019 13:32:42 +0300
 
-erlang (1:22.0~130.g573fda73e8-1) unstable; urgency=medium
+erlang (1:22.0.2+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream bugfix release. Upload to experimental.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 06 Jul 2018 10:43:35 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Sun, 09 Jun 2019 09:24:36 +0300
 
-erlang (1:22.0~129.g07332f96e5-1) unstable; urgency=medium
+erlang (1:22.0.1+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream bugfix release. Upload to experimental.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 06 Jul 2018 10:37:21 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 23 May 2019 17:44:11 +0300
 
-erlang (1:22.0~126.g1d13ab8ebf-1) unstable; urgency=medium
+erlang (1:22.0+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release. Upload to experimental.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 06 Jul 2018 08:51:32 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 15 May 2019 13:11:33 +0300
 
-erlang (1:22.0~121.g8de2daee2d-1) unstable; urgency=medium
+erlang (1:22.0~rc3+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release candidate. Upload to experimental.
+  * Refresh patches.
+  * Make all architecture-dependent binary packages multi-arch allowed
+    (closes: #926241).
 
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 05 Jul 2018 16:24:10 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 24 Apr 2019 14:04:00 +0300
 
-erlang (1:21.3-1) unstable; urgency=medium
+erlang (1:22.0~rc2+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release candidate. Upload to experimental.
+  * Refresh patches.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 12 Mar 2019 13:28:09 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 27 Mar 2019 09:29:21 +0300
 
-erlang (1:21.2.7-1) unstable; urgency=medium
+erlang (1:22.0~rc1+dfsg-2) experimental; urgency=medium
 
-  * New upstream release.
+  * Fix finding the target triplet for building manpages. This fixes
+    FTBFS on kfreebsd-amd64 and kfreebsd-i386.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 06 Mar 2019 16:06:04 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Thu, 28 Feb 2019 14:45:49 +0300
 
-erlang (1:21.2.6-1) unstable; urgency=medium
+erlang (1:22.0~rc1+dfsg-1) experimental; urgency=medium
 
-  * New upstream release.
+  * New upstream release candidate. Upload to experimental.
+  * Refresh patches.
+  * Remove patch which disabled vfork() on the hppa architecture.
 
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 18 Feb 2019 12:37:22 +0000
+ -- Sergei Golovan <sgolovan@debian.org>  Wed, 27 Feb 2019 16:57:01 +0300
 
 erlang (1:21.2.6+dfsg-1) unstable; urgency=medium
 
@@ -4330,23 +531,11 @@ erlang (1:21.2.6+dfsg-1) unstable; urgency=medium
 
  -- Sergei Golovan <sgolovan@debian.org>  Mon, 18 Feb 2019 16:09:27 +0300
 
-erlang (1:21.2.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Mon, 04 Feb 2019 14:07:40 +0000
-
 erlang (1:21.2.5+dfsg-1) unstable; urgency=medium
 
   * New upstream bugfix release.
 
  -- Sergei Golovan <sgolovan@debian.org>  Mon, 04 Feb 2019 17:43:49 +0300
-
-erlang (1:21.2.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 25 Jan 2019 12:28:33 +0000
 
 erlang (1:21.2.4+dfsg-1) unstable; urgency=medium
 
@@ -4354,24 +543,12 @@ erlang (1:21.2.4+dfsg-1) unstable; urgency=medium
 
  -- Sergei Golovan <sgolovan@debian.org>  Fri, 25 Jan 2019 16:24:41 +0300
 
-erlang (1:21.2.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 16 Jan 2019 10:53:10 +0000
-
 erlang (1:21.2.3+dfsg-1) unstable; urgency=medium
 
   * New upstream bugfix release.
   * Bump standards version to 4.3.0.
 
  -- Sergei Golovan <sgolovan@debian.org>  Wed, 16 Jan 2019 14:07:16 +0300
-
-erlang (1:21.2.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 28 Dec 2018 09:28:25 +0000
 
 erlang (1:21.2.2+dfsg-1) unstable; urgency=medium
 
@@ -4385,23 +562,11 @@ erlang (1:21.2.2+dfsg-1) unstable; urgency=medium
 
  -- Sergei Golovan <sgolovan@debian.org>  Sat, 29 Dec 2018 00:41:13 +0300
 
-erlang (1:21.2.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 21 Dec 2018 14:35:50 +0000
-
 erlang (1:21.2.1+dfsg-1) unstable; urgency=medium
 
   * New upstream bugfix release.
 
  -- Sergei Golovan <sgolovan@debian.org>  Tue, 25 Dec 2018 10:58:50 +0300
-
-erlang (1:21.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 11 Dec 2018 11:13:06 +0000
 
 erlang (1:21.2+dfsg-2) unstable; urgency=medium
 
@@ -4417,36 +582,12 @@ erlang (1:21.2+dfsg-1) unstable; urgency=medium
 
  -- Sergei Golovan <sgolovan@debian.org>  Tue, 11 Dec 2018 17:45:08 +0300
 
-erlang (1:21.1.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 30 Nov 2018 09:38:43 +0000
-
 erlang (1:21.1.4+dfsg-1) unstable; urgency=medium
 
   * New upstream bugfix release.
   * Refresh patches.
 
  -- Sergei Golovan <sgolovan@debian.org>  Mon, 10 Dec 2018 10:03:50 +0300
-
-erlang (1:21.1.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 23 Nov 2018 09:01:58 +0000
-
-erlang (1:21.1.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 16 Nov 2018 09:30:33 +0000
-
-erlang (1:21.1.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 12 Oct 2018 16:01:17 +0000
 
 erlang (1:21.1.1+dfsg-2) unstable; urgency=medium
 
@@ -4463,12 +604,6 @@ erlang (1:21.1.1+dfsg-1) unstable; urgency=medium
     and erlang-base-hipe prerm and postinst maintainer scripts.
 
  -- Sergei Golovan <sgolovan@debian.org>  Tue, 16 Oct 2018 09:22:26 +0300
-
-erlang (1:21.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 25 Sep 2018 06:49:47 +0000
 
 erlang (1:21.1+dfsg-2) unstable; urgency=medium
 
@@ -4495,66 +630,6 @@ erlang (1:21.1+dfsg-1) unstable; urgency=medium
     commands in debian/rules.
 
  -- Sergei Golovan <sgolovan@debian.org>  Thu, 27 Sep 2018 11:52:05 +0300
-
-erlang (1:21.0.9-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 12 Sep 2018 14:45:17 +0000
-
-erlang (1:21.0.8-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 06 Sep 2018 12:23:31 +0000
-
-erlang (1:21.0.7-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 30 Aug 2018 14:09:22 +0000
-
-erlang (1:21.0.6-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 28 Aug 2018 03:25:41 +0000
-
-erlang (1:21.0.5-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Sat, 11 Aug 2018 14:09:25 +0000
-
-erlang (1:21.0.4-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Thu, 26 Jul 2018 10:14:56 +0000
-
-erlang (1:21.0.3-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Fri, 13 Jul 2018 11:33:01 +0000
-
-erlang (1:21.0.2-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 04 Jul 2018 07:49:16 +0000
-
-erlang (1:21.0.1-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Tue, 26 Jun 2018 05:16:41 +0000
-
-erlang (1:21.0-1) unstable; urgency=medium
-
-  * New upstream release.
-
- -- RabbitMQ Team <info@rabbitmq.com>  Wed, 20 Jun 2018 16:40:01 +0000
 
 erlang (1:20.3.8.8+dfsg-1) unstable; urgency=medium
 
