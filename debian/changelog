@@ -1,3 +1,9 @@
+erlang (1:23.3.4.15-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- RabbitMQ Team <info@rabbitmq.com>  Tue, 21 Jun 2022 15:23:23 +0000
+
 erlang (1:23.3.4.14-1) unstable; urgency=medium
 
   * New upstream release.
