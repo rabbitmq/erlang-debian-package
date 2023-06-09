@@ -19,15 +19,12 @@ The following distributions are currently [supported](https://www.rabbitmq.com/i
 
  * Ubuntu 22.04 (Jammy)
  * Ubuntu 20.04 (Focal)
- * Ubuntu 18.04 (Bionic)
- * Ubuntu 16.04 (Xenial)
  * Debian Bullseye
  * Debian Buster
 
 For each distribution, the following release series of Erlang/OTP can be produced:
 
- * `24.x`
- * `23.x`
+ * `26.x`
 
 and so on.
  
