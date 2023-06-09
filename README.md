@@ -25,8 +25,7 @@ The following distributions are currently [supported](https://www.rabbitmq.com/i
 
 For each distribution, the following release series of Erlang/OTP can be produced:
 
- * `25.x`
- * `24.x`
+ * `26.x`
 
 and so on.
  
