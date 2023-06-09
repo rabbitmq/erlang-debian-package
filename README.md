@@ -17,16 +17,14 @@ and [Cloudsmith.io](https://cloudsmith.io/~rabbitmq/repos/rabbitmq-erlang/packag
 
 The following distributions are currently [supported](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang):
 
+ * Ubuntu 22.04 (Jammy)
  * Ubuntu 20.04 (Focal)
- * Ubuntu 18.04 (Bionic)
- * Ubuntu 16.04 (Xenial)
  * Debian Bullseye
  * Debian Buster
 
 For each distribution, the following release series of Erlang/OTP can be produced:
 
- * `23.x`
- * `22.x`
+ * `26.x`
 
 and so on.
  
