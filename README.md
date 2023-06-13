@@ -26,8 +26,7 @@ The following distributions are currently [supported](https://www.rabbitmq.com/i
 For each distribution, the following release series of Erlang/OTP can be produced:
 
  * `26.x`
-
-and so on.
+ * `25.3.x`
  
 For every release series, only the latest minor series is supported.
  
