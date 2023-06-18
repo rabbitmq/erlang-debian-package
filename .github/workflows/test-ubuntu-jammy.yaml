@@ -1,10 +1,10 @@
-name: Test Ubuntu 22.04
+name: Test Ubuntu Jammy
 on:
   push:
 jobs:
-  test-ubuntu-22.04:
+  test-ubuntu-jammy:
     container:
-      image: ubuntu:22.04
+      image: ubuntu:jammy
     runs-on: ubuntu-latest
     steps:
       - name: Install Git
