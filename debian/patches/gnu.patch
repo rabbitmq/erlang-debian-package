@@ -49,7 +49,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -5121,6 +5121,11 @@
+@@ -5262,6 +5262,11 @@
      *x = addr;
      return 0;
  }
@@ -156,7 +156,7 @@ Author: Pino Toscano <pino@debian.org>
          abspath = find_prog(argv[0]);
 --- a/lib/ssl/src/Makefile
 +++ b/lib/ssl/src/Makefile
-@@ -181,7 +181,8 @@
+@@ -184,7 +184,8 @@
  
  $(DEP_FILE): $(ERL_FILES)
  	@echo SED $(TARGET) $(ERL_TOP_NATIVE)
