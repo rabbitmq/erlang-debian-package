@@ -5,5 +5,5 @@ version=4
 opts="dversionmangle=s/\+dfsg\d*$//;s/~/-/, \
   oversionmangle=s/-/~/;s/$/+dfsg/, \
   repack, compression=xz" \
-  https://github.com/erlang/otp/releases \
+  https://github.com/erlang/otp/tags \
   /erlang/otp/archive/refs/tags/OTP-(.+).tar.gz

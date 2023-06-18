@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=KonsoleApplication
-Name=Erlang
-Comment=New Erlang Shell
-Exec=/usr/bin/erl
-Icon=/usr/share/pixmaps/erlang.xpm
