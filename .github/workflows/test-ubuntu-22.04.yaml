@@ -1,10 +1,10 @@
-name: Test Debian Bookworm
+name: Test Ubuntu 22.04
 on:
   push:
 jobs:
-  test-debian-bookworm:
+  test-ubuntu-22.04:
     container:
-      image: debian:bookworm
+      image: ubuntu:22.04
     runs-on: ubuntu-latest
     steps:
       - name: Install Git
