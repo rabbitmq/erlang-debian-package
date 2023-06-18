@@ -14,11 +14,11 @@ jobs:
             ca-certificates \
             git
       - name: Checkout
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3.5.3
         with:
           path: package-sources
       - name: Checkout otp
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3.5.3
         with:
           repository: erlang/otp
           ref: maint-26
