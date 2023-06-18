@@ -19,7 +19,7 @@ The following distributions are currently [supported](https://www.rabbitmq.com/i
 
  * Ubuntu 22.04 (Jammy)
  * Ubuntu 20.04 (Focal)
- * Ubuntu 18.04 (Bionic)
+ * Debian Bookworm
  * Debian Bullseye
  * Debian Buster
 
