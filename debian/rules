@@ -70,13 +70,19 @@ else
 SCTP_OPT=--enable-sctp
 endif
 
+ifeq ($(DEB_HOST_ARCH), armel)
+OPTIMIZATION=-O1
+else
+OPTIMIZATION=-O2
+endif
+
 ifeq ($(findstring debug,$(DEB_BUILD_OPTIONS)),debug)
-CFLAGS=-g -O2 -fno-strict-aliasing
-GEN_OPT_FLGS=-O2 -fno-strict-aliasing
+CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing
+GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing
 TYPE=debug
 else
-CFLAGS=-g -O2 -fno-strict-aliasing
-GEN_OPT_FLGS=-O2 -fno-strict-aliasing
+CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing
+GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing
 TYPE=
 endif
 
@@ -174,7 +180,7 @@ automake-stamp: debian/control
 	done
 	#
 	# Regenerate configure scripts using autoconf
-	./otp_build autoconf
+	./otp_build update_configure --no-commit
 	#
 	touch automake-stamp
 
@@ -249,13 +255,6 @@ define do-install
 	# Remove useless Install and manpage formatting scripts
 	rm -v $(INSTALL_DIR)/usr/lib/erlang/Install
 	rm -rv $(INSTALL_DIR)/usr/lib/erlang/misc
-
-	# Install systemd units for epmd
-	if [ "$(USE_CLOCK_GETTIME)" = "yes" ] ; then \
-	    install -m 755 -d $(INSTALL_DIR)/usr/lib/systemd/system ; \
-	    install -m 644 debian/epmd.service $(INSTALL_DIR)/usr/lib/systemd/system ; \
-	    install -m 644 debian/epmd.socket $(INSTALL_DIR)/usr/lib/systemd/system ; \
-	fi
 endef
 
 # manpages builds section 1 manual pages
@@ -388,10 +387,6 @@ binary-erlang-base: build-stamp
 	#
 	install -D -m 755 $(ROOT_DIR)/debian/scripts/erlang-depends \
 		$(ROOT_DIR)/debian/erlang-dev/usr/bin/erlang-depends
-	install -D -m 644 $(ROOT_DIR)/debian/erlang.xpm \
-		$(ROOT_DIR)/debian/erlang-base/usr/share/pixmaps/erlang.xpm
-	install -D -m 644 $(ROOT_DIR)/debian/erlang-base.desktop \
-		$(ROOT_DIR)/debian/erlang-base/usr/share/apps/konsole/erlang.desktop
 	#
 	dh_lintian -a
 	dh_installdocs -a -A debian/README.Debian debian/AUTHORS
@@ -401,8 +396,7 @@ binary-erlang-base: build-stamp
 	dh_installman -a
 	dh_installmenu -a
 	dh_link -a
-	dh_systemd_enable -a
-	dh_systemd_start -a
+	dh_installsystemd -a --name=epmd
 	dh_strip -a
 	dh_compress -a
 	dh_fixperms -a
