@@ -1,10 +1,10 @@
-name: Test Debian Bullseye
+name: Test Debian Bookworm
 on:
   push:
 jobs:
-  test-debian-bullseye:
+  test-debian-bookworm:
     container:
-      image: debian:bullseye
+      image: debian:bookworm
     runs-on: ubuntu-latest
     steps:
       - name: Install Git
