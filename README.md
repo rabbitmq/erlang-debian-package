@@ -12,10 +12,14 @@ are not monolithic and use the same dependency tree as the official Debian packa
 
 ## Supported Erlang/OTP and Debian/Ubuntu Combinations
 
-Packages are published to a [Launchpad PPA](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang)
-and [Cloudsmith.io](https://cloudsmith.io/~rabbitmq/repos/rabbitmq-erlang/packages/?sort=-version&q=filename%3Adeb%24).
+Packages are published to several Launchpad PPAs:
 
-The following distributions are currently [supported](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang):
+ * [`~rabbitmq/rabbitmq-erlang`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang) (26.x)
+ * [`~rabbitmq/rabbitmq-erlang-25`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-25) (25.3.x)
+
+as well a Cloudsmith.io mirror (see below).
+
+The following distributions are currently supported:
 
  * Ubuntu 22.04 (Jammy)
  * Ubuntu 20.04 (Focal)
@@ -35,7 +39,12 @@ For every release series, only the latest minor series is supported.
 
 ### Launchpad PPA
 
-See the section on [provisioning modern Erlang versions from Launchpad](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang) in the RabbitMQ Ubuntu and Debian installation guide.
+See the section on [provisioning modern Erlang versions from Launchpad](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang)
+in the RabbitMQ Ubuntu and Debian installation guide, or the installation instructions
+of the PPAs:
+
+ * [`~rabbitmq/rabbitmq-erlang`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang) (26.x)
+ * [`~rabbitmq/rabbitmq-erlang-25`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-25) (25.3.x)
 
 ### Community Mirror of Cloudsmith
 
