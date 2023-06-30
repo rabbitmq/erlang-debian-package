@@ -63,17 +63,32 @@ endif
 LIBSCTP=$(shell grep-status -s Depends -PX libsctp-dev |sed -e 's!.*\(libsctp[0-9]*\).*!\1!')
 LIBSCTPDEP=$(shell grep-status -s Version -PX $(LIBSCTP) | sed -e's!^Version: \(.*\)-[^-]*!$(LIBSCTP) (>= \1)!')
 
+USE_SCTP := $(shell echo ${DEB_HOST_ARCH} | egrep -c "bsd|hurd" | sed -es/1/no/ -es/0/yes/)
+ifeq ($(USE_SCTP), no)
+SCTP_OPT=--disable-sctp
+else
+SCTP_OPT=--enable-sctp
+endif
+
+ifeq ($(DEB_HOST_ARCH), armel)
+OPTIMIZATION=-O1
+else
+OPTIMIZATION=-O2
+endif
+
 ifeq ($(findstring debug,$(DEB_BUILD_OPTIONS)),debug)
-CFLAGS=-g -O2 -fno-strict-aliasing
-GEN_OPT_FLGS=-O2 -fno-strict-aliasing
+CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing
+GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing
 TYPE=debug
 else
-CFLAGS=-g -O2 -fno-strict-aliasing
-GEN_OPT_FLGS=-O2 -fno-strict-aliasing
+CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing
+GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing
 TYPE=
 endif
 
 JAVA_OPTIONS=-Xlint -source 1.8 -target 1.8
+
+export LC_ALL := C.UTF-8
 
 JOBS=4
 
@@ -165,7 +180,7 @@ automake-stamp: debian/control
 	done
 	#
 	# Regenerate configure scripts using autoconf
-	./otp_build autoconf
+	./otp_build update_configure --no-commit
 	#
 	touch automake-stamp
 
@@ -190,7 +205,7 @@ configure-stnd-stamp: automake-stamp
 		    $(KERNEL_POLL_OPT) \
 		    $(ESOCKET_OPT) \
 		    $(SYSTEMD_OPT) \
-		    --enable-sctp \
+		    $(SCTP_OPT) \
 		    $(CLOCK_GETTIME_OPT) \
 		    --enable-dynamic-ssl-lib \
 		    --with-ssl-rpath=no \
@@ -240,13 +255,6 @@ define do-install
 	# Remove useless Install and manpage formatting scripts
 	rm -v $(INSTALL_DIR)/usr/lib/erlang/Install
 	rm -rv $(INSTALL_DIR)/usr/lib/erlang/misc
-
-	# Install systemd units for epmd
-	if [ "$(USE_CLOCK_GETTIME)" = "yes" ] ; then \
-	    install -m 755 -d $(INSTALL_DIR)/lib/systemd/system ; \
-	    install -m 644 debian/epmd.service $(INSTALL_DIR)/lib/systemd/system ; \
-	    install -m 644 debian/epmd.socket $(INSTALL_DIR)/lib/systemd/system ; \
-	fi
 endef
 
 # manpages builds section 1 manual pages
@@ -379,10 +387,6 @@ binary-erlang-base: build-stamp
 	#
 	install -D -m 755 $(ROOT_DIR)/debian/scripts/erlang-depends \
 		$(ROOT_DIR)/debian/erlang-dev/usr/bin/erlang-depends
-	install -D -m 644 $(ROOT_DIR)/debian/erlang.xpm \
-		$(ROOT_DIR)/debian/erlang-base/usr/share/pixmaps/erlang.xpm
-	install -D -m 644 $(ROOT_DIR)/debian/erlang-base.desktop \
-		$(ROOT_DIR)/debian/erlang-base/usr/share/apps/konsole/erlang.desktop
 	#
 	dh_lintian -a
 	dh_installdocs -a -A debian/README.Debian debian/AUTHORS
@@ -392,8 +396,7 @@ binary-erlang-base: build-stamp
 	dh_installman -a
 	dh_installmenu -a
 	dh_link -a
-	dh_systemd_enable -a
-	dh_systemd_start -a
+	dh_installsystemd -a --name=epmd
 	dh_strip -a
 	dh_compress -a
 	dh_fixperms -a
