@@ -6,11 +6,11 @@ Priority: optional
 Standards-Version: 4.5.1
 Build-Depends: debhelper (>= 10.0.0), autoconf (>= 2.50), openssl, libssl-dev, m4,
  libncurses5-dev, unixodbc-dev, bison, flex, ed, zlib1g-dev,
- libwxgtk3.0-gtk3-dev, libwxgtk-webview3.0-gtk3-dev, libx11-dev, dctrl-tools, xsltproc,
+ libwxgtk3.2-dev, libwxgtk-webview3.2-dev, libx11-dev, dctrl-tools, xsltproc,
  libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev,
  libsctp-dev [linux-any], libsystemd-dev [linux-any], erlang-base:native <cross>
 Build-Depends-Indep: libxml2-utils, fop, default-jdk | sun-java6-jdk
-Build-Conflicts: autoconf2.13, libwxgtk2.4-dev, libwxgtk2.6-dev, libwxgtk2.8-dev
+Build-Conflicts: autoconf2.13, libwxgtk2.4-dev, libwxgtk2.6-dev, libwxgtk2.8-dev, libwxgtk3.0-dev
 Homepage: http://www.erlang.org/
 Vcs-Browser: https://salsa.debian.org/erlang-team/packages/erlang
 Vcs-Git: https://salsa.debian.org/erlang-team/packages/erlang.git
