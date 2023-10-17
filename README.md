@@ -137,22 +137,22 @@ This repository doesn't provide such packages.
 
 ## How the Packages are Produced
 
-Team RabbitMQ maintains a [public Concourse pipeline](https://ci.rabbitmq.com/teams/main/pipelines/erlang-debian-package)
+Team RabbitMQ maintains a pipeline
 that automates the build process for all versions of Erlang/OTP and all
 Debian/Ubuntu distributions.
+
+The packages produced from this source repository are then 
+published to external packaging services such as [Launchpad](https://launchpad.net/~rabbitmq) and Cloudsmith,
+and then to [Cloudsmith mirrors](https://rabbitmq.com/install-debian.html#apt-cloudsmith).
 
 When a new patch release is tagged in the Erlang/OTP repository, it is
 automatically picked up by the pipeline. Then the package changelog
 is updated and a new package is built, tested and published to Bintray.
 
-The package are tested by a different part of the same Concourse pipeline
-once they are published to Bintray. This makes sure the final repository
-is indirectly tested.
-
 
 ## Copyright and License
 
-(c) 2018-2021 VMware, Inc and its affiliates.
+(c) 2018-2023 VMware, Inc and its affiliates.
 
 Released under the [Apache Software License 2.0](https://github.com/rabbitmq/erlang-rpm-packaging/blob/master/Erlang_ASL2_LICENSE.txt),
 same as Erlang/OTP starting with 18.0.
