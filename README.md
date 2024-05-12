@@ -19,10 +19,13 @@ Packages are published to several Launchpad PPAs:
 
 as well a Cloudsmith.io mirror (see below).
 
-The following distributions are currently supported:
+The following distributions are currently covered by at least one (e.g. Erlang 26.x)
+release series of this package, corresponding to the [RabbitMQ Erlang requirement matrix](https://www.rabbitmq.com/docs/which-erlang):
 
+ * Ubuntu 24.04 (Noble)
  * Ubuntu 22.04 (Jammy)
  * Ubuntu 20.04 (Focal)
+ * Debian Trixie
  * Debian Bookworm
  * Debian Bullseye
  * Debian Buster
