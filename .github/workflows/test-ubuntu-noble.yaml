@@ -1,10 +1,10 @@
-name: Test Ubuntu Jammy
+name: Test Ubuntu Noble
 on:
   push:
 jobs:
-  test-ubuntu-jammy:
+  test-ubuntu-noble:
     container:
-      image: ubuntu:jammy
+      image: ubuntu:noble
     runs-on: ubuntu-latest
     steps:
       - name: Install Git
