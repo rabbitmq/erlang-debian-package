@@ -6,10 +6,7 @@ usr/lib/erlang/usr/include/erl_driver.h			usr/include/erl_driver.h
 usr/lib/erlang/usr/include/erl_drv_nif.h		usr/include/erl_drv_nif.h
 usr/lib/erlang/usr/include/erl_fixed_size_int_types.h	usr/include/erl_fixed_size_int_types.h
 usr/lib/erlang/usr/include/erl_int_sizes_config.h	usr/include/erl_int_sizes_config.h
-usr/lib/erlang/usr/include/erl_memory_trace_parser.h	usr/include/erl_memory_trace_parser.h
 usr/lib/erlang/usr/include/erl_nif.h			usr/include/erl_nif.h
 usr/lib/erlang/usr/include/erl_nif_api_funcs.h		usr/include/erl_nif_api_funcs.h
 usr/lib/erlang/usr/lib/libei.a				usr/lib/libei.a
 usr/lib/erlang/usr/lib/libei_st.a			usr/lib/libei_st.a
-usr/lib/erlang/usr/lib/liberts.a			usr/lib/liberts.a
-usr/lib/erlang/usr/lib/liberts_r.a			usr/lib/liberts_r.a
