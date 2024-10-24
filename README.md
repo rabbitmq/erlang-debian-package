@@ -89,11 +89,10 @@ sudo apt-get install -y erlang-base \
                         erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
 ```
 
-## Differences from Other Debian Package Providers
 
-### Differences from the Official Debian Packages
+## Differences from the Official Debian Packages
 
-#### Provided Erlang/OTP Versions
+### Provided Erlang/OTP Versions
 
 The main difference is the provided versions:
 
@@ -106,7 +105,7 @@ The main difference is the provided versions:
     provides a preview of the next in-development release branch of
     Erlang/OTP.
 
-#### Supported architectures
+### Supported architectures
 
 Another difference is the supported architectures: this repository
 produces `amd64` packages plus Launchpad builds an `arm64` version
