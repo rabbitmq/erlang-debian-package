@@ -14,7 +14,7 @@ are not monolithic and use the same dependency tree as the official Debian packa
 
 Packages are published to several Launchpad PPAs:
 
- * [`~rabbitmq/rabbitmq-erlang`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang) (26.x)
+ * [`~rabbitmq/rabbitmq-erlang-26`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-26) (26.x)
  * [`~rabbitmq/rabbitmq-erlang-25`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-25) (25.3.x)
 
 as well a Cloudsmith.io mirror (see below).
@@ -24,11 +24,8 @@ release series of this package, corresponding to the [RabbitMQ Erlang requiremen
 
  * Ubuntu 24.04 (Noble)
  * Ubuntu 22.04 (Jammy)
- * Ubuntu 20.04 (Focal)
- * Debian Trixie
  * Debian Bookworm
  * Debian Bullseye
- * Debian Buster
 
 For each distribution, the following release series of Erlang/OTP can be produced:
 
@@ -42,12 +39,13 @@ For every release series, only the latest minor series is supported.
 
 ### Launchpad PPA
 
-See the section on [provisioning modern Erlang versions from Launchpad](https://www.rabbitmq.com/install-debian.html#apt-launchpad-erlang)
-in the RabbitMQ Ubuntu and Debian installation guide, or the installation instructions
-of the PPAs:
+This package is build and published to [Ubuntu Launchpad](https://launchpad.net/~rabbitmq):
 
- * [`~rabbitmq/rabbitmq-erlang`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang) (26.x)
+ * [`~rabbitmq/rabbitmq-erlang-26`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-26) (26.x)
  * [`~rabbitmq/rabbitmq-erlang-25`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-25) (25.3.x)
+
+Launchpad provides both `amd64` and `arm64` builds but only the latest published version
+(older releases are not available).
 
 ### Community Mirror of Cloudsmith
 
@@ -56,21 +54,27 @@ As such, we recommend that a community mirror of that repository
 is used instead.
 
 ``` shell
-#!/usr/bin/sh
+#!/bin/sh
 
 sudo apt-get install curl gnupg apt-transport-https -y
 
 ## Team RabbitMQ's main signing key
 curl -1sLf "https://keys.openpgp.org/vks/v1/by-fingerprint/0A9AF2115F4687BD29803A206B73A36E6026DFCA" | sudo gpg --dearmor | sudo tee /usr/share/keyrings/com.rabbitmq.team.gpg > /dev/null
 ## Community mirror of Cloudsmith: modern Erlang repository
-curl -1sLf https://ppa1.novemberain.com/gpg.E495BB49CC4BBE5B.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg > /dev/null
+curl -1sLf https://github.com/rabbitmq/signing-keys/releases/download/3.0/cloudsmith.rabbitmq-erlang.E495BB49CC4BBE5B.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg > /dev/null
+## Community mirror of Cloudsmith: RabbitMQ repository
+curl -1sLf https://github.com/rabbitmq/signing-keys/releases/download/3.0/cloudsmith.rabbitmq-server.9F4587F226208342.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/rabbitmq.9F4587F226208342.gpg > /dev/null
 
 ## Add apt repositories maintained by Team RabbitMQ
 sudo tee /etc/apt/sources.list.d/rabbitmq.list <<EOF
 ## Provides modern Erlang/OTP releases
 ##
-deb [signed-by=/usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg] https://ppa1.novemberain.com/rabbitmq/rabbitmq-erlang/deb/ubuntu jammy main
-deb-src [signed-by=/usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg] https://ppa1.novemberain.com/rabbitmq/rabbitmq-erlang/deb/ubuntu jammy main
+deb [arch=amd64 signed-by=/usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg] https://ppa1.rabbitmq.com/rabbitmq/rabbitmq-erlang/deb/ubuntu noble main
+deb-src [signed-by=/usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg] https://ppa1.rabbitmq.com/rabbitmq/rabbitmq-erlang/deb/ubuntu noble main
+
+# another mirror for redundancy
+deb [arch=amd64 signed-by=/usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg] https://ppa2.rabbitmq.com/rabbitmq/rabbitmq-erlang/deb/ubuntu noble main
+deb-src [signed-by=/usr/share/keyrings/rabbitmq.E495BB49CC4BBE5B.gpg] https://ppa2.rabbitmq.com/rabbitmq/rabbitmq-erlang/deb/ubuntu noble main
 EOF
 
 ## Update package indices
@@ -84,11 +88,10 @@ sudo apt-get install -y erlang-base \
                         erlang-syntax-tools erlang-tftp erlang-tools erlang-xmerl
 ```
 
-## Differences from Other Debian Package Providers
 
-### Differences from the Official Debian Packages
+## Differences from the Official Debian Packages
 
-#### Provided Erlang/OTP Versions
+### Provided Erlang/OTP Versions
 
 The main difference is the provided versions:
 
@@ -101,48 +104,16 @@ The main difference is the provided versions:
     provides a preview of the next in-development release branch of
     Erlang/OTP.
 
-#### Supported architectures
+### Supported architectures
 
-Another difference is the supported architectures: we only support
-`amd64` whereas Debian and Ubuntu provides packages for many more
-architectures.
+Another difference is the supported architectures: this repository
+produces `amd64` packages plus Launchpad builds an `arm64` version
+whereas Debian and Ubuntu provides packages for many more architectures.
 
-### Differences with the Erlang Solutions packages
-
-#### Provided Erlang/OTP versions
-
-Erlang Solutions [provides Debian packages](https://packages.erlang-solutions.com/erlang/) for many Erlang/OTP minor
-releases. However, patch releases in each series are often delayed or never published.
-In other words, they follow the Erlang/OTP sources published on
-[erlang.org](http://www.erlang.org/downloads). This repository strives to
-make the latest patch releases of Erlang/OTP easy to consume.
-
-#### Supported Architectures
-
-Erlang Solutions produces 32-bit (`i386`) packages. This repository
-only provides 64-bit packages.
-
-#### Distributions Coverage
-
-One of the primary goals of this package is to make latest Erlang release series
-available to most popular Debian/Ubuntu distributions.
-
-Erlang Solutions supports more distributions but older ones
-typically don't have the latest Erlang/OTP releases or entire series.
-
-#### All-in-one Package
-
-In addition to the fine-grained package set also provided by Debian
-and Ubuntu, Erlang Solutions publishes a convenient all-in-one package
-called `esl-erlang`.
-
-This repository doesn't provide such packages.
 
 ## How the Packages are Produced
 
-Team RabbitMQ maintains a pipeline
-that automates the build process for all versions of Erlang/OTP and all
-Debian/Ubuntu distributions.
+Packages are produced using a GitHub Actions [workflow that is publicly available](https://github.com/rabbitmq/erlang-packages/).
 
 The packages produced from this source repository are then 
 published to external packaging services such as [Launchpad](https://launchpad.net/~rabbitmq) and Cloudsmith,
@@ -154,6 +125,8 @@ is updated and a new package is built, tested and published to Bintray.
 
 
 ## Copyright and License
+
+(c) 2023-2024 Broadcom. "Broadcom" may refer to Broadcom, Inc or its affiliates.
 
 (c) 2018-2023 VMware, Inc and its affiliates.
 
