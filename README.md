@@ -42,7 +42,7 @@ For every release series, only the latest minor series is supported.
 
 This package is build and published to [Ubuntu Launchpad](https://launchpad.net/~rabbitmq):
 
- * [`~rabbitmq/rabbitmq-erlang`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-26) (26.x)
+ * [`~rabbitmq/rabbitmq-erlang-26`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-26) (26.x)
  * [`~rabbitmq/rabbitmq-erlang-25`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-25) (25.3.x)
 
 Launchpad provides both `amd64` and `arm64` builds but only the latest published version
