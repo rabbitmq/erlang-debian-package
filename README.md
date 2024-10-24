@@ -24,7 +24,6 @@ release series of this package, corresponding to the [RabbitMQ Erlang requiremen
 
  * Ubuntu 24.04 (Noble)
  * Ubuntu 22.04 (Jammy)
- * Debian Trixie
  * Debian Bookworm
  * Debian Bullseye
 
