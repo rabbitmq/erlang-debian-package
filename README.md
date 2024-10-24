@@ -127,8 +127,9 @@ is updated and a new package is built, tested and published to Bintray.
 
 ## Copyright and License
 
-(c) 2018-2023 VMware, Inc and its affiliates.
 (c) 2023-2024 Broadcom. "Broadcom" may refer to Broadcom, Inc or its affiliates.
+
+(c) 2018-2023 VMware, Inc and its affiliates.
 
 Released under the [Apache Software License 2.0](https://github.com/rabbitmq/erlang-rpm-packaging/blob/master/Erlang_ASL2_LICENSE.txt),
 same as Erlang/OTP starting with 18.0.
