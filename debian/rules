@@ -73,26 +73,16 @@ endif
 ifeq ($(DEB_HOST_ARCH), armel)
 OPTIMIZATION=-O1
 else
-ifeq ($(DEB_HOST_ARCH), mips64el)
-OPTIMIZATION=-O1
-else
 OPTIMIZATION=-O2
-endif
-endif
-
-ifeq ($(DEB_HOST_ARCH), i386)
-SSE2=-msse2
-else
-SSE2=
 endif
 
 ifeq ($(findstring debug,$(DEB_BUILD_OPTIONS)),debug)
-CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing $(SSE2)
-GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing $(SSE2)
+CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing
+GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing
 TYPE=debug
 else
-CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing $(SSE2)
-GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing $(SSE2)
+CFLAGS=-g $(OPTIMIZATION) -fno-strict-aliasing
+GEN_OPT_FLGS=$(OPTIMIZATION) -fno-strict-aliasing
 TYPE=
 endif
 
