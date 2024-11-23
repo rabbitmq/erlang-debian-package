@@ -1,6 +1,10 @@
 clean.patch
 gnu.patch
+man.patch
+emacs.patch
+docs.patch
+java.patch
 javascript.patch
 x32.patch
-doc.patch
-mermaid.patch
+time64.patch
+autoconf

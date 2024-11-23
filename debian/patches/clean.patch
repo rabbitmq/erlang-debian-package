@@ -5,7 +5,7 @@ a hack to remove them.
 
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -931,6 +931,7 @@
+@@ -1216,6 +1216,7 @@
  	rm -f *~ *.bak config.log config.status prebuilt.files ibin/*
  	cd erts && ERL_TOP=$(ERL_TOP) $(MAKE) clean
  	cd lib  && ERL_TOP=$(ERL_TOP) $(MAKE) clean BUILD_ALL=true
@@ -13,10 +13,10 @@ a hack to remove them.
  
  distclean: clean
  	find . -type f -name SKIP              -print | xargs $(RM)
-@@ -989,3 +990,204 @@
- $(NO_DIALYZER_APPS): $$(patsubst %,%_build,$$@)
- $(APPS_TEST): $$(patsubst %_test,%_build,$$@)
- 	ERL_TOP=$(ERL_TOP) TYPE=$(TYPE) $(MAKE) -C lib/$(patsubst %_test,%,$@) test
+@@ -1273,3 +1274,204 @@
+ .SECONDEXPANSION:
+ $(APPS_TEST): $$(patsubst %_test,%,$$@)
+ 	ERL_TOP=$(ERL_TOP) TYPE=$(TYPE) $(MAKE) -C lib/$< test
 +
 +additional_clean:
 +	rm -rf $(ERL_TOP)/bin

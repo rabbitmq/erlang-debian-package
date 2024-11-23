@@ -15,7 +15,7 @@ Author: Pino Toscano <pino@debian.org>
 
 --- a/erts/configure.ac
 +++ b/erts/configure.ac
-@@ -527,7 +527,7 @@
+@@ -525,7 +525,7 @@
  
  dnl NOTE: CPPFLAGS will be included in CFLAGS at the end
  case $host_os in
@@ -24,7 +24,7 @@ Author: Pino Toscano <pino@debian.org>
      aix*|os400*)
          # * _ALL_SOURCE: Required to get the winsize structure for TIOCSWINSZ.
          # * _LINUX_SOURCE_COMPAT: Not required, but makes some libc functions
-@@ -1158,7 +1158,7 @@
+@@ -1183,7 +1183,7 @@
  fi
  
  case $host_os in
@@ -49,7 +49,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -5297,6 +5297,11 @@
+@@ -5121,6 +5121,11 @@
      *x = addr;
      return 0;
  }
@@ -63,7 +63,7 @@ Author: Pino Toscano <pino@debian.org>
  
 --- a/erts/etc/common/erlexec.c
 +++ b/erts/etc/common/erlexec.c
-@@ -1663,7 +1663,7 @@
+@@ -1648,7 +1648,7 @@
      if (!bindir) {
  	/* Determine bindir from absolute path to executable */
  	char *p;
@@ -72,7 +72,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, argv[0], sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1677,7 +1677,7 @@
+@@ -1662,7 +1662,7 @@
      if (!rootdir) {
  	/* Determine rootdir from absolute path to bindir */
  	char *p;
@@ -81,7 +81,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, bindir, sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1911,7 +1911,7 @@
+@@ -1891,7 +1891,7 @@
          char cwd[MAX_PATH];
          if (_getcwd(cwd, sizeof(cwd)) == NULL) {
  #else
@@ -156,7 +156,7 @@ Author: Pino Toscano <pino@debian.org>
          abspath = find_prog(argv[0]);
 --- a/lib/ssl/src/Makefile
 +++ b/lib/ssl/src/Makefile
-@@ -188,7 +188,8 @@
+@@ -181,7 +181,8 @@
  
  $(DEP_FILE): $(ERL_FILES)
  	@echo SED $(TARGET) $(ERL_TOP_NATIVE)
