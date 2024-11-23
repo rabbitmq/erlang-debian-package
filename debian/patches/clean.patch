@@ -5,7 +5,7 @@ a hack to remove them.
 
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -963,6 +963,7 @@ clean: check_recreate_primary_bootstrap
+@@ -1216,6 +1216,7 @@
  	rm -f *~ *.bak config.log config.status prebuilt.files ibin/*
  	cd erts && ERL_TOP=$(ERL_TOP) $(MAKE) clean
  	cd lib  && ERL_TOP=$(ERL_TOP) $(MAKE) clean BUILD_ALL=true
@@ -13,7 +13,7 @@ a hack to remove them.
  
  distclean: clean
  	find . -type f -name SKIP              -print | xargs $(RM)
-@@ -1020,3 +1021,204 @@ APPS_TEST=$(patsubst %, %_test,$(APPS))
+@@ -1273,3 +1274,204 @@
  .SECONDEXPANSION:
  $(APPS_TEST): $$(patsubst %_test,%,$$@)
  	ERL_TOP=$(ERL_TOP) TYPE=$(TYPE) $(MAKE) -C lib/$< test

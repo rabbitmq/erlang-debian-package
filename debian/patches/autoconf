@@ -1,0 +1,29 @@
+--- a/otp_build
++++ b/otp_build
+@@ -200,17 +200,18 @@
+     export AUTOCONF_VERSION="$USE_AUTOCONF_VERSION"
+     ac_ver_blob=`autoconf --version`
+     if [ $? -ne 0 ]; then
+-	echo "ERROR: Failed to check autoconf version! You need to have autoconf of version $USE_AUTOCONF_VERSION in path." 1>&2
++	echo "ERROR: Failed to check autoconf version! You need to have autoconf of version >= $USE_AUTOCONF_VERSION in path." 1>&2
+ 	exit 1
+     fi
+     ac_ver=`echo $ac_ver_blob | sed "s|[^0-9]*\([0-9][^ \t\n]*\).*|\1|"`
+-    case $ac_ver in
+-	$USE_AUTOCONF_VERSION)
+-	    ;;
+-	*)
+-	    echo "ERROR: autoconf of version $ac_ver found in path! You need to have autoconf of version $USE_AUTOCONF_VERSION in path." 1>&2
+-	    exit 1;;
+-    esac
++    if [ $ac_ver = $USE_AUTOCONF_VERSION ] ; then
++        true
++    elif [ $ac_ver \> $USE_AUTOCONF_VERSION ] ; then
++        true
++    else
++        echo "ERROR: autoconf of version $ac_ver found in path! You need to have autoconf of version >= $USE_AUTOCONF_VERSION in path." 1>&2
++	exit 1
++    fi
+     
+     out_files=
+ 
