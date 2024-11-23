@@ -7,3 +7,4 @@ java.patch
 javascript.patch
 x32.patch
 time64.patch
+autoconf
