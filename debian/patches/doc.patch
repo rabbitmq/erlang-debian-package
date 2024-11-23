@@ -1,0 +1,37 @@
+Author: Sergei Golovan
+Description: Patch moves the command line syntax to a separate ``` block,
+ and fixes interpreting | as table column separators.
+Last-Modified: Mon, 04 Mar 2024 16:08:31 +0300
+
+--- a/lib/snmp/doc/references/snmpc_cmd.md
++++ b/lib/snmp/doc/references/snmpc_cmd.md
+@@ -26,7 +26,7 @@
+ The `snmpc` program provides a way to run the SNMP MIB compiler of the Erlang
+ system.
+ 
+-## snmpc \[options] file.mib | file.bin
++## snmpc \[options] file.mib \| file.bin
+ 
+ `snmpc` compile a SNMP MIB file, see [compile/1,2](`snmpc:compile/1`) for more
+ info.
+@@ -53,17 +53,17 @@
+ 
+ - **\--verbosity _verbosity_** - Print debug info.
+ 
+-  `verbosity` = `trace` | `debug` | `log` | `info` | `silence`
++  `verbosity` = `trace` \| `debug` \| `log` \| `info` \| `silence`
+ 
+   Defaults to `silence`.
+ 
+   [](){: #option_w } [](){: #option_warnings }
+ 
+-- **\--warnings | --W** - Print warning messages.
++- **\--warnings \| --W** - Print warning messages.
+ 
+   [](){: #option_wae } [](){: #option_werror }
+ 
+-- **\--wae | --Werror** - Warnings as errors. Indicates that warnings shall be
++- **\--wae \| --Werror** - Warnings as errors. Indicates that warnings shall be
+   treated as errors.
+ 
+   [](){: #option_odir }
