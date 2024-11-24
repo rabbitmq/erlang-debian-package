@@ -313,11 +313,6 @@ binary-indep: build-stamp docs-stamp
 	dh_installdirs -i
 	dh_install -i
 	dh_lintian -i
-ifeq ($(filter nodoc,$(DEB_BUILD_PROFILES)),)
-	dh_installdocs -i -A debian/README.Debian debian/AUTHORS
-else
-	dh_installdocs -i -Nerlang-doc -A debian/README.Debian debian/AUTHORS
-endif
 	dh_installemacsen -i
 	dh_installexamples -i
 	dh_installchangelogs -i
@@ -346,7 +341,6 @@ binary-arch: build-stamp manpages-stamp
 	#false
 	#
 	dh_lintian -a
-	dh_installdocs -a -A debian/README.Debian debian/AUTHORS
 	dh_installchangelogs -a
 	dh_installemacsen -a
 	dh_installexamples -a
