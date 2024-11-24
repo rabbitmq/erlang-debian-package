@@ -1,3 +1,3 @@
-tar-ignore = "^\.git"
+tar-ignore = ".git"
 tar-ignore = "README.md"
 tar-ignore = "Erlang_ASL2_LICENSE.txt"
