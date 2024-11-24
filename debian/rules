@@ -281,22 +281,6 @@ install-stamp: boot-stamp
 docs: docs-stamp
 docs-stamp:
 	dh_testdir
-ifeq ($(filter nodoc,$(DEB_BUILD_PROFILES)),)
-	PATH=$(ROOT_DIR)/bin:$$PATH $(MAKE) -j $(JOBS) docs
-	$(MAKE) -j $(JOBS) DESTDIR=$(ROOT_DIR)/debian/erlang-docs install-docs
-	#
-	(cd $(ROOT_DIR)/debian/erlang-docs/usr/lib/erlang/lib ; \
-	 perl $(ROOT_DIR)/debian/scripts/genlinks $(VSN) >$(ROOT_DIR)/debian/erlang-doc.links)
-	install -d $(ROOT_DIR)/debian/erlang-docs/usr/lib/html
-	mv $(ROOT_DIR)/debian/erlang-docs/usr/lib/erlang/* $(ROOT_DIR)/debian/erlang-docs/usr/lib/html
-	# Use system-wide javascript libraries
-	ln -sf /usr/share/javascript/jquery/jquery.min.js \
-		$(ROOT_DIR)/debian/erlang-docs/usr/lib/html/lib/jinterface-*/doc/html/assets/java/script-dir/jquery-[0-9]*.min.js
-	ln -sf /usr/share/javascript/jquery-ui/themes/base/jquery-ui.min.css \
-		$(ROOT_DIR)/debian/erlang-docs/usr/lib/html/lib/jinterface-*/doc/html/assets/java/script-dir/jquery-ui.min.css
-	ln -sf /usr/share/javascript/jquery-ui/jquery-ui.min.js \
-		$(ROOT_DIR)/debian/erlang-docs/usr/lib/html/lib/jinterface-*/doc/html/assets/java/script-dir/jquery-ui.min.js
-endif
 	touch docs-stamp
 
 build: build-arch build-indep
