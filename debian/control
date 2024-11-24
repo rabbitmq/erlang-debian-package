@@ -4,7 +4,7 @@ Uploaders: Sergei Golovan <sgolovan@debian.org>
 Section: interpreters
 Priority: optional
 Standards-Version: 4.7.0
-Build-Depends: debhelper-compat (= 13), autoconf (>= 2.71), openssl, libssl-dev, m4,
+Build-Depends: debhelper-compat (= 13), autoconf (>= 2.72), openssl, libssl-dev, m4,
  libncurses-dev, unixodbc-dev, bison, flex, ed, zlib1g-dev,
  libwxgtk3.2-dev, libwxgtk-webview3.2-dev, libx11-dev, dctrl-tools, xsltproc,
  libgl-dev, libglu-dev,
