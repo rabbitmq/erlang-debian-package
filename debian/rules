@@ -273,13 +273,13 @@ manpages-stamp: $(INSTALL_RULE)
 	dh_testdir
 	target=$$(basename $$(dirname $$(find make -name otp.mk))) ; \
 	PATH=$(ROOT_DIR)/bin:$$PATH ; \
-	for m in lib/diameter lib/snmp lib/dialyzer lib/erl_interface lib/common_test erts ; do \
+	for m in lib/erl_interface lib/common_test erts ; do \
 	    ${MAKE} -j ${JOBS} -C $$m/doc/src man ERL_TOP=$(ROOT_DIR) TARGET=$$target ; \
 	done
 	#
 	install -d $(MAN_DIR)/man1 $(MAN_DIR)/man3 ; \
 	install lib/dialyzer/doc/man3/*.3 $(MAN_DIR)/man3 ; \
-	for m in lib/diameter lib/snmp lib/erl_interface lib/common_test erts ; do \
+	for m in lib/erl_interface lib/common_test erts ; do \
 	    install $$m/doc/man1/*.1 $(MAN_DIR)/man1 ; \
 	done
 	#
