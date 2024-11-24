@@ -5,16 +5,7 @@ Last-Modified: Mon, 04 Mar 2024 16:08:31 +0300
 
 --- a/lib/snmp/doc/references/snmpc_cmd.md
 +++ b/lib/snmp/doc/references/snmpc_cmd.md
-@@ -26,7 +26,7 @@
- The `snmpc` program provides a way to run the SNMP MIB compiler of the Erlang
- system.
- 
--## snmpc \[options] file.mib | file.bin
-+## snmpc \[options] file.mib \| file.bin
- 
- `snmpc` compile a SNMP MIB file, see [compile/1,2](`snmpc:compile/1`) for more
- info.
-@@ -53,17 +53,17 @@
+@@ -56,17 +56,17 @@
  
  - **\--verbosity _verbosity_** - Print debug info.
  
