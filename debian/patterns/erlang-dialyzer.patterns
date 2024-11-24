@@ -1,3 +1,5 @@
 ./usr/lib/erlang/bin/dialyzer
+./usr/lib/erlang/bin/typer
 ./usr/lib/erlang/erts-.*/bin/dialyzer
+./usr/lib/erlang/erts-.*/bin/typer
 ./usr/lib/erlang/lib/dialyzer-.*/
