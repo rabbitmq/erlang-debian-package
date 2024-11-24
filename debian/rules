@@ -6,18 +6,20 @@ DEB_HOST_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_HOST_GNU_TYPE)
 DEB_BUILD_GNU_TYPE ?= $(shell dpkg-architecture -qDEB_BUILD_GNU_TYPE)
 
 ROOT_DIR=$(shell pwd)
-MAN_DIR = $(ROOT_DIR)/debian/erlang-docs/usr/lib/erlang/man
 
 export HOME := $(ROOT_DIR)/debian
 
--include ${ROOT_DIR}/erts/vsn.mk
--include ${ROOT_DIR}/lib/diameter/vsn.mk
--include ${ROOT_DIR}/lib/erl_interface/vsn.mk
--include ${ROOT_DIR}/lib/jinterface/vsn.mk
--include ${ROOT_DIR}/lib/ic/vsn.mk
--include ${ROOT_DIR}/lib/tools/vsn.mk
--include ${ROOT_DIR}/lib/common_test/vsn.mk
--include ${ROOT_DIR}/lib/snmp/vsn.mk
+-include $(ROOT_DIR)/erts/vsn.mk
+-include $(ROOT_DIR)/lib/diameter/vsn.mk
+-include $(ROOT_DIR)/lib/erl_interface/vsn.mk
+-include $(ROOT_DIR)/lib/jinterface/vsn.mk
+-include $(ROOT_DIR)/lib/ic/vsn.mk
+-include $(ROOT_DIR)/lib/tools/vsn.mk
+-include $(ROOT_DIR)/lib/common_test/vsn.mk
+-include $(ROOT_DIR)/lib/snmp/vsn.mk
+-include $(ROOT_DIR)/lib/observer/vsn.mk
+-include $(ROOT_DIR)/lib/edoc/vsn.mk
+
 SOURCE_VERSION=$(shell dpkg-parsechangelog | sed -ne's!^Version: \(.*\)-.*!\1!p')
 
 PCRE_MAJOR=$(shell cat erts/emulator/pcre/pcre.h | grep PCRE_MAJOR | sed -e's/.*\s\([0-9]\+\).*/\1/')
@@ -25,65 +27,43 @@ PCRE_MINOR=$(shell cat erts/emulator/pcre/pcre.h | grep PCRE_MINOR | sed -e's/.*
 PCRE_VERSION=$(PCRE_MAJOR).$(PCRE_MINOR)
 ABI_VERSION=17.0
 
-BINARY_TARGETS=binary-erlang-base
-INSTALL_RULE=install-stnd-stamp
-TMPINSTALL_DIR=debian/erlang-stnd
-ERLANGBASE=erlang-base (= $${binary:Version})
+MAN_DIR = $(ROOT_DIR)/debian/tmp/usr/share/man/man1
 
-USE_ESOCKET := $(shell echo ${DEB_HOST_ARCH} | egrep -c "hurd" | sed -es/1/no/ -es/0/yes/)
-ifeq ($(USE_ESOCKET), no)
+ifneq ($(findstring hurd,$(DEB_HOST_ARCH)),)
 ESOCKET_OPT=--disable-esock
 else
 ESOCKET_OPT=--enable-esock
 endif
 
-USE_KERNEL_POLL := $(shell echo ${DEB_HOST_ARCH} | egrep -c "hurd" | sed -es/1/no/ -es/0/yes/)
-ifeq ($(USE_KERNEL_POLL), no)
+ifneq ($(findstring hurd,$(DEB_HOST_ARCH)),)
 KERNEL_POLL_OPT=--disable-kernel-poll
 else
 KERNEL_POLL_OPT=--enable-kernel-poll
 endif
 
-USE_CLOCK_GETTIME := $(shell echo ${DEB_HOST_ARCH} | egrep -c "bsd|hurd" | sed -es/1/no/ -es/0/yes/)
-ifeq ($(USE_CLOCK_GETTIME), no)
-CLOCK_GETTIME_OPT=
-SYSTEMD_OPT=
-else
-CLOCK_GETTIME_OPT=--enable-clock-gettime
-SYSTEMD_OPT=--enable-systemd
-endif
-
-# Temporary (until #475459 is fixed) disabling threads for sparc architecture
-ifeq ($(DEB_HOST_ARCH), sparc)
-THREAD_OPTS=--disable-threads --disable-smp-support
-else
-THREAD_OPTS=--enable-threads --enable-smp-support
-endif
-
 LIBSCTP=$(shell grep-status -s Depends -PX libsctp-dev |sed -e 's!.*\(libsctp[0-9]*\).*!\1!')
 LIBSCTPDEP=$(shell grep-status -s Version -PX $(LIBSCTP) | sed -e's!^Version: \(.*\)-[^-]*!$(LIBSCTP) (>= \1)!')
 
-USE_SCTP := $(shell echo ${DEB_HOST_ARCH} | egrep -c "bsd|hurd" | sed -es/1/no/ -es/0/yes/)
-ifeq ($(USE_SCTP), no)
-SCTP_OPT=--disable-sctp
-else
+ifeq ($(findstring hurd,$(DEB_HOST_ARCH))$(findstring bsd,$(DEB_HOST_ARCH)),)
+CLOCK_GETTIME_OPT=--enable-clock-gettime
+SYSTEMD_OPT=--enable-systemd
 SCTP_OPT=--enable-sctp
+else
+CLOCK_GETTIME_OPT=
+SYSTEMD_OPT=
+SCTP_OPT=--disable-sctp
 endif
 
-ifeq ($(DEB_HOST_ARCH), armel)
-OPTIMIZATION=-O1
-else
-ifeq ($(DEB_HOST_ARCH), mips64el)
-OPTIMIZATION=-O1
-else
-OPTIMIZATION=-O2
-endif
-endif
-
-ifeq ($(DEB_HOST_ARCH), i386)
-SSE2=-msse2
-else
+ifeq ($(findstring i386,$(DEB_HOST_ARCH)),)
 SSE2=
+else
+SSE2=-msse2
+endif
+
+ifeq ($(findstring armel,$(DEB_HOST_ARCH)),)
+OPTIMIZATION=-O2
+else
+OPTIMIZATION=-O1
 endif
 
 ifeq ($(findstring debug,$(DEB_BUILD_OPTIONS)),debug)
@@ -100,172 +80,7 @@ JAVA_OPTIONS=-Xlint -source 1.8 -target 1.8
 
 export LC_ALL := C.UTF-8
 
-JOBS=4
-
-debian/control: debian/control.in debian/rules
-	sed -e's/@PCRE_VERSION@/$(PCRE_VERSION)/g' \
-	    -e's/@ABI_VERSION@/$(ABI_VERSION)/g' <$< >$@
-
-clean:
-	dh_testdir
-	dh_testroot
-	#
-	[ ! -f Makefile ] || ${MAKE} -j ${JOBS} clean
-	rm -f lib/dialyzer/SKIP
-	#
-	# Remove installed erlang from debian/
-	rm -rf debian/erlang-docs
-	rm -rf debian/erlang-stnd
-	#
-	# Restore replaced configure, config.guess, and config.sub files
-	for i in `find ${ROOT_DIR} -name 'configure.backup'` ; do \
-	    mv $$i $${i%%.backup} ; \
-	done
-	for i in `find ${ROOT_DIR} -name 'config.guess~'` ; do \
-	    mv $$i $${i%%\~} ; \
-	done
-	for i in `find ${ROOT_DIR} -name 'config.sub~'` ; do \
-	    mv $$i $${i%%\~} ; \
-	done
-	rm -f lib/configure.in
-	#
-	# Remove files, which were generated from templates
-	for i in debian/*.in debian/scripts/*.in ; do \
-	    if [ "$$i" != "debian/control.in" ] ; then \
-		rm -f $${i%%.in} ; \
-	    fi ; \
-	done
-	#
-	# *.install were also generated on-the-fly
-	rm -f debian/*.install
-	rm -f debian/erlang-doc.links
-	rm -f debian/erlang-doc.doc-base.erlang-erts
-	#
-	rm -f debian/AUTHORS
-	#
-	# Remove touched stamp files
-	rm -f *-stamp
-	#
-	dh_clean -Xtest.erl.orig
-
-automake: automake-stamp
-automake-stamp: debian/control
-	dh_testdir
-	#
-	# Return error if there are known nonfree docs in upstream tarball
-	# Return error if there are prebuilt binaries in upstream tarball
-	err=0 ; \
-	for fn in `find lib/*/doc -name standard -or -name archive` ; do \
-	    err=1 ; \
-	    echo Found directory $$fn with non-free docs in upstream. Please remove it. ; \
-	done ; \
-	if [ -f prebuilt.files ] ; then \
-	    err=1 ; \
-	    echo Found prebuilt binaries in upstream. Please remove them. ; \
-	fi ; \
-	if [ $$err = 1 ] ; then \
-	    echo ; \
-	    echo Use uscan --download to get the upstream tarball. ; \
-	    echo ; \
-	    false ; \
-	fi
-	#
-	# Preserve configure scripts
-	for i in `find ${ROOT_DIR} -not \( -wholename '*/.pc' -prune \) \
-				    -a -name 'configure'` ; do \
-	    cp -f $$i $$i.backup ; \
-	done
-	#
-	# Replace config.guess and config.sub by installed in /usr/share/misc.
-	# Also add suffix -gnu to ibm-linux in config.guess to fix FTBFS
-	# on s390 architecture
-	for i in `find ${ROOT_DIR} -not \( -wholename '*/.pc' -prune \) \
-				    -a -name 'config.guess'` ; do \
-	    cp -fb /usr/share/misc/config.guess $$i ; \
-	    sed -i 's/-ibm-linux$$/-ibm-linux-gnu/g' $$i ; \
-	done
-	for i in `find ${ROOT_DIR} -not \( -wholename '*/.pc' -prune \) \
-				    -a -name 'config.sub'` ; do \
-	    cp -fb /usr/share/misc/config.sub $$i ; \
-	done
-	#
-	# Regenerate configure scripts using autoconf
-	./otp_build update_configure --no-commit
-	#
-	touch automake-stamp
-
-configure-stnd: configure-stnd-stamp
-configure-stnd-stamp: automake-stamp
-	dh_testdir
-	#
-	echo "BUILDING STANDARD VERSION"
-	#
-	[ ! -f Makefile ] || ${MAKE} -j ${JOBS} clean
-	rm -f lib/dialyzer/SKIP
-	#
-	CFLAGS="$(CFLAGS)" \
-	./configure --host=$(DEB_HOST_GNU_TYPE) \
-		    --build=$(DEB_BUILD_GNU_TYPE) \
-		    --prefix=/usr \
-		    --libexecdir=/usr/bin \
-		    --infodir=/usr/share/info \
-		    --mandir=/usr/share/man \
-		    --enable-hybrid-heap \
-		    $(THREAD_OPTS) \
-		    $(KERNEL_POLL_OPT) \
-		    $(ESOCKET_OPT) \
-		    $(SYSTEMD_OPT) \
-		    $(SCTP_OPT) \
-		    $(CLOCK_GETTIME_OPT) \
-		    --enable-dynamic-ssl-lib \
-		    --with-ssl-rpath=no \
-		    --enable-ethread-pre-pentium4-compatibility \
-		    --enable-shared-zlib \
-		    --disable-builtin-zlib \
-		    --without-ssl-zlib \
-		    --disable-silent-rules
-	#
-	touch configure-stnd-stamp
-
-define do-install
-	echo "*** do-install called for $(INSTALL_DIR)."
-
-	# Calls make install.
-	${MAKE} -j ${JOBS} DESTDIR=$(INSTALL_DIR) TYPE=$(TYPE) install
-
-	# Replace ROOTDIR in "erl" and "start" scripts for real rootdir
-	# If there's no erl or start then it's better to fail than silently continue
-	for dir in $(INSTALL_DIR)/usr/lib/erlang/erts-$(VSN)/bin		\
-		   $(INSTALL_DIR)/usr/lib/erlang/bin; do			\
-	    for val in erl start; do						\
-		sed -i 's!ROOTDIR=.*!ROOTDIR=/usr/lib/erlang!' $${dir}/$${val}; \
-	    done;								\
-	done
-
-	# Correct ERL_ROOT in RELEASES file
-	sed 's!%ERL_ROOT%!/usr/lib/erlang!' \
-	    $(INSTALL_DIR)/usr/lib/erlang/releases/RELEASES.src \
-	    >$(INSTALL_DIR)/usr/lib/erlang/releases/RELEASES
-
-	# Get rid of windows cruft
-	find $(INSTALL_DIR) -name *.bat -exec rm -v {} \;
-
-	# Fix permissions
-	cp $(INSTALL_DIR)/usr/lib/erlang/erts-$(VSN)/bin/start_erl.src \
-	   $(INSTALL_DIR)/usr/lib/erlang/erts-$(VSN)/bin/start_erl
-	chmod 755 $(INSTALL_DIR)/usr/lib/erlang/erts-$(VSN)/bin/start_erl
-	chmod 755 $(INSTALL_DIR)/usr/lib/erlang/erts-$(VSN)/bin/*.src
-	chmod 644 $(INSTALL_DIR)/usr/lib/erlang/bin/start.script
-	chmod 644 $(INSTALL_DIR)/usr/lib/erlang/lib/wx-*/examples/*/*.beam
-
-	# Remove some files which should be rather in erlang-doc-html package
-	find $(INSTALL_DIR)/usr/lib/erlang/lib -name info -exec rm -v {} \;
-	rm -rv $(INSTALL_DIR)/usr/lib/erlang/erts-$(VSN)/doc
-
-	# Remove useless Install and manpage formatting scripts
-	rm -v $(INSTALL_DIR)/usr/lib/erlang/Install
-	rm -rv $(INSTALL_DIR)/usr/lib/erlang/misc
-endef
+JOBS=$(shell nproc)
 
 MANPAGE_DIRS = $(shell find $(ROOT_DIR) -not \( -wholename '*/.pc' -prune \) \
 	       			-a \( -name '*_cmd.md' -or -name dialyzer.erl \) -exec dirname {} _cmd.md \; | tr "\n" ":")
@@ -295,81 +110,230 @@ $(MAN_DIR)/dialyzer.1: lib/dialyzer/src/dialyzer.erl $(MAN_DIR)
 $(MAN_DIR)/%.1: %_cmd.md $(MAN_DIR)
 	debian/scripts/fixmanpage $< 1 | ronn | sed -e's/start(1)/start_embedded(1)/' >$@
 
-build-stnd: build-stnd-stamp
-build-stnd-stamp: configure-stnd-stamp
+# Files generated from templates
+
+SCRIPTS_SRC = $(wildcard debian/erlang-*.in) $(wildcard debian/scripts/*.in)
+SCRIPTS = $(SCRIPTS_SRC:%.in=%)
+
+$(SCRIPTS) debian/control: %: %.in debian/rules
+	sed -e's/@VERSION@/$(VSN)/g' \
+	    -e's/@SOURCE_VERSION@/$(SOURCE_VERSION)/g' \
+	    -e's/@ABI_VERSION@/$(ABI_VERSION)/g' \
+	    -e's/@PCRE_VERSION@/$(PCRE_VERSION)/g' \
+	    -e's/@EI_VSN@/$(EI_VSN)/g' \
+	    -e's/@JINTERFACE_VSN@/$(JINTERFACE_VSN)/g' \
+	    -e's/@IC_VSN@/$(IC_VSN)/g' \
+	    -e's/@COMMON_TEST_VSN@/$(COMMON_TEST_VSN)/g' \
+	    -e's/@SNMP_VSN@/$(SNMP_VSN)/g' \
+	    -e's/@DIAMETER_VSN@/$(DIAMETER_VSN)/g' \
+	    -e's/@OBSERVER_VSN@/$(OBSERVER_VSN)/g' \
+	    -e's/@EDOC_VSN@/$(EDOC_VSN)/g' \
+	    -e's/@TOOLS_VSN@/$(TOOLS_VSN)/g' <$< >$@
+
+# Building the package
+
+clean:
 	dh_testdir
-ifeq ($(findstring debug,$(DEB_BUILD_OPTIONS)),debug)
-	${MAKE} -j ${JOBS} TYPE=$(TYPE) FLAVOR=smp GEN_OPT_FLGS="$(GEN_OPT_FLGS)" JAVA_OPTIONS="$(JAVA_OPTIONS)" emulator
-	${MAKE} -j ${JOBS} TYPE=$(TYPE) FLAVOR=plain GEN_OPT_FLGS="$(GEN_OPT_FLGS)" JAVA_OPTIONS="$(JAVA_OPTIONS)" emulator
-endif
-	${MAKE} -j ${JOBS} TYPE=$(TYPE) GEN_OPT_FLGS="$(GEN_OPT_FLGS)" JAVA_OPTIONS="$(JAVA_OPTIONS)"
-	touch build-stnd-stamp
+	dh_testroot
+	#
+	[ ! -f Makefile ] || $(MAKE) -j $(JOBS) clean
+	#
+	# Remove installed erlang from debian/
+	rm -rvf debian/erlang-docs
+	#
+	# Restore replaced configure, config.guess, and config.sub files
+	for i in `find $(ROOT_DIR) -regex '.*config\(ure\|\.guess\|\.sub\)~'` ; do \
+	    mv -v $$i $${i%%\~} ; \
+	done
+	#
+	# Remove files, which were generated from templates
+	rm -vf $(SCRIPTS)
+	#
+	# *.install were also generated on-the-fly
+	rm -vf debian/*.install
+	rm -vf debian/erlang-doc.links
+	#
+	rm -vf debian/AUTHORS
+	#
+	# Remove touched stamp files
+	rm -vf *-stamp
+	#
+	dh_clean -Xtest.erl.orig
+
+automake: automake-stamp
+automake-stamp: debian/control
+	dh_testdir
+	#
+	# Return error if there are known nonfree docs in upstream tarball
+	# Return error if there are prebuilt binaries in upstream tarball
+	err=0 ; \
+	for fn in `find lib/*/doc -name standard -or -name archive` ; do \
+	    err=1 ; \
+	    echo Found directory $$fn with non-free docs in upstream. Please remove it. ; \
+	done ; \
+	if [ -f prebuilt.files ] ; then \
+	    err=1 ; \
+	    echo Found prebuilt binaries in upstream. Please remove them. ; \
+	fi ; \
+	if [ $$err = 1 ] ; then \
+	    echo ; \
+	    echo Use uscan --download to get the upstream tarball. ; \
+	    echo ; \
+	    false ; \
+	fi
+	#
+	# Preserve configure scripts
+	for i in `find $(ROOT_DIR) -not \( -wholename '*/.pc' -prune \) \
+				    -a -name 'configure'` ; do \
+	    cp -vf $$i $$i~ ; \
+	done
+	#
+	# Replace config.guess and config.sub by installed in /usr/share/misc.
+	for i in `find $(ROOT_DIR) -not \( -wholename '*/.pc' -prune \) \
+				    -a -name 'config.guess'` ; do \
+	    cp -vfb /usr/share/misc/config.guess $$i ; \
+	done
+	for i in `find $(ROOT_DIR) -not \( -wholename '*/.pc' -prune \) \
+				    -a -name 'config.sub'` ; do \
+	    cp -vfb /usr/share/misc/config.sub $$i ; \
+	done
+	#
+	# Regenerate configure scripts using autoconf
+	./otp_build update_configure --no-commit
+	#
+	touch automake-stamp
+
+configure: configure-stamp
+configure-stamp: automake-stamp
+	dh_testdir
+	#
+	CFLAGS="$(CFLAGS)" \
+	./configure --host=$(DEB_HOST_GNU_TYPE) \
+		    --build=$(DEB_BUILD_GNU_TYPE) \
+		    --prefix=/usr \
+		    --libexecdir=/usr/bin \
+		    --infodir=/usr/share/info \
+		    --mandir=/usr/share/man \
+		    --enable-hybrid-heap \
+		    --enable-threads \
+		    --enable-smp-support \
+		    $(KERNEL_POLL_OPT) \
+		    $(ESOCKET_OPT) \
+		    $(SYSTEMD_OPT) \
+		    $(SCTP_OPT) \
+		    $(CLOCK_GETTIME_OPT) \
+		    --enable-dynamic-ssl-lib \
+		    --with-ssl-rpath=no \
+		    --enable-ethread-pre-pentium4-compatibility \
+		    --enable-shared-zlib \
+		    --disable-builtin-zlib \
+		    --without-ssl-zlib \
+		    --disable-silent-rules
+	#
+	touch configure-stamp
+
+boot: boot-stamp
+boot-stamp: configure-stamp
+	dh_testdir
+	$(MAKE) -j $(JOBS) TYPE=$(TYPE) GEN_OPT_FLGS="$(GEN_OPT_FLGS)" JAVA_OPTIONS="$(JAVA_OPTIONS)"
+	touch boot-stamp
+
+install: install-stamp
+install-stamp: boot-stamp
+	dh_testdir
+	#
+	$(MAKE) -j $(JOBS) DESTDIR=$(ROOT_DIR)/debian/tmp TYPE=$(TYPE) install
+	#
+	# Replace ROOTDIR in "erl" and "start" scripts for real rootdir
+	# If there's no erl or start then it's better to fail than silently continue
+	for dir in debian/tmp/usr/lib/erlang/erts-$(VSN)/bin \
+		   debian/tmp/usr/lib/erlang/bin; do \
+	    for val in erl start; do \
+		sed -i 's!ROOTDIR=.*!ROOTDIR=/usr/lib/erlang!' $${dir}/$${val}; \
+	    done; \
+	done
+	#
+	# Correct ERL_ROOT in RELEASES file
+	sed 's!%ERL_ROOT%!/usr/lib/erlang!' \
+	    debian/tmp/usr/lib/erlang/releases/RELEASES.src \
+	    >debian/tmp/usr/lib/erlang/releases/RELEASES
+	#
+	# Get rid of windows cruft
+	find debian/tmp -name *.bat -exec rm -v {} \;
+	#
+	# Fix permissions
+	cp debian/tmp/usr/lib/erlang/erts-$(VSN)/bin/start_erl.src \
+	   debian/tmp/usr/lib/erlang/erts-$(VSN)/bin/start_erl
+	chmod 755 debian/tmp/usr/lib/erlang/erts-$(VSN)/bin/start_erl
+	chmod 755 debian/tmp/usr/lib/erlang/erts-$(VSN)/bin/*.src
+	chmod 644 debian/tmp/usr/lib/erlang/bin/start.script
+	chmod 644 debian/tmp/usr/lib/erlang/lib/wx-*/examples/*/*.beam
+	#
+	# Remove some files which should be rather in erlang-doc-html package
+	find debian/tmp/usr/lib/erlang/lib -name info -exec rm -v {} \;
+	rm -rv debian/tmp/usr/lib/erlang/erts-$(VSN)/doc
+	#
+	# Remove unnecessary Install and manpage formatting scripts
+	rm -v debian/tmp/usr/lib/erlang/Install
+	rm -rv debian/tmp/usr/lib/erlang/misc
+	touch install-stamp
 
 docs: docs-stamp
 docs-stamp:
 	dh_testdir
+ifeq ($(filter nodoc,$(DEB_BUILD_PROFILES)),)
+	PATH=$(ROOT_DIR)/bin:$$PATH $(MAKE) -j $(JOBS) docs
+	$(MAKE) -j $(JOBS) DESTDIR=$(ROOT_DIR)/debian/erlang-docs install-docs
+	#
+	(cd $(ROOT_DIR)/debian/erlang-docs/usr/lib/erlang/lib ; \
+	 perl $(ROOT_DIR)/debian/scripts/genlinks $(VSN) >$(ROOT_DIR)/debian/erlang-doc.links)
+	install -d $(ROOT_DIR)/debian/erlang-docs/usr/lib/html
+	mv $(ROOT_DIR)/debian/erlang-docs/usr/lib/erlang/* $(ROOT_DIR)/debian/erlang-docs/usr/lib/html
+	# Use system-wide javascript libraries
+	ln -sf /usr/share/javascript/jquery/jquery.min.js \
+		$(ROOT_DIR)/debian/erlang-docs/usr/lib/html/lib/jinterface-*/doc/html/assets/java/script-dir/jquery-[0-9]*.min.js
+	ln -sf /usr/share/javascript/jquery-ui/themes/base/jquery-ui.min.css \
+		$(ROOT_DIR)/debian/erlang-docs/usr/lib/html/lib/jinterface-*/doc/html/assets/java/script-dir/jquery-ui.min.css
+	ln -sf /usr/share/javascript/jquery-ui/jquery-ui.min.js \
+		$(ROOT_DIR)/debian/erlang-docs/usr/lib/html/lib/jinterface-*/doc/html/assets/java/script-dir/jquery-ui.min.js
+endif
 	touch docs-stamp
 
-install-stnd: install-stnd-stamp
-install-stnd-stamp: INSTALL_DIR=$(ROOT_DIR)/debian/erlang-stnd
-install-stnd-stamp: build-stnd-stamp
-	dh_testdir
-	$(do-install)
-	touch install-stnd-stamp
-
 build: build-arch build-indep
+
 build-arch: build-stamp manpages-stamp
-build-indep: build-stamp
-build-stamp: $(INSTALL_RULE)
+build-indep: build-stamp docs-stamp
+
+build-stamp: install-stamp $(SCRIPTS)
 	dh_testdir
-	#
-	for i in debian/*.in debian/scripts/*.in ; do \
-	    if [ "$$i" != "debian/control.in" ] ; then \
-	    	sed -e's/@VERSION@/$(VSN)/g' \
-	     	    -e's/@SOURCE_VERSION@/$(SOURCE_VERSION)/g' \
-	     	    -e's/@ABI_VERSION@/$(ABI_VERSION)/g' \
-	     	    -e's/@PCRE_VERSION@/$(PCRE_VERSION)/g' \
-	     	    -e's/@EI_VSN@/$(EI_VSN)/g' \
-	     	    -e's/@JINTERFACE_VSN@/$(JINTERFACE_VSN)/g' \
-	     	    -e's/@IC_VSN@/$(IC_VSN)/g' \
-		    -e's/@COMMON_TEST_VSN@/$(COMMON_TEST_VSN)/g' \
-		    -e's/@SNMP_VSN@/$(SNMP_VSN)/g' \
-		    -e's/@DIAMETER_VSN@/$(DIAMETER_VSN)/g' \
-		    -e's/@TOOLS_VSN@/$(TOOLS_VSN)/g' <$$i >$${i%%.in} ; \
-	    fi ; \
-	done
-	sed -e's/@VERSION@/$(VSN)/g' <debian/in.erlang-doc.doc-base.erlang-erts \
-	    >debian/erlang-doc.doc-base.erlang-erts
 	#
 	# Place each installed file into the proper package.
 	# See this script and the debian/patterns/* files for more informations.
-	sh debian/scripts/analyse $(TMPINSTALL_DIR)
+	sh debian/scripts/analyse debian/tmp
 	#
 	# Add all author lists to debian/AUTHORS
-	f=1 ; \
-	for i in `find $(ROOT_DIR) -name AUTHORS | sort` ; do \
+	cat $(ROOT_DIR)/erts/AUTHORS >>debian/AUTHORS
+	for i in $$(find $(ROOT_DIR) -name AUTHORS | sort | tail -n +3) ; do \
 	    echo $$i ; \
-	    if [ $$f = 1 ] ; then \
-	    	f=0 ; \
-	    else \
-	    	echo >>debian/AUTHORS ; \
-		echo "------------------------------------------------------------------------" >>debian/AUTHORS ; \
-	        dirname=`dirname $$i` ; \
-	        echo `basename $$dirname` >>debian/AUTHORS ; \
-		echo >>debian/AUTHORS ; \
-	    fi ; \
+	    echo "\n------------------------------------------------------------------------\n$$(basename $$(dirname $$i))\n" >>debian/AUTHORS ; \
 	    cat $$i >>debian/AUTHORS ; \
 	done
 	#
 	touch build-stamp
 
+binary: binary-indep binary-arch
+
 binary-indep: build-stamp docs-stamp
 	dh_testdir
 	dh_testroot
 	dh_installdirs -i
-	dh_install -i --sourcedir=$(TMPINSTALL_DIR)
+	dh_install -i
 	dh_lintian -i
+ifeq ($(filter nodoc,$(DEB_BUILD_PROFILES)),)
 	dh_installdocs -i -A debian/README.Debian debian/AUTHORS
+else
+	dh_installdocs -i -Nerlang-doc -A debian/README.Debian debian/AUTHORS
+endif
 	dh_installemacsen -i
 	dh_installexamples -i
 	dh_installchangelogs -i
@@ -377,7 +341,7 @@ binary-indep: build-stamp docs-stamp
 	dh_installmenu -i
 	dh_link -i
 	dh_strip -i
-	dh_compress -i -X.txt -X.erl -X.hrl -X.c -X.js -X.kwc -X.pdf -X.eix -X.src -X.beam
+	dh_compress -i -X.txt -X.erl -X.hrl -X.c -X.js -X.kwc -X.pdf -X.eix -X.src -X.beam -X.md
 	dh_fixperms -i
 	dh_makeshlibs -i
 	dh_installdeb -i
@@ -386,17 +350,16 @@ binary-indep: build-stamp docs-stamp
 	dh_md5sums -i
 	dh_builddeb -i
 
-binary-arch: $(BINARY_TARGETS)
-
-binary-erlang-base: build-stamp
+binary-arch: build-stamp manpages-stamp
 	dh_testdir
 	dh_testroot
 	dh_installdirs -a
-	dh_install -perlang-base --sourcedir=debian/erlang-stnd
-	dh_install -a -Nerlang-base --sourcedir=$(TMPINSTALL_DIR)
+	dh_install -a
 	#
-	install -D -m 755 $(ROOT_DIR)/debian/scripts/erlang-depends \
-		$(ROOT_DIR)/debian/erlang-dev/usr/bin/erlang-depends
+	#sed -i -e 's/Depends: /Depends: $${erlang:Depends}, /g' debian/control
+	#$(ROOT_DIR)/debian/erlang-dev/usr/bin/erlang-depends -a
+	#grep -r erlang:Depends debian/
+	#false
 	#
 	dh_lintian -a
 	dh_installdocs -a -A debian/README.Debian debian/AUTHORS
@@ -413,16 +376,10 @@ binary-erlang-base: build-stamp
 	dh_makeshlibs -a
 	dh_installdeb -a
 	dh_shlibdeps -a
-	dh_gencontrol -perlang-base -- \
-		-Vlibsctp:Version='$(LIBSCTPDEP)'
-	dh_gencontrol -a -Nerlang-base -- \
-		-Verlang-base='$(ERLANGBASE)'
+	dh_gencontrol -a -- -Vlibsctp:Version='$(LIBSCTPDEP)'
 	dh_md5sums -a
 	dh_builddeb -a
 
-binary: binary-indep binary-arch
-
-.PHONY: clean automake install build build-arch build-indep
+.PHONY: clean automake build build-arch build-indep
 .PHONY: binary binary-arch binary-indep
-.PHONY: configure-stnd build-stnd install-stnd docs manpages
-.PHONY: binary-erlang-base
+.PHONY: configure boot install docs manpages

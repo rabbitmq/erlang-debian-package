@@ -1,0 +1,67 @@
+#!/usr/bin/perl
+
+use strict;
+use warnings;
+
+my $filename = $ARGV[0];
+my $section = $ARGV[1];
+
+my $module = '';
+my $filedata;
+open(my $fh, '<', $filename) or die "Cannot open file $filename";
+{
+    local $/;
+    $filedata = <$fh>;
+}
+close($fh);
+
+# For .erl files extract moduledoc
+if ($filename =~ /.erl$/) {
+    $filedata =~ /-module\((.*?)\)./s;
+    $module = $1;
+    $filedata =~ /-moduledoc \"\"\"\n([^\n]*)\n(.*?)\"\"\"/s;
+    $filedata = "# $module\n\n$1\n\n## Description\n$2";
+}
+
+# Drop language hints since ronn does not support them
+$filedata =~ s/\`\`\`\w+/\`\`\`/gs;
+
+my @lines = split /\n/, $filedata;
+
+my $header = '';
+my $rest = '';
+my $state = 0;
+
+foreach my $line (@lines) {
+    chomp $line;
+    if ($state == 0) {
+	if ($line =~ /^# /) {
+	    $header = "$line($section) -- ";
+	    $state = 1;
+	}
+    } elsif ($state == 1) {
+	if ($line =~ /^#/) {
+	    $rest .= "$line\n";
+	    $state = 2;
+	} else {
+	    $header .= $line;
+	}
+    } elsif ($state == 2) {
+        if ($line =~ "\`\`\`") {
+	    $rest .= "$line\n";
+            $state = 3;
+        } else {
+	    $line =~ s/#### ([^\{]*) \{.*/_$1_/;
+	    $line =~ s/\[\]\([^\)]*\)(\{[^\}]*\})?(\s*)//g;
+	    $line =~ s/\[([^\[]*)\]\([^\)]*\)(\{[^\}]*\})?(\s*)/*$1*$3/g;
+	    $rest .= "$line\n";
+        }
+    } elsif ($state == 3) {
+        if ($line =~ "\`\`\`") {
+            $state = 2;
+        }
+	$rest .= "$line\n";
+    }
+}
+
+print "$header\n\n$rest";

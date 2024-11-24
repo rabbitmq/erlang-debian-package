@@ -1,0 +1,5 @@
+debian/erlang-docs/usr/lib/html
+debian/html
+CONTRIBUTING.md
+README.md
+HOWTO
