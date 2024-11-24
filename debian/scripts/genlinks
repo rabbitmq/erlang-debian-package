@@ -16,7 +16,7 @@ foreach $filename (@files) {
         foreach $line (@info) {
                 chomp($line);
                 print STDERR " $line";
-                print "/usr/share/doc/erlang-doc/lib/" . $filename . "/" . $line;
+                print "/usr/share/doc/erlang-doc/html/lib/" . $filename . "/" . $line;
                 print "  /usr/lib/erlang/lib/" . $filename . "/" . $line;
                 print "\n";
         }
@@ -26,8 +26,7 @@ foreach $filename (@files) {
 #
 #  Closing boilerplate
 #
-print "/usr/share/doc/erlang-doc/erts-$erts_version/doc /usr/lib/erlang/erts-$erts_version/doc\n";
-print "/usr/share/doc/erlang-doc/erts-$erts_version/info /usr/lib/erlang/erts-$erts_version/info\n";
-print "/usr/share/doc/erlang-doc/doc /usr/lib/erlang/doc\n";
+print "/usr/share/doc/erlang-doc/html/erts-$erts_version/doc /usr/lib/erlang/erts-$erts_version/doc\n";
+print "/usr/share/doc/erlang-doc/html/doc /usr/lib/erlang/doc\n";
 
 print STDERR "Finished generating erlang-doc.links\n";

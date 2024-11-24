@@ -1,0 +1,3 @@
+# EPMD socket activation is optional and doesn't affect usability for
+# systems without systemd
+package-supports-alternative-init-but-no-init.d-script lib/systemd/system/epmd.service

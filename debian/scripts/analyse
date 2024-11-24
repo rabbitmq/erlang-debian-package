@@ -9,12 +9,13 @@ the magic of regular expressions."
 # package.  Same goes for the X11 package.  Files
 # that don't match anything go into the NO-X package etc.
 
-DIR=$1
+DIR=$1/
+LDIR=${#DIR}
 
 echo "erlang-base"
-find debian/erlang-stnd -type f | \
+find $DIR -type f | \
     grep -E -f debian/patterns/erlang-base.patterns | \
-    cut -c 20- > debian/erlang-base.install
+    cut -c $LDIR- > debian/erlang-base.install
 
 # Here, files that matched above shouldn't
 # be looked at.
@@ -23,29 +24,31 @@ echo "erlang-examples"
 find $DIR -type f | \
     grep -v -E -f debian/patterns/erlang-base.patterns | \
     grep -E -f debian/patterns/erlang-examples.patterns | \
-    cut -c 20- > debian/erlang-examples.install
+    cut -c $LDIR- > debian/erlang-examples.install
 
 echo "erlang-src"
 find $DIR -type f | \
     grep -v -E -f debian/patterns/erlang-base.patterns | \
     grep -v -E -f debian/patterns/erlang-examples.patterns | \
     grep -E -f debian/patterns/erlang-src.patterns | \
-    cut -c 20- > debian/erlang-src.install
+    cut -c $LDIR- > debian/erlang-src.install
 
 echo "erlang-dev"
 find $DIR -type f | \
     grep -E -e './usr/lib/erlang/usr/include' | \
-    cut -c 20- | sed -e 's!$! usr/lib/erlang/usr/include!' > debian/erlang-dev.install
+    cut -c $LDIR- | sed -e 's!$! usr/lib/erlang/usr/include!' > debian/erlang-dev.install
+
+echo 'debian/scripts/erlang-depends usr/bin' >> debian/erlang-dev.install
 
 find $DIR -type f | \
     grep -v -E -f debian/patterns/erlang-base.patterns | \
     grep -v -E -f debian/patterns/erlang-examples.patterns | \
     grep -v -E -f debian/patterns/erlang-src.patterns | \
     grep -E -f debian/patterns/erlang-dev.patterns | \
-    cut -c 20- >> debian/erlang-dev.install
+    cut -c $LDIR- >> debian/erlang-dev.install
 
 PACKAGES='asn1 common-test crypto debugger dialyzer diameter
-	  edoc eldap erl-docgen et eunit ftp inets jinterface megaco mnesia
+	  edoc eldap et eunit ftp inets jinterface megaco mnesia
 	  observer odbc os-mon parsetools public-key reltool
 	  runtime-tools snmp ssh ssl syntax-tools tftp tools
 	  wx xmerl'
@@ -68,7 +71,7 @@ for pkg in $PACKAGES ; do
 
     find $DIR -type f | eval $CMD | \
 	grep -E -f debian/patterns/erlang-$pkg.patterns | \
-	cut -c 20- | sort > debian/erlang-$pkg.install
+	cut -c $LDIR- | sort > debian/erlang-$pkg.install
 
     CMD1="$CMD1 | grep -v -E -f debian/patterns/erlang-$pkg.patterns"
     for fn in $(awk -- '/\.beam$/ {system("basename " $1 " .beam")}' debian/erlang-$pkg.install)

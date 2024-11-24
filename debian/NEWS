@@ -1,0 +1,8 @@
+erlang (1:21.2.2+dfsg-1) unstable; urgency=medium
+
+  The epmd.socket and epmd.service units, which serve the Erlang portmapper
+  daemon, are now enabled by default and the socket is listening on all
+  the network interfaces. If you want to reconfigure or disable them,
+  please consult README.Debian.
+    
+ -- Sergei Golovan <sgolovan@debian.org>  Fri, 28 Dec 2018 15:47:21 +0300

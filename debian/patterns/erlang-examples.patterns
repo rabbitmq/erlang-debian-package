@@ -12,6 +12,7 @@
 ./usr/lib/erlang/lib/orber-.*/examples/
 ./usr/lib/erlang/lib/reltool-.*/examples/
 ./usr/lib/erlang/lib/snmp-.*/examples/
+./usr/lib/erlang/lib/sasl-.*/examples/
 ./usr/lib/erlang/lib/ssl-.*/examples/
 ./usr/lib/erlang/lib/stdlib-.*/examples/
 ./usr/lib/erlang/lib/syntax_tools-.*/examples/
