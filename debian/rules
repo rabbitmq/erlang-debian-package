@@ -267,25 +267,33 @@ define do-install
 	rm -rv $(INSTALL_DIR)/usr/lib/erlang/misc
 endef
 
+MANPAGE_DIRS = $(shell find $(ROOT_DIR) -not \( -wholename '*/.pc' -prune \) \
+	       			-a \( -name '*_cmd.md' -or -name dialyzer.erl \) -exec dirname {} _cmd.md \; | tr "\n" ":")
+MANPAGE_NAMES = $(shell find $(ROOT_DIR) -not \( -wholename '*/.pc' -prune \) \
+				-a -name '*_cmd.md' -exec basename {} _cmd.md \;) dialyzer start_embedded
+MANPAGES = $(MANPAGE_NAMES:%=$(MAN_DIR)/%.1)
+
+vpath %_cmd.md $(MANPAGE_DIRS)
+
 # manpages builds section 1 manual pages
+
 manpages: manpages-stamp
-manpages-stamp: $(INSTALL_RULE)
+manpages-stamp: $(MANPAGES)
 	dh_testdir
-	target=$$(basename $$(dirname $$(find make -name otp.mk))) ; \
-	PATH=$(ROOT_DIR)/bin:$$PATH ; \
-	for m in lib/erl_interface lib/common_test erts ; do \
-	    ${MAKE} -j ${JOBS} -C $$m/doc/src man ERL_TOP=$(ROOT_DIR) TARGET=$$target ; \
-	done
-	#
-	install -d $(MAN_DIR)/man1 $(MAN_DIR)/man3 ; \
-	install lib/dialyzer/doc/man3/*.3 $(MAN_DIR)/man3 ; \
-	for m in lib/erl_interface lib/common_test erts ; do \
-	    install $$m/doc/man1/*.1 $(MAN_DIR)/man1 ; \
-	done
-	#
-	sh debian/scripts/fixmanpages $(MAN_DIR) 1
-	#
 	touch manpages-stamp
+
+$(MAN_DIR):
+	install -d $(MAN_DIR)
+
+$(MAN_DIR)/start_embedded.1: $(MAN_DIR)/start.1
+	sed -e's/START/START_EMBEDDED/' \
+	    -e's/Bstart\([ \\]\)/Bstart_embedded\1/' <$< >$@
+
+$(MAN_DIR)/dialyzer.1: lib/dialyzer/src/dialyzer.erl $(MAN_DIR)
+	debian/scripts/fixmanpage $< 1 | ronn | sed -e's/start(1)/start_embedded(1)/' >$@
+
+$(MAN_DIR)/%.1: %_cmd.md $(MAN_DIR)
+	debian/scripts/fixmanpage $< 1 | ronn | sed -e's/start(1)/start_embedded(1)/' >$@
 
 build-stnd: build-stnd-stamp
 build-stnd-stamp: configure-stnd-stamp
@@ -298,16 +306,8 @@ endif
 	touch build-stnd-stamp
 
 docs: docs-stamp
-docs-stamp: $(INSTALL_RULE)
+docs-stamp:
 	dh_testdir
-	PATH=$(ROOT_DIR)/bin:$$PATH $(MAKE) -j ${JOBS} docs
-	$(MAKE) -j ${JOBS} DESTDIR=$(ROOT_DIR)/debian/erlang-docs install-docs
-	#
-	sh debian/scripts/fixmanpages $(MAN_DIR) 2
-	#
-	(cd $(ROOT_DIR)/debian/erlang-docs/usr/lib/erlang/lib ; \
-	 perl $(ROOT_DIR)/debian/scripts/genindex >index.html ; \
-	 perl $(ROOT_DIR)/debian/scripts/genlinks $(VSN) >$(ROOT_DIR)/debian/erlang-doc.links)
 	touch docs-stamp
 
 install-stnd: install-stnd-stamp
