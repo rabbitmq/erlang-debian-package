@@ -14,6 +14,7 @@ are not monolithic and use the same dependency tree as the official Debian packa
 
 Packages are published to several Launchpad PPAs:
 
+ * [`~rabbitmq/rabbitmq-erlang`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang) (several recent series)
  * [`~rabbitmq/rabbitmq-erlang-26`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-26) (26.x)
  * [`~rabbitmq/rabbitmq-erlang-25`](https://launchpad.net/~rabbitmq/+archive/ubuntu/rabbitmq-erlang-25) (25.3.x)
 
@@ -29,7 +30,8 @@ release series of this package, corresponding to the [RabbitMQ Erlang requiremen
 
 For each distribution, the following release series of Erlang/OTP can be produced:
 
- * `26.x`
+ * `27.3.x`
+ * `26.2.x`
  * `25.3.x`
  
 For every release series, only the latest minor series is supported.
