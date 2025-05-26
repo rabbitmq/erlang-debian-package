@@ -198,9 +198,6 @@ automake-stamp: debian/control
 	    cp -vfb /usr/share/misc/config.sub $$i ; \
 	done
 	#
-	# Regenerate configure scripts using autoconf
-	./otp_build update_configure --no-commit
-	#
 	touch automake-stamp
 
 configure: configure-stamp
