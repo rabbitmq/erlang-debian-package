@@ -22,8 +22,8 @@ export HOME := $(ROOT_DIR)/debian
 
 SOURCE_VERSION=$(shell dpkg-parsechangelog | sed -ne's!^Version: \(.*\)-.*!\1!p')
 
-PCRE_MAJOR=$(shell cat erts/emulator/pcre/pcre.h | grep PCRE_MAJOR | sed -e's/.*\s\([0-9]\+\).*/\1/')
-PCRE_MINOR=$(shell cat erts/emulator/pcre/pcre.h | grep PCRE_MINOR | sed -e's/.*\s\([0-9]\+\).*/\1/')
+PCRE_MAJOR=$(shell cat erts/emulator/pcre/pcre2.h | grep PCRE2_MAJOR | sed -e's/.*\s\([0-9]\+\).*/\1/')
+PCRE_MINOR=$(shell cat erts/emulator/pcre/pcre2.h | grep PCRE2_MINOR | sed -e's/.*\s\([0-9]\+\).*/\1/')
 PCRE_VERSION=$(PCRE_MAJOR).$(PCRE_MINOR)
 ABI_VERSION=17.0
 
