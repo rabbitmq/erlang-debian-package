@@ -5,7 +5,7 @@ Last-Modified: Mon, 04 Mar 2024 16:08:31 +0300
 
 --- a/lib/snmp/doc/references/snmpc_cmd.md
 +++ b/lib/snmp/doc/references/snmpc_cmd.md
-@@ -56,17 +56,17 @@
+@@ -57,17 +57,17 @@
  
  - **\--verbosity _verbosity_** - Print debug info.
  

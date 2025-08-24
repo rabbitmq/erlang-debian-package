@@ -1,0 +1,80 @@
+Author: Sergei Golovan
+Description: Patch fixes FTBFS when using pbuilder.
+
+--- a/make/ex_doc_wrapper.in
++++ b/make/ex_doc_wrapper.in
+@@ -35,11 +35,14 @@
+ 
+ ## Running the command where we redirect stderr to fd 1 and stdout to fd 3.
+ ## We then use tee on the stderr (which is now fd 1) to print that to fd 4
+-OUTPUT="$( { escript@EXEEXT@ "${EX_DOC}" "${ARGS[@]}"; } 2>&1 1>&3 | tee /dev/fd/4 )"
++export ERL_LIBS=/usr/lib/elixir/lib
++OUTPUT="$( { "${EX_DOC}" "${ARGS[@]}"; } 2>&1 1>&3 )"
+ 
+ ## Close fd 3 and 4
+ exec 3>&- 4>&-
+ 
++echo "${OUTPUT}"
++
+ ## If EX_DOC_WARNINGS_AS_ERRORS is not explicitly turned on
+ ## and any .app file is missing, we turn off warnings as errors
+ if [ "${EX_DOC_WARNINGS_AS_ERRORS}" != "true" ]; then
+--- a/make/ex_doc.exs
++++ b/make/ex_doc.exs
+@@ -185,6 +185,7 @@
+     |> Enum.uniq(),
+   extras: extras,
+   skip_undefined_reference_warnings_on: ["notes.md"],
++  skip_code_autolink_to: ["t:fun/0"],
+   groups_for_docs:
+     (Access.get(local_config, :groups_for_docs, []) ++ groups_for_docs) |> Enum.uniq(),
+   deps:
+--- a/lib/kernel/doc/docs.exs
++++ b/lib/kernel/doc/docs.exs
+@@ -39,7 +39,7 @@
+       :trace
+     ]
+   ],
+-  skip_code_autolink_to: ["t:file_descriptor/0"],
++  skip_code_autolink_to: ["t:file_descriptor/0","t:fun/0"],
+   ## The order of these items determine
+   ## how they are listed in the docs
+   extras: [
+--- a/lib/tools/doc/docs.exs
++++ b/lib/tools/doc/docs.exs
+@@ -11,6 +11,7 @@
+     "references/erlang.el.md"
+   ],
+   skip_code_autolink_to: [
++    "t:fun/0",
+     "fprof:apply_start_stop/4",
+     "prim_file:drv_command/4",
+     "prim_file:drv_command/2",
+--- a/lib/xmerl/doc/docs.exs
++++ b/lib/xmerl/doc/docs.exs
+@@ -1,5 +1,5 @@
+ [
+-  skip_code_autolink_to: ["t:xmerl_scanner/0", "t:xsd_state/0"],
++  skip_code_autolink_to: ["t:xmerl_scanner/0", "t:xsd_state/0", "t:fun/0"],
+ 
+   ## The order of these items determine
+   ## how they are listed in the docs
+--- a/lib/diameter/doc/docs.exs
++++ b/lib/diameter/doc/docs.exs
+@@ -9,5 +9,5 @@
+     "references/diameterc_cmd.md",
+     "references/diameter_dict.md"
+   ],
+-  skip_code_autolink_to: ["diameter_traffic:request/1"]
++  skip_code_autolink_to: ["diameter_traffic:request/1","t:fun/0"]
+ ]
+--- a/erts/doc/docs.exs
++++ b/erts/doc/docs.exs
+@@ -106,6 +106,7 @@
+       "references/werl_cmd.md"
+     ] ++ Path.wildcard("../emulator/internal_doc/*.md"),
+   skip_code_autolink_to: [
++    "t:fun/0",
+     "dist_util:net_ticker_spawn_options/0",
+     "dist_util:handshake_we_started/1",
+     "dist_util:handshake_other_started/1",

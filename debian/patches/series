@@ -3,3 +3,4 @@ gnu.patch
 javascript.patch
 x32.patch
 doc.patch
+exdoc.patch

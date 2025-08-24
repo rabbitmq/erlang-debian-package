@@ -1,17 +1,23 @@
-diff --git a/Makefile.in b/Makefile.in
-index ec5988348c..d76d79e589 100644
+clean.patch by Sergei Golovan <sgolovan@nes.ru>
+
+Erlang leaves many files after make clean. This patch contains
+a hack to remove them.
+
 --- a/Makefile.in
 +++ b/Makefile.in
-@@ -931,11 +931,214 @@ clean: check_recreate_primary_bootstrap
+@@ -931,6 +931,7 @@
  	rm -f *~ *.bak config.log config.status prebuilt.files ibin/*
  	cd erts && ERL_TOP=$(ERL_TOP) $(MAKE) clean
  	cd lib  && ERL_TOP=$(ERL_TOP) $(MAKE) clean BUILD_ALL=true
 +	$(MAKE) additional_clean
-
+ 
  distclean: clean
  	find . -type f -name SKIP              -print | xargs $(RM)
- 	find . -type f -name SKIP-APPLICATIONS -print | xargs $(RM)
-
+@@ -989,3 +990,204 @@
+ $(NO_DIALYZER_APPS): $$(patsubst %,%_build,$$@)
+ $(APPS_TEST): $$(patsubst %_test,%_build,$$@)
+ 	ERL_TOP=$(ERL_TOP) TYPE=$(TYPE) $(MAKE) -C lib/$(patsubst %_test,%,$@) test
++
 +additional_clean:
 +	rm -rf $(ERL_TOP)/bin
 +	rm -rf $(ERL_TOP)/bootstrap/bin/erl
@@ -212,8 +218,3 @@ index ec5988348c..d76d79e589 100644
 +	rm -rf $(ERL_TOP)/system/doc/tutorial/erl_interface.xml
 +	rm -rf $(ERL_TOP)/system/doc/tutorial/example.xml
 +	rm -rf $(ERL_TOP)/system/doc/tutorial/nif.xml
-+
-+
- #
- # Just wipe out emulator, not libraries
- #
