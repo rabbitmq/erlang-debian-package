@@ -264,7 +264,7 @@ install-stamp: boot-stamp
 	chmod 755 debian/tmp/usr/lib/erlang/erts-$(VSN)/bin/start_erl
 	chmod 755 debian/tmp/usr/lib/erlang/erts-$(VSN)/bin/*.src
 	chmod 644 debian/tmp/usr/lib/erlang/bin/start.script
-	chmod 644 debian/tmp/usr/lib/erlang/lib/wx-*/examples/*/*.beam
+	chmod 644 debian/tmp/usr/lib/erlang/lib/wx-*/doc/examples/*/*.beam
 	#
 	# Remove some files which should be rather in erlang-doc-html package
 	find debian/tmp/usr/lib/erlang/lib -name info -exec rm -v {} \;
