@@ -15,7 +15,7 @@ Author: Pino Toscano <pino@debian.org>
 
 --- a/erts/configure.ac
 +++ b/erts/configure.ac
-@@ -526,7 +526,7 @@
+@@ -527,7 +527,7 @@
  
  dnl NOTE: CPPFLAGS will be included in CFLAGS at the end
  case $host_os in
@@ -24,7 +24,7 @@ Author: Pino Toscano <pino@debian.org>
      aix*|os400*)
          # * _ALL_SOURCE: Required to get the winsize structure for TIOCSWINSZ.
          # * _LINUX_SOURCE_COMPAT: Not required, but makes some libc functions
-@@ -1157,7 +1157,7 @@
+@@ -1158,7 +1158,7 @@
  fi
  
  case $host_os in
@@ -49,7 +49,7 @@ Author: Pino Toscano <pino@debian.org>
  #include <sys/sysctl.h>
 --- a/erts/emulator/drivers/common/inet_drv.c
 +++ b/erts/emulator/drivers/common/inet_drv.c
-@@ -5308,6 +5308,11 @@
+@@ -5297,6 +5297,11 @@
      *x = addr;
      return 0;
  }
@@ -63,7 +63,7 @@ Author: Pino Toscano <pino@debian.org>
  
 --- a/erts/etc/common/erlexec.c
 +++ b/erts/etc/common/erlexec.c
-@@ -1699,7 +1699,7 @@
+@@ -1663,7 +1663,7 @@
      if (!bindir) {
  	/* Determine bindir from absolute path to executable */
  	char *p;
@@ -72,7 +72,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, argv[0], sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1713,7 +1713,7 @@
+@@ -1677,7 +1677,7 @@
      if (!rootdir) {
  	/* Determine rootdir from absolute path to bindir */
  	char *p;
@@ -81,7 +81,7 @@ Author: Pino Toscano <pino@debian.org>
  	strncpy(buffer, bindir, sizeof(buffer));
  	buffer[sizeof(buffer)-1] = '\0';
  	
-@@ -1947,7 +1947,7 @@
+@@ -1911,7 +1911,7 @@
          char cwd[MAX_PATH];
          if (_getcwd(cwd, sizeof(cwd)) == NULL) {
  #else
@@ -166,32 +166,3 @@ Author: Pino Toscano <pino@debian.org>
  	| perl -pe "s@ [a-zA-Z]?$(ERL_TOP_NATIVE)/(?:bootstrap/)?lib/([^/]+)@ ../../\1@g" 2> /dev/null \
  	| sed "s/\.$(EMULATOR)/\.$$\(EMULATOR\)/" \
  	| sed 's@^dtls_@$$(EBIN)/dtls_@' \
---- a/make/autoconf/otp.m4
-+++ b/make/autoconf/otp.m4
-@@ -1818,6 +1818,8 @@
- 		    ETHR_DEFS="$ETHR_DEFS -DETHR_UNUSABLE_SIGALTSTACK"
- 		fi
- 		;;
-+	    *gnu*)
-+		ETHR_DEFS="$ETHR_DEFS -D_GNU_SOURCE" ;;
- 	    *) ;;
- 	esac
- 
-@@ -3079,7 +3081,7 @@
- DED_CFLAGS=
- DED_OSTYPE=unix
- case $host_os in
--     linux*)
-+     linux*|*gnu*)
- 	DED_CFLAGS="-D_GNU_SOURCE" ;;
-      win32)
- 	DED_CFLAGS="-D_WIN32_WINNT=0x0600 -DWINVER=0x0600"
-@@ -3217,7 +3219,7 @@
- 		DED_LD="$CC"
- 		DED_LD_FLAG_RUNTIME_LIBRARY_PATH="$CFLAG_RUNTIME_LIBRARY_PATH"
- 	;;
--	linux*)
-+	linux*|*gnu*)
- 		DED_LD="$CC"
- 		DED_LD_FLAG_RUNTIME_LIBRARY_PATH="$CFLAG_RUNTIME_LIBRARY_PATH"
- 		DED_LDFLAGS="-shared -Wl,-Bsymbolic"
