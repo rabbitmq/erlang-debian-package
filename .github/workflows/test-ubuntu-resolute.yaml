@@ -1,10 +1,10 @@
-name: Test Ubuntu Noble
+name: Test Ubuntu Resolute
 on:
   push:
 jobs:
-  test-ubuntu-noble:
+  test-ubuntu-resolute:
     container:
-      image: ubuntu:noble
+      image: ubuntu:resolute
     runs-on: ubuntu-latest
     steps:
       - name: Install Git
